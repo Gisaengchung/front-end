@@ -82,7 +82,7 @@ export default class App extends Component {
             <Route
               path="/aboutus"
               exact
-              component = { AboutUs } 
+              render={(routerProps) => <AboutUs {...routerProps} token={this.state.token} username={this.state.username} logOut={this.logOut} />}
             />
 
             <Route

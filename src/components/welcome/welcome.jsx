@@ -6,7 +6,7 @@ class Welcome extends Component {
     return (
       <div>
         <Navigation />        
-                HELLLO PUDDY BUDDY COOKIE CRUMBLE HONEY. Eat a pie. 
+                HELLLO PUDDY BUDDY  fun cuddy COOKIE CRUMBLE HONEY. Eat a pie. jelly belly.
       </div>
     );
   }
