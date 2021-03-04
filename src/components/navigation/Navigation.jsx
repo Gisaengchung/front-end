@@ -1,48 +1,51 @@
 /* eslint-disable max-len */
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useIsAuthenticated, useLogout } from '../../state/AuthContext';
 
-export default class Navigation extends Component {
 
-    handleLogOut = async() => {
+export default function Navigation({ history }) {
 
-      await this.props.logOut();
-      this.props.history.push('/');
-    }
+  const logOut = useLogout();
 
-    render() {
-      return (
-        <div>
-          {
-            this.props.token
-              ?
-              <div className="navbar">
-                <NavLink className="link" to="/Home">Home</NavLink>
-                <NavLink className="link" to="/aboutUs">About the Developers</NavLink>
+  const handleLogOut = async() => {
+    await logOut();
+  };
+    
+  const authentication = useIsAuthenticated(); 
 
-                <div className="logged-in">
-                  <NavLink className="link" to="/userdetail">User Profile</NavLink>
-                  <span className="logout">
-                    <button className="logger-out" onClick={this.handleLogOut}>Log out</button>
-                  </span>
-                </div>
+  return (
+    <div>
+      {
+        authentication ?
+          <div className="navbar">
+            <NavLink className="link" to="/Home">Home</NavLink>
+            <NavLink className="link" to="/aboutUs">About the Developers</NavLink>
 
-              </div>
-              :
-              <div>
-                <NavLink className="link" to="/Home">Home</NavLink>
-                <NavLink className="link" to="/aboutUs">About the Developers</NavLink>
+            <div className="logged-in">
+              <NavLink className="link" to="/userdetail">User Profile</NavLink>
+              <span className="logout">
+                <button onClick={handleLogOut}>Log out</button>
+              </span>
+            </div>
 
-                <div>
-                  <NavLink className="link" to="/signup">Sign Up</NavLink>
-                  <NavLink className="link" to="/login">Login</NavLink>
-                </div>
-              </div>
+          </div>
+            
+          :
 
-          }
+          <div>
+            <NavLink className="link" to="/Home">Home</NavLink>
+            <NavLink className="link" to="/aboutUs">About the Developers</NavLink>
 
-        </div>
-      );
-    }
+            <div>
+              <NavLink className="link" to="/signup">Sign Up</NavLink>
+              <NavLink className="link" to="/login">Login</NavLink>
+            </div>
+          </div>
+
+      }
+
+    </div>
+  );
 }
 
