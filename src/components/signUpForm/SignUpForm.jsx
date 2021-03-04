@@ -1,10 +1,9 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
 import request from 'superagent';
-import Navigation from '../navigation/Navigation';
 import States from '../userDetail/States';
 
-export default class SignUp extends Component {
+export default class SignUpForm extends Component {
 
   // -----------------------------------------------------------------------------
 
@@ -67,10 +66,6 @@ export default class SignUp extends Component {
       return (
         <section className="background">
 
-          <Navigation /> 
-
-
-
           <div className="main-container">
 
             <div className="container center">
@@ -80,23 +75,23 @@ export default class SignUp extends Component {
                   <h2>Sign Up</h2>
 
                   <label>First Name:
-                        <input
-                            className='nameinput'
-                            name="firstName"
-                            maxLength="30"
-                            onChange={(e) => this.setState({ firstName: e.target.value })}
-                            value={this.state.firstName}
-                        />
+                    <input
+                      className="nameinput"
+                      name="firstName"
+                      maxLength="30"
+                      onChange={(e) => this.setState({ firstName: e.target.value })}
+                      value={this.state.firstName}
+                    />
                   </label>
 
                   <label>Last Name:
-                        <input
-                            className='nameinput'
-                            name="lastName"
-                            maxLength="30"
-                            onChange={(e) => this.setState({ lastName: e.target.value })}
-                            value={this.state.lastName}
-                        />
+                    <input
+                      className="nameinput"
+                      name="lastName"
+                      maxLength="30"
+                      onChange={(e) => this.setState({ lastName: e.target.value })}
+                      value={this.state.lastName}
+                    />
                   </label>
                   <br/>
                             Email:
@@ -119,46 +114,46 @@ export default class SignUp extends Component {
                   </label>
 
                   <br/>
-                <p/>
+                  <p/>
                   <label>Venmo Username:
-                        <input
-                            className='venmoinput'
-                            name="paymentHandle"
-                            maxLength="50"
-                            onChange={(e) => this.setState({  paymentHandle: e.target.value })}
-                            value={this.state.paymentHandle}
-                            />
-                    </label>
+                    <input
+                      className="venmoinput"
+                      name="paymentHandle"
+                      maxLength="50"
+                      onChange={(e) => this.setState({  paymentHandle: e.target.value })}
+                      value={this.state.paymentHandle}
+                    />
+                  </label>
 
                   <label>Tagline:
-                        <input
-                            className='tagline'
-                            name="tagline"
-                            maxLength="120"
-                            onChange={(e) => this.setState({ tagline: e.target.value })}
-                            value={this.state.tagline}
-                        />
+                    <input
+                      className="tagline"
+                      name="tagline"
+                      maxLength="120"
+                      onChange={(e) => this.setState({ tagline: e.target.value })}
+                      value={this.state.tagline}
+                    />
 
-                    </label>
-                    <label>Role:
-                        <input
-                            className='roleinput'
-                            about="userRole"
-                            maxLength="500"
-                            onChange={(e) => this.setState({ userRole: e.target.value })}
-                            value={this.state.userRole}
-                        />
+                  </label>
+                  <label>Role:
+                    <input
+                      className="roleinput"
+                      about="userRole"
+                      maxLength="500"
+                      onChange={(e) => this.setState({ userRole: e.target.value })}
+                      value={this.state.userRole}
+                    />
                   </label>
                   <br/>
                   <p/>
                   <label>City:
-                        <input
-                            className='cityinput'
-                            city="userCity"
-                            maxLength="30"
-                            onChange={(e) => this.setState({ userCity: e.target.value })}
-                            value={this.state.userCity}
-                        />
+                    <input
+                      className="cityinput"
+                      city="userCity"
+                      maxLength="30"
+                      onChange={(e) => this.setState({ userCity: e.target.value })}
+                      value={this.state.userCity}
+                    />
                         
                   </label>
                      
