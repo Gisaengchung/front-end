@@ -94,7 +94,7 @@ export default class App extends Component {
                 exact path="/moviepitchform"
                 component = { MoviePitchForm } 
               />
-
+  
               <Route
                 exact path="/userdetail"
                 render={ UserDetail }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useAuthError } from '../state/AuthContext';
 
+
 const AuthForm = ({ title, authFn }) => {
   const error = useAuthError();
   const [email, setEmail] = useState('');
@@ -28,6 +29,8 @@ const AuthForm = ({ title, authFn }) => {
           value={password}
           placeholder="Password"
           onChange={({ target }) => setPassword(target.value)} />
+
+        
 
         <button>{title}</button>
       </form>
