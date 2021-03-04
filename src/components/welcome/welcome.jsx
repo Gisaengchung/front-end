@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Navigation from '../navigation/Navigation';
 
-class AboutUs extends Component {
+class Welcome extends Component {
   render() {
     return (
       <div>
-        <Navigation />     
+        <Navigation />        
+                HELLLO PUDDY BUDDY COOKIE CRUMBLE HONEY. Eat a pie. 
       </div>
     );
   }
 }
 
-export default AboutUs;
+export default Welcome;
