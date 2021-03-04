@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
 import request from 'superagent';
-import { NavLink } from 'react-router-dom';
+import Navigation from '../navigation/Navigation';
 
 export default class SignUp extends Component {
 
@@ -28,7 +28,7 @@ export default class SignUp extends Component {
 
       this.props.setTokenAndName(user.body.email,
         user.body.token);
-      this.props.history.push('/userProfile');
+      this.props.history.push('/userDetail');
     }
 
     // -----------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ export default class SignUp extends Component {
 
         this.props.changerTN(user.body.email,
           user.body.token);
-        this.props.history.push('/userProfile');
+        this.props.history.push('/userdetail');
       }
       catch(err) {
         this.setState({ err: 'ERROR, Please enter a valid EMAIL' });
@@ -60,14 +60,13 @@ export default class SignUp extends Component {
       return (
         <section className="background">
 
+          <Navigation /> 
+
           {/* ----------------------------------------------------------------------- */}
 
           <div className="main-container">
 
             <div className="container center">
-
-              <div><NavLink to="/signup">SignUp</NavLink></div>
-              <div><NavLink to="/login">Login</NavLink></div>
 
               <div>
                 <form onSubmit={this.handleSubmitSignUp}>

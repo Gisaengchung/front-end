@@ -64,13 +64,19 @@ export default class App extends Component {
             <Route
               path="/signup"
               exact
-              component = { SignUp } 
+              render={
+                (routerProps) =>
+                  <SignUp
+                    {...routerProps}
+                    setTokenAndName={this.setTokenAndName}
+                  />
+              }
             />
 
-            <Route
-              path="/login"
-              exact
-              component = { Login } 
+            <Route exact path="/login" render={(routerProps) =>
+              <Login {...routerProps}
+                setTokenAndName={this.setTokenAndName}
+              />}
             />
 
             <Route
@@ -106,7 +112,7 @@ export default class App extends Component {
             <Route
               path="/userdetail"
               exact
-              component = { UserDetail } 
+              render={(routerProps) => <UserDetail {...routerProps} token={this.state.token} username={this.state.username} logOut={this.logOut} />}
             />
 
           </Switch>

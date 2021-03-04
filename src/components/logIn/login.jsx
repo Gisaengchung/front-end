@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
 import request from 'superagent';
-import { NavLink } from 'react-router-dom';
+import Navigation from '../navigation/Navigation';
 
 export default class Login extends Component {
     state = {
@@ -18,13 +18,13 @@ export default class Login extends Component {
       this.setState({ loading: true });
       try {
         const user = await request
-          .post('https://fiin-dev.herokuapp.com/api/v1/auth/signin')
+          .post('https://fiin-dev.herokuapp.com/api/v1/auth/login')
           .send(this.state);
         
         this.setState({ loading: false });
         this.props.setTokenAndName(user.body.email,
           user.body.token);
-        this.props.history.push('/userProfile');
+        this.props.history.push('/userdetail');
       }
       catch(err) {
         this.setState({ err: 'ERROR, Please enter a valid EMAIL' });
@@ -44,8 +44,7 @@ export default class Login extends Component {
           <div>
             <div>
 
-              <div><NavLink to="/signup">SignUp</NavLink></div>
-              <div><NavLink to="/login">Login</NavLink></div>
+              <div><Navigation /></div>
 
               <div>
                 <form onSubmit={this.handleSubmit}>
