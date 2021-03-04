@@ -1,11 +1,9 @@
+/* eslint-disable max-len */
 import React, { Component } from 'react';
-import Navigation from '../navigation/Navigation';
-
 class Welcome extends Component {
   render() {
     return (
-      <div>
-        <Navigation />        
+      <div>   
                 HELLLO PUDDY BUDDY  fun cuddy COOKIE CRUMBLE HONEY. Eat a pie. jelly belly.
       </div>
     );
