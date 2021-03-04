@@ -7,11 +7,16 @@ import {
 } from 'react-router-dom';
 import Welcome from '../components/welcome/Welcome';
 import SignUp from '../components/signUp/SignUp';
-
+import Login from '../components/login/Login';
+import AboutUs from '../components/aboutUs/AboutUs';
+import Home from '../components/home/Home';
+import HowWorks from '../components/howWorks/HowWorks';
+import MovieDetail from '../components/movieDetail/MovieDetail';
+import MoviePitchForm from '../components/moviePitchForm/MoviePitchForm';
+import UserDetail from '../components/userDetail/UserDetail';
 // -----------------------------------------------------------------------------------
 
 export default class App extends Component {
-
 
   state = {
     username: localStorage.getItem('USERNAME') || '',
@@ -60,6 +65,48 @@ export default class App extends Component {
               path="/signup"
               exact
               component = { SignUp } 
+            />
+
+            <Route
+              path="/login"
+              exact
+              component = { Login } 
+            />
+
+            <Route
+              path="/aboutus"
+              exact
+              component = { AboutUs } 
+            />
+
+            <Route
+              path="/home"
+              exact
+              component = { Home } 
+            />
+
+            <Route
+              path="/howworks"
+              exact
+              component = { HowWorks } 
+            />
+
+            <Route
+              path="/moviedetail"
+              exact
+              component = { MovieDetail } 
+            />
+
+            <Route
+              path="/moviepitchform"
+              exact
+              component = { MoviePitchForm } 
+            />
+
+            <Route
+              path="/userdetail"
+              exact
+              component = { UserDetail } 
             />
 
           </Switch>

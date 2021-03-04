@@ -66,8 +66,8 @@ export default class SignUp extends Component {
 
             <div className="container center">
 
-              <NavLink to="/signup">SignUp</NavLink>
-
+              <div><NavLink to="/signup">SignUp</NavLink></div>
+              <div><NavLink to="/login">Login</NavLink></div>
 
               <div>
                 <form onSubmit={this.handleSubmitSignUp}>
