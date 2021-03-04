@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { createProject } from '';
+import { useDispatch } from '../../state/ProjectProvider';
+import { createProject } from '../../actions/projectActions';
 
-const ProjectForm = ({ index }) => { 
+const MoviePitchForm = ({ index }) => { 
   const dispatch = useDispatch();
 
   const [projectTitle, setProjectTitle] = useState('');
@@ -107,4 +107,4 @@ const ProjectForm = ({ index }) => {
   );
 };
   
-export default ProjectForm;
+export default MoviePitchForm;
