@@ -1,4 +1,5 @@
 import { CREATE_PROJECT, DELETE_PROJECT } from '../actions/projectActions';
+import { post } from '../services/request';
 
 export const initialState = {
   projects: []
@@ -7,6 +8,7 @@ export const initialState = {
 export default function reducer(state, action) {
   switch(action.type) {
     case CREATE_PROJECT:
+      post('/projectform', action.payload);
       return {
         ...state,
         projects: [...state.projects, action.payload]

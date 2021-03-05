@@ -1,38 +1,32 @@
 import React, { useState } from 'react';
-import { useDispatch } from '../../state/ProjectProvider';
-import { createProject } from '../../actions/projectActions';
+import useProjectForm from '../../hooks/useProjectForm';
 
-const MoviePitchForm = () => { 
-  const dispatch = useDispatch();
-
-  const [projectTitle, setProjectTitle] = useState('');
-  const [projectSubtitle, setProjectSubtitle] = useState('');
-  const [projectDescription, setProjectDescription] = useState('');  
-  const [projectGenre, setProjectGenre] = useState('');
-  const [projectLocState, setProjectLocState] = useState('');
-  const [projectLocCity, setProjectLocCity] = useState('');
-  const [projectMainImage, setProjectMainImage] = useState('');
-  const [projectFundingGoal, setProjectFundingGoal] = useState('');
-  const [projectFundingExDate, setProjectFundingExDate] = useState('');
-  const [projectRiskChallenge, setProjectRiskChallenge] = useState('');
-  const [projectDiversity, setProjectDiversity] = useState('');
-
-  const handleSubmitProject = event => {
-    event.preventDefault();
-    dispatch(createProject({ 
-      projectTitle, 
-      projectSubtitle, 
-      projectDescription,
-      projectGenre,
-      projectLocState,
-      projectLocCity,
-      projectMainImage,
-      projectFundingGoal,
-      projectFundingExDate,
-      projectRiskChallenge,
-      projectDiversity, 
-    }));  
-  };
+const ProjectForm = () => { 
+  const {
+    projectTitle, 
+    projectSubtitle, 
+    projectDescription,
+    projectGenre,
+    projectLocState,
+    projectLocCity,
+    projectMainImage,
+    projectFundingGoal,
+    projectFundingExDate,
+    projectRiskChallenge,
+    projectDiversity,
+    setProjectTitle,
+    setProjectSubtitle,
+    setProjectDescription,
+    setProjectGenre,
+    setProjectLocState,
+    setProjectLocCity,
+    setProjectMainImage,
+    setProjectFundingGoal,
+    setProjectFundingExDate,
+    setProjectRiskChallenge,
+    setProjectDiversity,
+    handleSubmitProject
+  } = useProjectForm();
 
   return (
     <form onSubmit={handleSubmitProject}>
@@ -98,7 +92,7 @@ const MoviePitchForm = () => {
       />
       <input
         type="text"
-        placeholder="Risks and Challenges"
+        placeholder="Diversity Baby"
         value={projectDiversity}
         onChange={({ target }) => setProjectDiversity(target.value)}
       />    
@@ -107,4 +101,4 @@ const MoviePitchForm = () => {
   );
 };
   
-export default MoviePitchForm;
+export default ProjectForm;

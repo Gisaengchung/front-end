@@ -13,7 +13,7 @@ import Home from '../components/home/Home';
 import Navigation from '../components/navigation/Navigation';
 import HowWorks from '../components/howWorks/HowWorks';
 import MovieDetail from '../components/movieDetail/MovieDetail';
-import MoviePitchForm from '../components/moviePitchForm/MoviePitchForm';
+import ProjectForm from '../components/projectForm/ProjectForm';
 import UserDetail from '../components/userDetail/UserDetail';
 import { AuthProvider } from '../state/AuthContext';
 import { ProjectProvider } from '../state/ProjectProvider';
@@ -64,8 +64,8 @@ export default class App extends Component {
                 />
 
                 <Route
-                  exact path="/moviepitchform"
-                  component = { MoviePitchForm } 
+                  exact path="/projectform"
+                  component = { ProjectForm } 
                 />
   
                 <Route
