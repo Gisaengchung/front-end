@@ -9,8 +9,6 @@ export const AuthProvider = ({ children }) => {
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // session ? true : false
-  // session !== null
   const isAuthenticated = !!session;
 
   useEffect(() => {
@@ -22,6 +20,8 @@ export const AuthProvider = ({ children }) => {
     // if they are store the in session
   }, []);
 
+  // SIGNUP------------------------------------------------------------
+
   const signup = (email, password) => {
     // make a fetch request to signup a user
     return postSignup(email, password)
@@ -31,6 +31,8 @@ export const AuthProvider = ({ children }) => {
       .catch(err => setError(err));
   };
     
+  //LOGIN ------------------------------------------------------------
+
   const login = (email, password) => {
     // make a fetch request to login a user
     return postLogin(email, password)
@@ -39,6 +41,8 @@ export const AuthProvider = ({ children }) => {
       .then(() => history.push('/'))
       .catch(err => setError(err));
   };
+
+  //LOGOUT ------------------------------------------------------------
 
   const logout = () => {
     return getLogout()
@@ -59,6 +63,8 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
+// HOOKS ------------------------------------------------------------
 
 export const useSession = () => {
   const { session } = useContext(AuthContext);
