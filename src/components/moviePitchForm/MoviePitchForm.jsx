@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from '../../state/ProjectProvider';
 import { createProject } from '../../actions/projectActions';
 
-const MoviePitchForm = ({ index }) => { 
+const MoviePitchForm = () => { 
   const dispatch = useDispatch();
 
   const [projectTitle, setProjectTitle] = useState('');
@@ -31,7 +31,7 @@ const MoviePitchForm = ({ index }) => {
       projectFundingExDate,
       projectRiskChallenge,
       projectDiversity, 
-      index }));  
+    }));  
   };
 
   return (

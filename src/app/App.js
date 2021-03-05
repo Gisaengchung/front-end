@@ -16,6 +16,7 @@ import MovieDetail from '../components/movieDetail/MovieDetail';
 import MoviePitchForm from '../components/moviePitchForm/MoviePitchForm';
 import UserDetail from '../components/userDetail/UserDetail';
 import { AuthProvider } from '../state/AuthContext';
+import { ProjectProvider } from '../state/ProjectProvider';
 // import PrivateRoute from '../auth/PrivateRoute';
 // -----------------------------------------------------------------------------------
 
@@ -28,51 +29,52 @@ export default class App extends Component {
       <div>
         <Router>
           <AuthProvider>
-      
-            <Navigation /> 
+            <ProjectProvider>
+              <Navigation /> 
 
-            <Switch>
+              <Switch>
 
-              <Route
-                exact path="/"
-                component = { Welcome } 
-              />
+                <Route
+                  exact path="/"
+                  component = { Welcome } 
+                />
             
-              <Route exact path="/login" component={ Login } />
+                <Route exact path="/login" component={ Login } />
             
-              <Route exact path="/signup" component={ SignUp } />
+                <Route exact path="/signup" component={ SignUp } />
 
-              <Route
-                exact path="/aboutus"
-                render={ AboutUs }
-              />
+                <Route
+                  exact path="/aboutus"
+                  render={ AboutUs }
+                />
 
-              <Route
-                exact path="/home"
-                component = { Home } 
-              />
+                <Route
+                  exact path="/home"
+                  component = { Home } 
+                />
 
-              <Route
-                exact path="/howworks"
-                component = { HowWorks } 
-              />
+                <Route
+                  exact path="/howworks"
+                  component = { HowWorks } 
+                />
 
-              <Route
-                exact path="/moviedetail"
-                component = { MovieDetail } 
-              />
+                <Route
+                  exact path="/moviedetail"
+                  component = { MovieDetail } 
+                />
 
-              <Route
-                exact path="/moviepitchform"
-                component = { MoviePitchForm } 
-              />
+                <Route
+                  exact path="/moviepitchform"
+                  component = { MoviePitchForm } 
+                />
   
-              <Route
-                exact path="/userdetail"
-                render={ UserDetail }
-              />
+                <Route
+                  exact path="/userdetail"
+                  render={ UserDetail }
+                />
 
-            </Switch>
+              </Switch>
+            </ProjectProvider>
           </AuthProvider>
         </Router>
       </div>
