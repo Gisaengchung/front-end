@@ -21,34 +21,6 @@ import { AuthProvider } from '../state/AuthContext';
 
 export default class App extends Component {
 
-  // state = {
-  //   username: localStorage.getItem('USERNAME') || '',
-  //   token: localStorage.getItem('TOKEN') || '',
-  // };
-
-  // // -----------------------------------------------------------------------------------
-
-  // setTokenAndName = (username, token) => {
-  //   localStorage.setItem('TOKEN', token);
-  //   localStorage.setItem('USERNAME', username);
-
-  //   this.setState({
-  //     username,
-  //     token
-  //   });
-  // };
-
-  // // -----------------------------------------------------------------------------------
-
-  // logOut = () => {
-  //   localStorage.setItem('TOKEN', '');
-  //   localStorage.setItem('USERNAME', '');
-
-  //   this.setState({
-  //     username: '',
-  //     token: ''
-  //   });
-  // };
 
   // -----------------------------------------------------------------------------------
   render() {

@@ -42,8 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     return getLogout()
-      .then(() => setSession(null))
-      .then(() => history.push('/'));
+      .then(() => setSession(null));
   };
 
   return (
