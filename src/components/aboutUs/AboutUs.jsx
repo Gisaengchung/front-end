@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
-import Kevin from './images/andrew_b.png';
-import Katie from './images/';
-import Sydney from './images/';
-import Richard from './images/';
+// import Kevin from '';
+// import Katie from './images/';
+// import Sydney from './images/';
+// import Richard from './images/';
 
 export default class AboutUs extends Component {
   render() {
@@ -13,7 +13,7 @@ export default class AboutUs extends Component {
         {/* -------------------------------------------------------- */}
 
         <div>
-          <img className="profile-pic" src={Katie} type="image" alt="Katie" />
+          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Katie" />
           <div >
 
             <h2>Katie</h2>
@@ -26,7 +26,7 @@ export default class AboutUs extends Component {
         {/* -------------------------------------------------------- */}
 
         <div>
-          <img className="profile-pic" src={Kevin} type="image" alt="Kevin" />
+          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Kevin" />
           <div>
 
             <h2>Kevin</h2>
@@ -39,7 +39,7 @@ export default class AboutUs extends Component {
         {/* -------------------------------------------------------- */}
 
         <div>
-          <img className="profile-pic" src={Sydney} type="image" alt="Sydney" />
+          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Sydney" />
           <div>
 
             <h2>Sydney</h2>
@@ -52,7 +52,7 @@ export default class AboutUs extends Component {
         {/* -------------------------------------------------------- */}
 
         <div>
-          <img className="profile-pic" src={Richard} type="image" alt="Richard and his cat" />
+          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Richard and his cat" />
           <div>
 
             <h2>Richard</h2>

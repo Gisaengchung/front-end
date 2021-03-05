@@ -92,7 +92,7 @@ const ProjectForm = () => {
       />
       <input
         type="text"
-        placeholder="Risks and Challenges"
+        placeholder="Diversity Baby"
         value={projectDiversity}
         onChange={({ target }) => setProjectDiversity(target.value)}
       />    

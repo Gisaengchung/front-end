@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useDispatch } from '../../state/ProjectProvider';
-import { createProject } from '../../actions/projectActions';
-
+import { useDispatch } from '../state/ProjectProvider';
+import { createProject } from '../actions/projectActions';
 
 export default function useProjectForm() {
   const dispatch = useDispatch();
