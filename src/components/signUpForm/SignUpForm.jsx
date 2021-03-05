@@ -120,7 +120,7 @@ export default class SignUpForm extends Component {
                       className="venmoinput"
                       name="paymentHandle"
                       maxLength="50"
-                      onChange={(e) => this.setState({  paymentHandle: e.target.value })}
+                      onChange={(e) => this.setState({ paymentHandle: e.target.value })}
                       value={this.state.paymentHandle}
                     />
                   </label>
