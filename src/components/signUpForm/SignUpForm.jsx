@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
 import request from 'superagent';
-import States from '../userDetail/States';
+
 
 export default class SignUpForm extends Component {
 
@@ -154,11 +154,21 @@ export default class SignUpForm extends Component {
                       onChange={(e) => this.setState({ userCity: e.target.value })}
                       value={this.state.userCity}
                     />
+                      
+                  </label>
+                  
+                  <label>State:
+                    <input
+                      className="stateInput"
+                      city="userState"
+                      maxLength="30"
+                      onChange={(e) => this.setState({ userState: e.target.value })}
+                      value={this.state.userState}
+                    />
                         
                   </label>
                      
-                  <States />
-                  
+                   
                   {
                     this.state.loading
                       ? 'spins'
