@@ -8,12 +8,13 @@ export default function Navigation({ history }) {
 
   const logOut = useLogout();
 
-  const handleLogOut = async() => {
-    await logOut();
+  const handleLogOut = () => {
+    logOut()
+      .then(() => history.push('/'));
   };
     
   const authentication = useIsAuthenticated(); 
-
+  console.log(authentication);
   return (
     <div>
       {
