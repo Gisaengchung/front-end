@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutUs component renders AboutUs 1`] = `
+<DocumentFragment>
+  <div
+    class="about-us-content"
+  >
+    <div>
+      <img
+        alt="Katie"
+        class="profile-pic"
+        src="https://bit.ly/3kN09pq"
+        type="image"
+      />
+      <div>
+        <h2>
+          Katie
+        </h2>
+        <p
+          class="about-text"
+        >
+          Hi! I'm Katie. I eat berries for breakfast.
+        </p>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="Kevin"
+        class="profile-pic"
+        src="https://bit.ly/3kN09pq"
+        type="image"
+      />
+      <div>
+        <h2>
+          Kevin
+        </h2>
+        <p
+          class="about-text"
+        >
+          Hi! My name is Ferrari!
+        </p>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="Sydney"
+        class="profile-pic"
+        src="https://bit.ly/3kN09pq"
+        type="image"
+      />
+      <div>
+        <h2>
+          Sydney
+        </h2>
+        <p
+          class="about-text"
+        >
+          Hi! My name is Sydney, I have eleven animals that sleep in my bed. None of them are cats, dogs, bunnies, ferrets, horses, rodents, reptiles or things that are cute and smell good.
+        </p>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="Richard and his cat"
+        class="profile-pic"
+        src="https://bit.ly/3kN09pq"
+        type="image"
+      />
+      <div>
+        <h2>
+          Richard
+        </h2>
+        <p
+          class="about-text"
+        >
+          Hi! My Name is Richard. In the future time is backwards!
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

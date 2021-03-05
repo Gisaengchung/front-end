@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from '../../state/ProjectProvider';
 
+const EditUserForm = () => {
+  const dispatch = useDispatch();
 
-class AboutUs extends Component {
-  render() {
-    return (
-      <div>HI IM THE DETAIL PAGE</div>
-    );
-  }
-}
+  const [projectTitle, setProjectTitle] = useState('');
+};
 
 export default AboutUs;
