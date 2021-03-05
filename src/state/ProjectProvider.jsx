@@ -3,12 +3,12 @@ import reducer, { initialState } from '../reducers/projectReducer';
 
 const ProjectContext = createContext(null);
 
-export const ProjectProvider = ({ index }) => {
+export const ProjectProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <ProjectContext.Provider value={{ state, dispatch }}>
-      {index}
+      {children}
     </ProjectContext.Provider>
   );
 };
