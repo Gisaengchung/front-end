@@ -1,10 +1,14 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+/* eslint-disable max-len */
+import React, { createContext, useContext, useEffect, useReducer, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import reducer, { initialState } from '../reducers/projectReducer';
 import { getVerify, postLogin, postSignup, getLogout } from '../services/auth';
+
 
 const AuthContext = createContext(null);
 
-export const AuthProvider = ({ children }) => {
+export const AuthUserProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   const history = useHistory();
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -49,12 +53,17 @@ export const AuthProvider = ({ children }) => {
       .then(() => setSession(null));
   };
 
+  // PROVIDER-------------------------------------------------------------
+
   return (
     <AuthContext.Provider value={{
       session,
       loading,
       error,
       isAuthenticated,
+      state,
+      setSession,
+      dispatch,
       signup,
       login,
       logout
@@ -67,36 +76,50 @@ export const AuthProvider = ({ children }) => {
 // HOOKS ------------------------------------------------------------
 
 export const useSession = () => {
-  const { session } = useContext(AuthContext);
-  return session;
+  const { session, setSession } = useContext(AuthContext);
+  return { session, setSession };
 };
+
+// ------------------------------------------------------------
 
 export const useAuthLoading = () => {
   const { loading } = useContext(AuthContext);
   return loading;
 };
 
+// ------------------------------------------------------------
+
 export const useAuthError = () => {
   const { error } = useContext(AuthContext);
   return error;
 };
+
+// ------------------------------------------------------------
 
 export const useIsAuthenticated = () => {
   const { isAuthenticated } = useContext(AuthContext);
   return isAuthenticated;
 };
 
-export const useSignup = () => {
+// ------------------------------------------------------------
+
+export const useSignUp = () => {
   const { signup } = useContext(AuthContext);
   return signup;
 };
+
+// ------------------------------------------------------------
 
 export const useLogin = () => {
   const { login } = useContext(AuthContext);
   return login;
 };
 
+// ------------------------------------------------------------
+
 export const useLogout = () => {
   const { logout } = useContext(AuthContext);
   return logout;
 };
+
+// ------------------------------------------------------------

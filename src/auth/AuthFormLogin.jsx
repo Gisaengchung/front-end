@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useAuthError } from '../state/AuthContext';
+import { useAuthError } from '../state/AuthUserProvider';
 
 
-const AuthForm = ({ title, authFn }) => {
+const AuthForm = ({ authFn }) => {
   const error = useAuthError();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +15,7 @@ const AuthForm = ({ title, authFn }) => {
 
   return (
     <>
-      <h2>{title}</h2>
+      <h2>Login</h2>
       {error && <p>{error.message}</p>}
       <form onSubmit={handleSubmit}>
         <input
@@ -32,14 +32,13 @@ const AuthForm = ({ title, authFn }) => {
 
         
 
-        <button>{title}</button>
+        <button>Login</button>
       </form>
     </>
   );
 };
 
 AuthForm.propTypes = {
-  title: PropTypes.string.isRequired,
   authFn: PropTypes.func.isRequired
 };
 

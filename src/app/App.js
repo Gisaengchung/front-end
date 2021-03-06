@@ -15,9 +15,10 @@ import HowWorks from '../components/howWorks/HowWorks';
 import MovieDetail from '../components/movieDetail/MovieDetail';
 import ProjectForm from '../components/projectForm/ProjectForm';
 import UserDetail from '../components/userDetail/UserDetail';
-import { AuthProvider } from '../state/AuthContext';
+import UserForm from '../components/userForm/UserForm';
+import { AuthUserProvider } from '../state/AuthUserProvider';
 import { ProjectProvider } from '../state/ProjectProvider';
-// import PrivateRoute from '../auth/PrivateRoute';
+import PrivateRoute from '../auth/PrivateRoute';
 // -----------------------------------------------------------------------------------
 
 export default class App extends Component {
@@ -28,7 +29,7 @@ export default class App extends Component {
     return (
       <div>
         <Router>
-          <AuthProvider>
+          <AuthUserProvider>
             <ProjectProvider>
               <Navigation /> 
 
@@ -54,28 +55,33 @@ export default class App extends Component {
                 />
 
                 <Route
-                  exact path="/howworks"
+                  exact path="/how-works"
                   component = { HowWorks } 
                 />
 
                 <Route
-                  exact path="/moviedetail"
+                  exact path="/movie-detail"
                   component = { MovieDetail } 
                 />
 
                 <Route
-                  exact path="/projectform"
+                  exact path="/project-form"
                   component = { ProjectForm } 
                 />
   
-                <Route
-                  exact path="/userdetail"
-                  render={ UserDetail }
+                <PrivateRoute
+                  exact path="/user-detail"
+                  component={ UserDetail }
+                />
+
+                <PrivateRoute
+                  exact path="/user-form"
+                  component={ UserForm }
                 />
 
               </Switch>
             </ProjectProvider>
-          </AuthProvider>
+          </AuthUserProvider>
         </Router>
       </div>
     );

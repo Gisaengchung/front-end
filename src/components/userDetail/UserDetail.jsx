@@ -1,10 +1,33 @@
-import React, { useState } from 'react';
-import { useDispatch } from '../../state/ProjectProvider';
 
-const EditUserForm = () => {
-  const dispatch = useDispatch();
+import React from 'react'; 
+import { useSession } from '../../state/AuthUserProvider';
+import { NavLink } from 'react-router-dom';
 
-  const [projectTitle, setProjectTitle] = useState('');
-};
+export default function UserDetail() {
 
-export default AboutUs;
+  const { session } = useSession() || {};
+
+  return (
+    <>
+      <div> Hello
+        <div>{session.email}</div>
+        <div>{session.firstName}</div>
+        <div>{session.lastName}</div>
+        <div>{session.userCity}</div>
+        <div>{session.userState}</div>
+        <div>{session.userTagLine}</div>
+        <div>{session.userRole}</div>
+        <div>{session.userPaymentHandle}</div>
+        <div>USER IMAGE</div>
+      </div>
+
+      <div>
+        <button>
+          <NavLink className="link" to="/user-form">
+            Edit your Profile
+          </NavLink>
+        </button>
+      </div>
+    </>
+  );
+}
