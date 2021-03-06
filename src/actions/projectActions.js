@@ -9,3 +9,4 @@ export const deleteProject = title => ({
   type: DELETE_PROJECT,
   payload: title
 });
+

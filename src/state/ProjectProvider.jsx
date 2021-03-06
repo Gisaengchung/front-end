@@ -19,7 +19,6 @@ export const ProjectProvider = ({ children }) => {
 
 export const useSelector = selectorFn => {
   const { state } = useContext(ProjectContext);
-
   return selectorFn(state);
 };
 

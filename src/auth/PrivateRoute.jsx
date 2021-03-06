@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { useAuthLoading, useIsAuthenticated } from '../state/AuthContext';
+import { useAuthLoading, useIsAuthenticated } from '../state/AuthUserProvider';
 
 const PrivateRoute = props => {
   const isAuthenticated = useIsAuthenticated();

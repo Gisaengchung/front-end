@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useAuthError } from '../state/AuthContext';
+import { useAuthError } from '../state/AuthUserProvider';
+import { useHistory } from 'react-router-dom';
 
-const AuthForm = ({ title, authFn }) => {
+const AuthForm = ({ authFn }) => {
+  const history = useHistory();
   const error = useAuthError();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,12 +17,20 @@ const AuthForm = ({ title, authFn }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    authFn({ email, password, firstName, lastName, userState, userCity });
+
+    // dispatching to backend
+    authFn({ email, password, firstName, lastName, userState, userCity })
+      // returns user
+      .then((user) =>  {
+        // dispatching to global state using reducer
+ 
+        history.push('/user-detail');
+      }); 
   };
 
   return (
     <>
-      <h2>{title}</h2>
+      <h2>Sign Up</h2>
       {error && <p>{error.message}</p>}
       <form onSubmit={handleSubmit}>
         <input
@@ -63,14 +73,13 @@ const AuthForm = ({ title, authFn }) => {
           onChange={({ target }) => setUserState(target.value)}
           value={userState} />     
 
-        <button>{title}</button>
+        <button>Sign Up</button>
       </form>
     </>
   );
 };
 
 AuthForm.propTypes = {
-  title: PropTypes.string.isRequired,
   authFn: PropTypes.func.isRequired
 };
 

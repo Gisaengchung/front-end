@@ -1,14 +1,14 @@
 
 import React from 'react';
-import { useSignup } from '../state/AuthContext';
-import AuthForm from './AuthFormS';
+import { useSignUp } from '../state/AuthUserProvider';
+import AuthForm from './AuthFormSignup';
 
 
 const Signup = () => {
-  const signup = useSignup();
+  const signUp = useSignUp();
   return (
     <>
-      <AuthForm title="Signup" authFn={signup} />
+      <AuthForm title="Signup" authFn={signUp} />
     </>
   );
 };

@@ -1,20 +1,21 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useIsAuthenticated, useLogout } from '../../state/AuthContext';
+import { useIsAuthenticated, useLogout } from '../../state/AuthUserProvider';
+import { useHistory } from 'react-router-dom';
 
+export default function Navigation() {
 
-export default function Navigation({ history }) {
-
+  const history = useHistory();
   const logOut = useLogout();
 
   const handleLogOut = () => {
     logOut()
-      .then(() => history.push('/'));
+      .then(() => history.push('/Home'));
   };
     
   const authentication = useIsAuthenticated(); 
-  console.log(authentication);
+
   return (
     <div>
       {
@@ -24,7 +25,7 @@ export default function Navigation({ history }) {
             <NavLink className="link" to="/aboutUs">About the Developers</NavLink>
 
             <div className="logged-in">
-              <NavLink className="link" to="/userdetail">User Profile</NavLink>
+              {/* <NavLink className="link" to="/user-detail">User Profile</NavLink> */}
               <span className="logout">
                 <button onClick={handleLogOut}>Log out</button>
               </span>
