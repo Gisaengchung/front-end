@@ -123,3 +123,9 @@ export const useLogout = () => {
 };
 
 // ------------------------------------------------------------
+
+export const useSelector = selectorFn => {
+  const { state } = useContext(AuthContext);
+
+  return selectorFn(state);
+};

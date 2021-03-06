@@ -19,6 +19,7 @@ import UserForm from '../components/userForm/UserForm';
 import { AuthUserProvider } from '../state/AuthUserProvider';
 import { ProjectProvider } from '../state/ProjectProvider';
 import PrivateRoute from '../auth/PrivateRoute';
+import UsersList from '../components/allUsersList/UsersList';
 // -----------------------------------------------------------------------------------
 
 export default class App extends Component {
@@ -68,6 +69,12 @@ export default class App extends Component {
                   exact path="/project-form"
                   component = { ProjectForm } 
                 />
+
+                <Route
+                  exact path="/user"
+                  component = { UsersList } 
+                />
+
   
                 <PrivateRoute
                   exact path="/user-detail"
