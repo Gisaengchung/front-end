@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useReducer, useState } fro
 import { useHistory } from 'react-router-dom';
 import reducer, { initialState } from '../reducers/projectReducer';
 import { getVerify, postLogin, postSignup, getLogout } from '../services/auth';
-
+import { getAllUsers } from '../services/fetches/fetches';
 
 const AuthContext = createContext(null);
 
@@ -15,6 +15,7 @@ export const AuthUserProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const isAuthenticated = !!session;
 
+  // CHECKING AND STORING CRED FOR USER-----------------------------------
   useEffect(() => {
     // check if the user is logged in
     getVerify()
@@ -23,6 +24,25 @@ export const AuthUserProvider = ({ children }) => {
       .finally(() => setLoading(false));
     // if they are store the in session
   }, []);
+
+  // GetUsers------------------------------------------------------------
+
+
+  const useUserList = () => {
+    const [users, setUsers]  = useState([]);
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+      getAllUsers()
+        .then((users) => { setUsers(users);
+          setLoading(false);
+        });
+    }, []);
+    return {
+      users, 
+      loading
+    };
+  };
 
   // SIGNUP------------------------------------------------------------
 
@@ -62,6 +82,8 @@ export const AuthUserProvider = ({ children }) => {
       error,
       isAuthenticated,
       state,
+      users,
+      useUserList,
       setSession,
       dispatch,
       signup,
@@ -128,4 +150,12 @@ export const useSelector = selectorFn => {
   const { state } = useContext(AuthContext);
 
   return selectorFn(state);
+};
+
+// ------------------------------------------------------------
+
+
+export const users = () => {
+  const { users } = useContext(AuthContext);
+  return users;
 };

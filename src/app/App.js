@@ -41,12 +41,16 @@ export default class App extends Component {
                   component = { Welcome } 
                 />
             
-                <Route exact path="/login" component={ Login } />
+                <Route exact path="/login"
+                  component={ Login } 
+                />
             
-                <Route exact path="/signup" component={ SignUp } />
+                <Route exact path="/signup"
+                  component={ SignUp } 
+                />
 
                 <Route
-                  exact path="/aboutus"
+                  exact path="/about-us"
                   render={ AboutUs }
                 />
 
@@ -71,10 +75,11 @@ export default class App extends Component {
                 />
 
                 <Route
-                  exact path="/user"
+                  exact path="/users-list"
                   component = { UsersList } 
                 />
 
+                {/* PRIVATE---------------------------------------------- */}
   
                 <PrivateRoute
                   exact path="/user-detail"

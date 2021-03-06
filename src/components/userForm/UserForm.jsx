@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useAuthError } from '../../state/AuthUserProvider';
 import { useSession } from '../../state/AuthUserProvider';
 import { patchUserData } from '../../services/fetches/fetches';

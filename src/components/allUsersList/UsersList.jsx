@@ -1,23 +1,11 @@
 import React from 'react';
-import { getAllUsers } from '../../services/fetches/fetches';
-import { useSelector } from '../../state/AuthUserProvider';
-import UserDetail from '../userDetail/UserDetail';
+import UserListPresentational from '../allUsersList/UsersListPresentational';
+import { useUserList } from '../../hooks/userListHook';
+import LoadingSpinner from '../../loading/LoadingSpinner';
 
-const UsersList = () => {
-  console.log(users);
-  const users = useSelector(getAllUsers);
+export default function UserList() {
+  const { loading, users } = useUserList();
 
-  const userElements = users.map(user => (
-    <li key={user.name}>
-      <UserDetail {...user} />
-    </li>
-  ));
-
-  return (
-    <ul>
-      {userElements}
-    </ul>
-  );
-};
-
-export default UsersList;
+  if(loading) return <LoadingSpinner />;
+  return <UserListPresentational users={users} />;
+}
