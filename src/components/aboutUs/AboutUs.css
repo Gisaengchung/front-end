@@ -1,0 +1,40 @@
+html {
+    background-color: grey
+}
+
+.aboutContainer {
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.personContainer {
+    margin: 20px;
+}
+
+.picContainer {
+    padding: 30px;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: double black 2px;
+    
+   
+}
+
+img {
+    height: 5%;
+    width: 50%;
+    border: black 3px dotted;
+    border-radius: 10px;
+}
+
+.textContainer {
+    color: white;
+    border: black solid 1px;
+    margin: 40px;
+    border-radius: 10px;
+    padding: 30px
+} 
+

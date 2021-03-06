@@ -1,6 +1,6 @@
 
 .navContainer {
-    background-color: rgba(0, 0, 0, 0.473);
+    background-color: rgba(0, 0, 0, 0.658);
     position: center;
     top: 0;
     width: 100%;
@@ -22,16 +22,16 @@
 }
 
 .nav:hover {
-    background-color: rgb(177, 1, 1);
+    background-color: rgba(214, 204, 61, 0.911);
     color: black;
     border-radius: 10px;
 }
 
-.nav:link {
+.nav a:link {
     color:white;
 }
 
-.nav:visited {
+.nav a:visited {
     color: white;
 }
 .navRight{ 
