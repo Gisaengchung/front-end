@@ -1,0 +1,10 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input, button{
+  margin: 30px 0px 0px 10px;
+  justify-content: right;
+}

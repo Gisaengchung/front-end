@@ -43,6 +43,8 @@ export default function Navigation() {
                 <span>
                   <button onClick={handleLogOut}>Log out</button>
                 </span>
+
+               
               </div>
             </section>
           </>

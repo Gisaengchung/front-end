@@ -34,12 +34,13 @@ export default class SignUpForm extends Component {
 
       this.props.setTokenAndName(user.body.email,
         user.body.token);
-      this.props.history.push('/userDetail');
+      this.props.history.push(`/user-detail/${user.userId}`);
     }
 
     // -----------------------------------------------------------------------------------
 
     handleSubmitLogin = async(e) => {
+      console.log('test');
       e.preventDefault();
       this.setState({ loading: true });
       try {
@@ -52,7 +53,7 @@ export default class SignUpForm extends Component {
 
         this.props.changerTN(user.body.email,
           user.body.token);
-        this.props.history.push('/userdetail');
+        this.props.history.push(`/user-detail/${user.userId}`);
       }
       catch(err) {
         this.setState({ err: 'ERROR, Please enter a valid EMAIL' });
@@ -182,7 +183,3 @@ export default class SignUpForm extends Component {
       );
     }
 }
-
-
-k
-;

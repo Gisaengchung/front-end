@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useAuthError } from '../../state/AuthUserProvider';
 import { useSession } from '../../state/AuthUserProvider';
 import { patchUserData } from '../../services/fetches/fetches';
+import styles from './UserForm.css';
 
 
 const AuthForm = ({ history }) => {
@@ -33,62 +34,64 @@ const AuthForm = ({ history }) => {
     <>
       <h2>Edit Your Profile</h2>
       {error && <p>{error.message}</p>}
-      <form onSubmit={handleSubmit}>              
-        <input
-          type="email"
-          value={email}
-          placeholder="email"
-          onChange={({ target }) => setEmail(target.value)} />
+      <form onSubmit={handleSubmit}>   
+        <div className = {styles.formContainer}>         
+          <input
+            type="email"
+            value={email}
+            placeholder="email"
+            onChange={({ target }) => setEmail(target.value)} />
 
-        <input
-          type="text"
-          value={firstName}
-          placeholder="firstName"
-          onChange={({ target }) => setFName(target.value)} />
+          <input
+            type="text"
+            value={firstName}
+            placeholder="firstName"
+            onChange={({ target }) => setFName(target.value)} />
 
-        <input
-          type="text"
-          value={lastName}
-          placeholder="lastName"
-          onChange={({ target }) => setLName(target.value)} />
+          <input
+            type="text"
+            value={lastName}
+            placeholder="lastName"
+            onChange={({ target }) => setLName(target.value)} />
 
-        <input
-          type="text"
-          value={userTagLine}
-          placeholder="Tag Line"
-          onChange={({ target }) => setUserTagLine(target.value)} />
+          <input
+            type="text"
+            value={userTagLine}
+            placeholder="Tag Line"
+            onChange={({ target }) => setUserTagLine(target.value)} />
 
-        <input
-          type="text"
-          value={userRole}
-          placeholder="role"
-          onChange={({ target }) => setUserRole(target.value)} />
+          <input
+            type="text"
+            value={userRole}
+            placeholder="role"
+            onChange={({ target }) => setUserRole(target.value)} />
 
-        <input
-          type="text"
-          value={userPaymentHandle}
-          placeholder="paymentHandle"
-          onChange={({ target }) => setUserPaymentHandle(target.value)} />
+          <input
+            type="text"
+            value={userPaymentHandle}
+            placeholder="paymentHandle"
+            onChange={({ target }) => setUserPaymentHandle(target.value)} />
 
-        <input
-          type="text"
-          className="cityInput"
-          city="userCity"
-          maxLength="30"
-          placeholder="cityInput"
-          onChange={({ target }) => setCity(target.value)}
-          value={userCity} />
+          <input
+            type="text"
+            className="cityInput"
+            city="userCity"
+            maxLength="30"
+            placeholder="cityInput"
+            onChange={({ target }) => setCity(target.value)}
+            value={userCity} />
 
-        <input
-          type="text"
-          className="userState"
-          city="userState"
-          placeholder="userState"
-          maxLength="30"
-          onChange={({ target }) => setUserState(target.value)}
-          value={userState} />     
+          <input
+            type="text"
+            className="userState"
+            city="userState"
+            placeholder="userState"
+            maxLength="30"
+            onChange={({ target }) => setUserState(target.value)}
+            value={userState} />     
 
-        <button>Submit</button>
+          <button>Submit</button>
+        </div> 
       </form>
     </>
   );

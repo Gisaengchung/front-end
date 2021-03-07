@@ -11,6 +11,7 @@ export const getAllUsers = () => {
 };
 
 export const patchUserData = (userInfo) => {
+  console.log(userInfo);
   return put('user', userInfo);
 };
 

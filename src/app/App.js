@@ -79,13 +79,13 @@ export default class App extends Component {
                   component = { UsersList } 
                 />
 
-                {/* PRIVATE---------------------------------------------- */}
-  
-                <PrivateRoute
-                  exact path="/user-detail"
+                <Route
+                  exact path="/user-detail/:id"
                   component={ UserDetail }
                 />
 
+                {/* PRIVATE---------------------------------------------- */}
+  
                 <PrivateRoute
                   exact path="/user-form"
                   component={ UserForm }

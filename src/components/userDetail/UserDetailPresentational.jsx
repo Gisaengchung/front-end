@@ -1,46 +1,29 @@
-/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { NavLink } from 'react-router-dom';
 
-const UserDetail = ({ user }) => {
+const UserListPresentation = ({ user }) => {
+  console.log(user);
+
+
+ 
   return (
     <>
-      <figure>
-        <div>{user.email}</div>
-        <div>{user.firstName}</div>
-        <div>{user.lastName}</div>
-        <div>{user.userCity}</div>k
-        <div>{user.userState}</div>
-        <div>{user.userTagLine}</div>
-        <div>{user.userRole}</div>
-        <div>{user.userPaymentHandle}</div>
-        <div>USER IMAGE</div>
-      </figure>    
-      
-      {/* Need Some Sort of conditional rendering for if userId matches session userId then render button to edit profile. This page also renders to the map so need to make sure doesnt render in all profiles. 
-      <div>
-        <button>
-          <NavLink className="link" to="/user-form">
-            Edit your Profile
-          </NavLink>
-        </button>
-      </div> */}
+      <img src={user.profileImageUrl} />
+      <div>{ user.email }</div>
+      <div>{ user.firstName }</div>
+      <div>{ user.lastName }</div>
+      <div>{ user.paymentHandle }</div>
+      <div>{ user.userRole }</div>
+      <div>{ user.userCity }</div>
+      <div>{ user.userState }</div>
+
     </>
   );
 };
 
-UserDetail.propTypes = {
-  character: PropTypes.shape({
-    email: PropTypes.string,
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
-    userState: PropTypes.string,
-    userCity: PropTypes.string,
-    userRole: PropTypes.string,
-    userTagLine: PropTypes.string,
-    userPaymentHandle: PropTypes.string,
-  })
+UserListPresentation.propTypes = {
+  user: PropTypes.object.isRequired
 };
 
-export default UserDetail;
+export default UserListPresentation;
+

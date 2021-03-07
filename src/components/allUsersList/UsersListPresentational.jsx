@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import User from '../userDetail/UserDetail';
 
 const UserListPresentation = ({ users }) => {
-  console.log(users);
   const userElements = users.map(user => (
-    <li key={user.name}>
-      <Link to={`/user/${user.userId}`}>
-        <User {...user} /> 
+    <li key={user.userId}>
+      <Link to={`/user-detail/${user.userId}`}>
+        <div>{user.userId}</div> 
+        <div>{user.firstName}</div> 
       </Link>
     </li>
   ));
