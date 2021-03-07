@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const UserListPresentation = ({ user }) => {
-  console.log(user);
-
-
- 
+  
   return (
     <>
       <img src={user.profileImageUrl} />
