@@ -1,70 +1,88 @@
 /* eslint-disable max-len */
-import React, { Component } from 'react';
+import React from 'react';
+import styles from './AboutUs.css';
+
 // import Kevin from '';
 // import Katie from './images/';
 // import Sydney from './images/';
 // import Richard from './images/';
 
-export default class AboutUs extends Component {
-  render() {
-    return (
-      <div className="about-us-content">
+export default function AboutUs() {
+  return (
+    <div className={styles.aboutContainer}>
 
-        {/* -------------------------------------------------------- */}
+      {/* -------------------------------------------------------- */}
 
-        <div>
-          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Katie" />
-          <div >
+      <div className={styles.personContainer}>
 
-            <h2>Katie</h2>
-            <p className="about-text">
-                  Hi! I'm Katie. I eat berries for breakfast.             
-            </p>
-          </div>
+        <div className={styles.picContainer}>
+          <img src="https://bit.ly/3kN09pq" type="image" alt="Katie" />
         </div>
 
-        {/* -------------------------------------------------------- */}
-
-        <div>
-          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Kevin" />
-          <div>
-
-            <h2>Kevin</h2>
-            <p className="about-text">
-                Hi! My name is Ferrari!
-            </p>
-          </div>
+        <div className={styles.textContainer}>
+          <h2>Katie</h2>
+          <p className="about-text">
+                  Hi! I'm a Katie. I eat berries for breakfast.             
+          </p>
         </div>
 
-        {/* -------------------------------------------------------- */}
-
-        <div>
-          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Sydney" />
-          <div>
-
-            <h2>Sydney</h2>
-            <p className="about-text">
-                Hi! My name is Sydney, I have eleven animals that sleep in my bed. None of them are cats, dogs, bunnies, ferrets, horses, rodents, reptiles or things that are cute and smell good. 
-            </p>
-          </div>
-        </div>
-
-        {/* -------------------------------------------------------- */}
-
-        <div>
-          <img className="profile-pic" src="https://bit.ly/3kN09pq" type="image" alt="Richard and his cat" />
-          <div>
-
-            <h2>Richard</h2>
-            <p className="about-text">
-                Hi! My Name is Richard. In the future time is backwards! 
-            </p>
-          </div>
-        </div>
-
-        {/* -------------------------------------------------------- */}
       </div>
 
-    );
-  }
+      {/* -------------------------------------------------------- */}
+
+      <div className={styles.personContainer}>
+        
+        <div className={styles.picContainer}>
+          <img src="https://bit.ly/3kN09pq" type="image" alt="Kevin" />
+        </div>
+        
+        <div className={styles.textContainer}>
+          <h2>Kevin</h2>
+          <p className="about-text">
+                Hi! My name is Ferrari!
+          </p>
+        </div>
+
+      </div>
+
+      {/* -------------------------------------------------------- */}
+
+      <div className={styles.personContainer}>
+
+        <div className={styles.picContainer}>
+          <img src="https://bit.ly/3kN09pq" type="image" alt="Sydney" />
+        </div>
+        
+        <div className={styles.textContainer}>
+          <h2>Sydney</h2>
+          <p className="about-text">
+                Hi! My name is Sydney, I have eleven animals that sleep in my bed. None of them are cats, dogs, bunnies, ferrets, horses, rodents, reptiles or things that are cute and smell good. 
+          </p>
+        </div>
+
+      </div>
+
+      {/* -------------------------------------------------------- */}
+
+      <div className={styles.personContainer}>
+        
+        <div className={styles.picContainer}>
+          <img src="https://bit.ly/3kN09pq" type="image" alt="Richard and his cat" />
+        </div>
+
+        <div className={styles.textContainer}>
+          <h2>Richard</h2>
+          <p className="about-text">
+                Hi! My Name is Richard. In the future time is backwards! 
+          </p>     
+        </div>
+ 
+      </div>
+
+      {/* -------------------------------------------------------- */}
+    </div>
+
+  );
 }
+
+

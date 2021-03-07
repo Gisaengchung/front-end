@@ -29,36 +29,38 @@ export default function Navigation() {
         // CONDITIONAL----------------------------------------------------------
           ?
           <>
-            <div className={styles.nav}>
-              <NavLink className="link" to="/home">Home</NavLink>
-              <NavLink className="link" to="/how-works">How It All Works</NavLink>
-              <NavLink className="link" to="/about-us">About the Developers</NavLink>
-              <NavLink className="link" to="/users-list">Find A Friend</NavLink>
-              <NavLink className="link" to="/project-form">Create a Project</NavLink>
-            </div>
-
-            <div className={styles.navRight}>
-              {/* <NavLink className="link" to="/user-detail">User Profile</NavLink> */}
-              <span>
-                <button onClick={handleLogOut}>Log out</button>
-              </span>
-            </div>
+            <section className={styles.navContainer}>
+              <div className={styles.navLeft}>
+                <span className={styles.nav}><NavLink className="link" to="/home">Home</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/how-works">How It All Works</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/about-us">About the Developers</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/users-list">Find A Friend</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/project-form">Create a Project</NavLink></span>
+              </div>
+            
+              <div className={styles.navRight}>
+                {/* <NavLink className="link" to="/user-detail">User Profile</NavLink> */}
+                <span>
+                  <button onClick={handleLogOut}>Log out</button>
+                </span>
+              </div>
+            </section>
           </>
           // --------------------------------------------------------------------
           :
           <>       
-            <div className={styles.nav}>
-              <div>
-                <NavLink className="link" to="/Home">Home</NavLink>
-                <NavLink className="link" to="/about-us">About the Developers</NavLink>
-                <NavLink className="link" to="/how-works">How It All Works</NavLink>
-                <NavLink className="link" to="/users-list">Find A Friend</NavLink>
-                <NavLink className="link" to="/project-form">Create a Project</NavLink>
+            <div className={styles.navContainer}>
+              <div className={styles.navLeft}>
+                <span className={styles.nav}><NavLink className="link" to="/home">Home</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/how-works">How It All Works</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/about-us">About the Developers</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/users-list">Find A Friend</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/project-form">Create a Project</NavLink></span>
               </div>
 
               <div className={styles.navRight}>
-                <NavLink className="link" to="/signup">Sign Up</NavLink>
-                <NavLink className="link" to="/login">Login</NavLink>
+                <span className={styles.nav}><NavLink className="link" to="/signup">Sign Up</NavLink></span>
+                <span className={styles.nav}><NavLink className="link" to="/login">Login</NavLink></span>
               </div>
             </div>
           </>
