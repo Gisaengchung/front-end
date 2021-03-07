@@ -12,7 +12,7 @@ export default function reducer(state, action) {
     //   ------------------------------------------
 
     case CREATE_PROJECT:
-      post('/projectform', action.payload);
+      post('project', action.payload);
       return {
         ...state,
         projects: [...state.projects, action.payload]
