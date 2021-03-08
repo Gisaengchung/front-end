@@ -75,7 +75,7 @@ export default class App extends Component {
                 />
 
                 <Route
-                  exact path="/project-detail:id"
+                  exact path="/project-detail/:id"
                   component = { ProjectDetail } 
                 />
 

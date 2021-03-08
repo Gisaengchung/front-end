@@ -44,6 +44,9 @@ export default function Navigation() {
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
                 </span>
                 <span className={styles.nav}>
+                  <NavLink className="link" to="/project-list">Discover Projects</NavLink>
+                </span>
+                <span className={styles.nav}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
                 </span>
               </div>
@@ -74,6 +77,9 @@ export default function Navigation() {
                 </span>
                 <span className={styles.nav}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
+                </span>
+                <span className={styles.nav}>
+                  <NavLink className="link" to="/project-list">Discover Projects</NavLink>
                 </span>
                 <span className={styles.nav}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
