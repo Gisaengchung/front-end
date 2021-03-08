@@ -76,9 +76,6 @@ export default function Navigation() {
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/project-list">Discover Projects</NavLink>
                 </li>
-                <li className={styles.navItem}>
-                  <NavLink className="link" to="/project-form">Create a Project</NavLink>
-                </li>
               </div>
               <div className={styles.navRight}>
                 <li className={styles.nav}><NavLink className="link" to="/signup">Sign Up</NavLink></li>
