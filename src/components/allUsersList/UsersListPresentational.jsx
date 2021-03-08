@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { Link } from 'react-router-dom';
 import styles from './UsersListPresentational.css';
 
-const UserListPresentation = ({ users }) => {
+const UsersListPresentational = ({ users }) => {
   const userElements = users.map(user => (
     <li key={user.userId}>
       <Link to={`/user-detail/${user.userId}`}>
@@ -25,12 +25,7 @@ const UserListPresentation = ({ users }) => {
   );
 };
 
-UserListPresentation.propTypes = {
-  users: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-    image: PropTypes.string,
-  }))
-};
 
-export default UserListPresentation;
+export default UsersListPresentational;
 
+ 
