@@ -23,7 +23,7 @@ export default function Navigation() {
   // ---------------------------------------
 
   return (
-    <div className={styles.site}>
+    <div>
       {
         authentication 
         // CONDITIONAL----------------------------------------------------------

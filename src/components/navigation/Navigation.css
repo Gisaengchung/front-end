@@ -1,5 +1,5 @@
 .navContainer {
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: rgb(250, 249, 247);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,16 +21,15 @@
 }
 
 .navItem:hover {
-  background-color: rgba(214, 204, 61, 0.911);
-  color: black;
-  border-radius: 10px;
+  text-decoration: underline;
+  color: rgb(43, 44, 40);
 }
 
 .navItem a:link {
-  color: white;
+  color: rgb(43, 44, 40);
   text-decoration: none;
 }
 
 .navItem a:visited {
-  color: white;
+  color: rgb(43, 44, 40);
 }
