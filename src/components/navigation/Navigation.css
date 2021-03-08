@@ -1,6 +1,9 @@
 .navContainer {
+  position: sticky;
   background-color: rgba(0, 0, 0, 0.658);
-  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   left: 0;
   right: 0;
@@ -11,8 +14,7 @@
 
 .navItem {
   margin-left: 33px;
-  float: left;
-  display: block;
+  display: inline-block;
   color: rgb(43, 44, 40);
   text-align: center;
   padding: 15px;
