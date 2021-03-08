@@ -22,16 +22,16 @@ const AuthForm = ({ authFn }) => {
           type="email"
           value={email}
           placeholder="Email"
-          onChange={({ target }) => setEmail(target.value)} />
+          onChange={({ target }) => setEmail(target.value)} 
+          required />
 
         <input
           type="password"
           value={password}
           placeholder="Password"
-          onChange={({ target }) => setPassword(target.value)} />
-
-        
-
+          onChange={({ target }) => setPassword(target.value)} 
+          required />
+          
         <button>Login</button>
       </form>
     </>

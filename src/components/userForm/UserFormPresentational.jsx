@@ -17,14 +17,16 @@ const UserFormPresentational = ({ user }) => {
   const [lastName, setLName] = useState(user.lastName);
   const [userCity, setCity] = useState(user.userCity);
   const [userState, setUserState] = useState(user.userState);
-  const [userTagLine, setUserTagLine] = useState(user.userTagLine);
+  const [tagline, setTagline] = useState(user.tagline);
   const [userRole, setUserRole] = useState(user.userRole);
-  const [userPaymentHandle, setUserPaymentHandle] = useState(user.userPaymentHandle);
+  const [profileImageUrl, setProfileImageUrl] = useState(user.profileImageUrl);
+  const [paymentHandle, setPaymentHandle] = useState(user.paymentHandle);
+
 
 
   const handleSubmit = event => {
     event.preventDefault();
-    patchUserData({ userId:session.userId, email, userTagLine, userRole, userPaymentHandle, firstName, lastName, userState, userCity })
+    patchUserData({ userId:session.userId, email, tagline, userRole, paymentHandle, firstName, lastName, userState, userCity, profileImageUrl })
       .then((user) => { 
         setSession(user);
         history.push(`/user-detail/${user.userId}`);}); 
@@ -39,56 +41,67 @@ const UserFormPresentational = ({ user }) => {
           <input
             type="email"
             value={email}
-            placeholder="email"
-            onChange={({ target }) => setEmail(target.value)} />
+            placeholder="Email"
+            onChange={({ target }) => setEmail(target.value)} 
+            required/>
 
           <input
             type="text"
             value={firstName}
-            placeholder="firstName"
-            onChange={({ target }) => setFName(target.value)} />
+            placeholder="First Name"
+            onChange={({ target }) => setFName(target.value)} 
+            required/>
 
           <input
             type="text"
             value={lastName}
-            placeholder="lastName"
-            onChange={({ target }) => setLName(target.value)} />
+            placeholder="Last Name"
+            onChange={({ target }) => setLName(target.value)} 
+            required/>
 
           <input
             type="text"
-            value={userTagLine}
-            placeholder="Tag Line"
-            onChange={({ target }) => setUserTagLine(target.value)} />
+            value={tagline}
+            placeholder="Tagline"
+            onChange={({ target }) => setTagline(target.value)} />
 
           <input
             type="text"
             value={userRole}
-            placeholder="role"
+            placeholder="Role"
             onChange={({ target }) => setUserRole(target.value)} />
 
           <input
             type="text"
-            value={userPaymentHandle}
-            placeholder="paymentHandle"
-            onChange={({ target }) => setUserPaymentHandle(target.value)} />
+            value={paymentHandle}
+            placeholder="Venmo Handle"
+            onChange={({ target }) => setPaymentHandle(target.value)} />
 
           <input
             type="text"
             className="cityInput"
-            city="userCity"
-            maxLength="30"
-            placeholder="cityInput"
+            maxLength="50"
+            placeholder="City"
             onChange={({ target }) => setCity(target.value)}
-            value={userCity} />
+            value={userCity} 
+            required/>
 
           <input
             type="text"
             className="userState"
-            city="userState"
-            placeholder="userState"
+            placeholder="State"
             maxLength="30"
             onChange={({ target }) => setUserState(target.value)}
-            value={userState} />     
+            value={userState} 
+            required/>
+
+          <input
+            type="text"
+            className="profileImage"
+            placeholder="Profile Image URL"
+            onChange={({ target }) => setProfileImageUrl(target.value)}
+            value={profileImageUrl} 
+            required/>      
 
           <button>Submit</button>
         </div> 

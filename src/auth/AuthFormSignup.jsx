@@ -36,36 +36,43 @@ const AuthForm = ({ authFn }) => {
             type="email"
             value={email}
             placeholder="Email"
-            onChange={({ target }) => setEmail(target.value)} />
+            onChange={({ target }) => setEmail(target.value)}
+            required />
           <input
             type="password"
             value={password}
+            minLength="8"
             placeholder="Password"
-            onChange={({ target }) => setPassword(target.value)} />
+            onChange={({ target }) => setPassword(target.value)} 
+            required />
           <input
             type="firstName"
             value={firstName}
             placeholder="First Name"
-            onChange={({ target }) => setFName(target.value)} />
+            onChange={({ target }) => setFName(target.value)} 
+            required />
           <input
             type="lastName"
             value={lastName}
             placeholder="Last Name"
-            onChange={({ target }) => setLName(target.value)} />
+            onChange={({ target }) => setLName(target.value)} 
+            required />
           <input
             className="cityInput"
             city="userCity"
             maxLength="30"
             placeholder="City"
             onChange={({ target }) => setCity(target.value)}
-            value={userCity} />
+            value={userCity} 
+            required />
           <input
             className="userState"
             city="userState"
             placeholder="State"
             maxLength="30"
             onChange={({ target }) => setUserState(target.value)}
-            value={userState} />     
+            value={userState} 
+            required/>     
           <button>Sign Up</button>
         </div>
       </form>

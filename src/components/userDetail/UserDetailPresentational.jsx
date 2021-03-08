@@ -13,6 +13,7 @@ const UserListPresentation = ({ user }) => {
       <div>{ user.userRole }</div>
       <div>{ user.userCity }</div>
       <div>{ user.userState }</div>
+      <div>{ user.tagline }</div>
 
     </>
   );
