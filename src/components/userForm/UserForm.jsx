@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
-import { useAuthError } from '../../state/AuthUserProvider';
+import React from 'react';
 import { useSession } from '../../state/AuthUserProvider';
 import { useUserDetail } from '../../hooks/userHook';
 import UserFormPresentational from './UserFormPresentational';

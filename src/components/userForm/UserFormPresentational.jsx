@@ -7,7 +7,6 @@ import { useHistory } from 'react-router-dom';
 
 
 const UserFormPresentational = ({ user }) => {
-  console.log(user, 'test');
   const history = useHistory();
 
   const error = useAuthError();
@@ -26,7 +25,18 @@ const UserFormPresentational = ({ user }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    patchUserData({ userId:session.userId, email, tagline, userRole, paymentHandle, firstName, lastName, userState, userCity, profileImageUrl })
+    patchUserData({ 
+      userId:session.userId, 
+      email, 
+      tagline, 
+      userRole, 
+      paymentHandle, 
+      firstName, 
+      lastName, 
+      userState, 
+      userCity, 
+      profileImageUrl 
+    })
       .then((user) => { 
         setSession(user);
         history.push(`/user-detail/${user.userId}`);}); 
