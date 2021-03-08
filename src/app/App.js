@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import '../styles/styles.css';
 import SignUp from '../auth/SignUp';
 import Login from '../auth/Login';
 import AboutUs from '../components/aboutUs/AboutUs';

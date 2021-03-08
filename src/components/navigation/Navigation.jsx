@@ -23,14 +23,15 @@ export default function Navigation() {
   // ---------------------------------------
 
   return (
-    <div>
+    <div className={styles.site}>
       {
         authentication 
         // CONDITIONAL----------------------------------------------------------
           ?
           <>
-            <section className={styles.navContainer}>
-              <div className={styles.navLeft}>
+            <nav className={styles.navContainer}>
+              <div className={styles.logo}>FIIN</div>
+              <ul className={styles.navList}>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/">Home</NavLink>
                 </li>
@@ -42,28 +43,23 @@ export default function Navigation() {
                 </li>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
+                </li>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/project-list">Discover Projects</NavLink>
                 </li>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
                 </li>
-              </div>
-            
-              <div className={styles.navRight}>
-                {/* <NavLink className="link" to="/user-detail">User Profile</NavLink> */}
-                <li>
-                  <div onClick={handleLogOut}>Log out</div>
+                <li className={styles.navItem}>
+                  <span className="link" onClick={handleLogOut}>Log out</span>
                 </li>
-
-               
-              </div>
-            </section>
+              </ul>
+            </nav>
           </>
           // --------------------------------------------------------------------
           :
           <>       
-            <div className={styles.navContainer}>
+            <nav className={styles.navContainer}>
               <div className={styles.navLeft}>
                 <li className={styles.nav}>
                   <NavLink className="link" to="/">Home</NavLink>
@@ -76,6 +72,7 @@ export default function Navigation() {
                 </li>
                 <li className={styles.nav}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
+                </li>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/project-list">Discover Projects</NavLink>
                 </li>
@@ -87,10 +84,9 @@ export default function Navigation() {
                 <li className={styles.nav}><NavLink className="link" to="/signup">Sign Up</NavLink></li>
                 <li className={styles.nav}><NavLink className="link" to="/login">Login</NavLink></li>
               </div>
-            </div>
+            </nav>
           </>
       }
     </div>
   );
 }
-
