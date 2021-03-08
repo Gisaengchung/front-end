@@ -34,7 +34,14 @@ export default function useProjectForm() {
       projectFundingExDate,
       projectRiskChallenge,
       projectDiversity, 
-    }));  
+    })
+
+    .then((user) => { 
+      setSession(user);
+    history.push(`/project-detail/${project.id}`) 
+    }
+
+    )  
   };
 
   return {
