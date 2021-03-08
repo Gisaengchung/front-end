@@ -78,9 +78,6 @@ export default function Navigation() {
                   <NavLink className="link" to="/project-list">Discover Films</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <NavLink className="link" to="/project-form">Create a Film</NavLink>
-                </li>
-                <li className={styles.navItem}>
                   <NavLink className="link" to="/signup">Sign Up</NavLink>
                 </li>
                 <li className={styles.navItem}>

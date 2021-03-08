@@ -13,7 +13,7 @@ export default function ProjectDetail({ history }) {
   const projUserId = project.userId;
 
   const handleClick = () => {
-    history.push('/project-form');
+    history.push(`/project-edit/${project.projectId}`);
 
   };
 
