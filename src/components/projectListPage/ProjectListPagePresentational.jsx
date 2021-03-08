@@ -1,20 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './ProjectListPagePresentational.css';
 
-const ProjectListPagePresentational = ({ users }) => {
-  const userElements = users.map(user => (
-    <li key={user.userId}>
-      <Link to={`/user-detail/${user.userId}`}>
-        <div>{user.userId}</div> 
-        <div>{user.firstName}</div> 
+
+const ProjectListPagePresentational = ({ projects }) => {
+  const projectElements = projects.map(project => (
+    <li key={project.projectId}>
+      <Link to={`/project-detail/${project.projectId}`}>
+        <div className={`${styles.row} ${styles.userListContainer}`} >
+          <img className = {styles.listImage} src = {project.projectMainImage} />
+          <div className={styles.column}>
+            <div>{project.projectTitle}</div> 
+            <div>{project.subtitle}</div> 
+            <div>{project.projectGenre}</div> 
+          </div>
+          <div>
+            <div>{project.projectFundingExDate}</div>
+            <div>{project.projectFundingGoal}</div>
+          </div>
+        </div>
       </Link>
     </li>
   ));
 
   return (
     <ul>
-      {userElements}
+      {projectElements}
     </ul>
   );
 };

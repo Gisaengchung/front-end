@@ -10,6 +10,8 @@ export default function ProjectDetail({ history }) {
   const { session } = useSession() || {};
   const { loading, project } = useProjectHook(id);
 
+  const projUserId = project.userId;
+
   const handleClick = () => {
     history.push('/project-form');
 
@@ -19,7 +21,7 @@ export default function ProjectDetail({ history }) {
 
   try {
     projectButton = 
-    (id === session.userId) ? 
+    (session.userId === projUserId) ? 
       <button onClick={handleClick}>Edit Project</button> : <div></div>;
   }
   catch{
