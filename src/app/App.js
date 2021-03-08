@@ -54,7 +54,7 @@ export default class App extends Component {
                 />
 
                 <Route
-                  exact path="/how-works"
+                  exact path="/info"
                   component = { HowWorks } 
                 />
 
