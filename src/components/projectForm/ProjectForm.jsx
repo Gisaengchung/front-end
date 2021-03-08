@@ -1,32 +1,49 @@
-import React from 'react';
-import useProjectForm from '../../hooks/useProjectForm';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router';
+import { postProjectData } from '../../services/fetches/fetches';
+import { useSession } from '../../state/AuthUserProvider';
 
 const ProjectForm = () => { 
-  const {
-    projectTitle, 
-    projectSubtitle, 
-    projectDescription,
-    projectGenre,
-    projectLocState,
-    projectLocCity,
-    projectMainImage,
-    projectFundingGoal,
-    projectFundingExDate,
-    projectRiskChallenge,
-    projectDiversity,
-    setProjectTitle,
-    setProjectSubtitle,
-    setProjectDescription,
-    setProjectGenre,
-    setProjectLocState,
-    setProjectLocCity,
-    setProjectMainImage,
-    setProjectFundingGoal,
-    setProjectFundingExDate,
-    setProjectRiskChallenge,
-    setProjectDiversity,
-    handleSubmitProject
-  } = useProjectForm();
+
+  const history = useHistory();
+  const [projectTitle, setProjectTitle] = useState('');
+  const [projectSubtitle,  setProjectSubtitle] = useState('');
+  const [projectDescription, setProjectDescription] = useState('');
+  const [projectGenre, setProjectGenre] = useState('');
+  const [projectLocState, setProjectLocState] = useState('');
+  const [projectLocCity, setProjectLocCity] = useState('');
+  const [projectMainImage, setProjectMainImage] = useState('');
+  const [projectFundingGoal, setProjectFundingGoal] = useState('');
+  const [projectFundingExDate, setProjectFundingExDate] = useState('');
+  const [projectRiskChallenge, setProjectRiskChallenge] = useState('');
+  const [projectDiversity, setProjectDiversity] = useState('');
+  const { session }  = useSession() || {};
+  const userId = session.userId;
+
+  const handleSubmitProject = event => {
+    event.preventDefault();
+
+    postProjectData({       
+      projectTitle, 
+      projectSubtitle, 
+      projectDescription,
+      projectGenre,
+      projectLocState,
+      projectLocCity,
+      projectMainImage,
+      projectFundingGoal,
+      projectFundingExDate,
+      projectRiskChallenge,
+      projectDiversity,
+      userId
+    })
+      .then(() => { 
+        history.push('/');
+      //history.push(`/project-detail/${projectId}`);
+      }); 
+  };
+      
+
 
   return (
     <form onSubmit={handleSubmitProject}>

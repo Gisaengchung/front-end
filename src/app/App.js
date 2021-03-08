@@ -12,7 +12,8 @@ import AboutUs from '../components/aboutUs/AboutUs';
 import Home from '../components/home/Home';
 import Navigation from '../components/navigation/Navigation';
 import HowWorks from '../components/howWorks/HowWorks';
-import MovieDetail from '../components/movieDetail/MovieDetail';
+import ProjectDetail from '../components/ProjectDetailPage/ProjectDetailPage';
+import ProjectList from '../components/projectListPage/ProjectListPage';
 import ProjectForm from '../components/projectForm/ProjectForm';
 import UserDetail from '../components/userDetail/UserDetail';
 import UserForm from '../components/userForm/UserForm';
@@ -65,16 +66,6 @@ export default class App extends Component {
                 />
 
                 <Route
-                  exact path="/movie-detail"
-                  component = { MovieDetail } 
-                />
-
-                <Route
-                  exact path="/project-form"
-                  component = { ProjectForm } 
-                />
-
-                <Route
                   exact path="/users-list"
                   component = { UsersList } 
                 />
@@ -84,11 +75,26 @@ export default class App extends Component {
                   component={ UserDetail }
                 />
 
+                <Route
+                  exact path="/project-list"
+                  component = { ProjectList } 
+                />
+
+                <Route
+                  exact path="/project-detail:id"
+                  component = { ProjectDetail } 
+                />
+
                 {/* PRIVATE---------------------------------------------- */}
   
                 <PrivateRoute
                   exact path="/user-form"
                   component={ UserForm }
+                />
+
+                <PrivateRoute
+                  exact path="/project-form"
+                  component = { ProjectForm } 
                 />
 
               </Switch>
