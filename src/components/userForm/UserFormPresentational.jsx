@@ -3,22 +3,23 @@ import PropTypes from 'prop-types';
 import { patchUserData } from '../../services/fetches/fetches';
 import styles from './UserForm.css';
 import { useAuthError, useSession } from '../../state/AuthUserProvider';
+import { useHistory } from 'react-router-dom';
+
 
 const UserFormPresentational = ({ user }) => {
   console.log(user, 'test');
+  const history = useHistory();
 
   const error = useAuthError();
   const { session, setSession }  = useSession() || {};
   const [email, setEmail] = useState(user.email);
-  const [firstName, setFName] = useState('');
-  const [lastName, setLName] = useState('');
-  const [userCity, setCity] = useState('');
-  const [userState, setUserState] = useState('');
-  const [userTagLine, setUserTagLine] = useState('');
-  const [userRole, setUserRole] = useState('');
-  const [userPaymentHandle, setUserPaymentHandle] = useState('');
-  
-  console.log(user, 'test2');
+  const [firstName, setFName] = useState(user.firstName);
+  const [lastName, setLName] = useState(user.lastName);
+  const [userCity, setCity] = useState(user.userCity);
+  const [userState, setUserState] = useState(user.userState);
+  const [userTagLine, setUserTagLine] = useState(user.userTagLine);
+  const [userRole, setUserRole] = useState(user.userRole);
+  const [userPaymentHandle, setUserPaymentHandle] = useState(user.userPaymentHandle);
 
 
   const handleSubmit = event => {
@@ -28,7 +29,7 @@ const UserFormPresentational = ({ user }) => {
         setSession(user);
         history.push(`/user-detail/${user.userId}`);}); 
   };
-
+  
   return (
     <>
       <h2>Edit Your Profile</h2>
@@ -37,7 +38,7 @@ const UserFormPresentational = ({ user }) => {
         <div className = {styles.formContainer}>         
           <input
             type="email"
-            value={user.email}
+            value={email}
             placeholder="email"
             onChange={({ target }) => setEmail(target.value)} />
 
