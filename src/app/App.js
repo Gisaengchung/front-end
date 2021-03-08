@@ -5,7 +5,6 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Welcome from '../components/welcome/Welcome';
 import SignUp from '../auth/SignUp';
 import Login from '../auth/Login';
 import AboutUs from '../components/aboutUs/AboutUs';
@@ -35,11 +34,6 @@ export default class App extends Component {
               <Navigation /> 
 
               <Switch>
-
-                <Route
-                  exact path="/"
-                  component = { Welcome } 
-                />
             
                 <Route exact path="/login"
                   component={ Login } 
@@ -55,7 +49,7 @@ export default class App extends Component {
                 />
 
                 <Route
-                  exact path="/home"
+                  exact path="/"
                   component = { Home } 
                 />
 

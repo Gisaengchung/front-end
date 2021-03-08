@@ -29,39 +29,39 @@ export default function Navigation() {
         // CONDITIONAL----------------------------------------------------------
           ?
           <>
-            <section className={styles.navContainer}>
-              <div className={styles.navLeft}>
-                <span className={styles.nav}>
-                  <NavLink className="link" to="/home">Home</NavLink>
-                </span>
-                <span className={styles.nav}>
+            <nav className="page-menu menu">
+              <ul className="menu-list r-list">
+                <li className="menu-group">
+                  <NavLink className="link" to="/">Home</NavLink>
+                </li>
+                <li className="menu-group">
                   <NavLink className="link" to="/how-works">How It All Works</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className="menu-group">
                   <NavLink className="link" to="/about-us">About the Developers</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className="menu-group">
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className="menu-group">
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
-                </span>
-              </div>
+                </li>
             
-              <div className={styles.navRight}>
-                {/* <NavLink className="link" to="/user-detail">User Profile</NavLink> */}
-                <span>
-                  <button onClick={handleLogOut}>Log out</button>
-                </span>
+                <div className={styles.navRight}>
+                  {/* <NavLink className="link" to="/user-detail">User Profile</NavLink> */}
+                  <li>
+                    <button onClick={handleLogOut}>Log out</button>
+                  </li>
 
                
-              </div>
-            </section>
+                </div>
+              </ul>
+            </nav>
           </>
           // --------------------------------------------------------------------
           :
           <>       
-            <div className={styles.navContainer}>
+            <nav className={styles.navContainer}>
               <div className={styles.navLeft}>
                 <span className={styles.nav}>
                   <NavLink className="link" to="/home">Home</NavLink>
@@ -83,7 +83,7 @@ export default function Navigation() {
                 <span className={styles.nav}><NavLink className="link" to="/signup">Sign Up</NavLink></span>
                 <span className={styles.nav}><NavLink className="link" to="/login">Login</NavLink></span>
               </div>
-            </div>
+            </nav>
           </>
       }
     </div>
