@@ -9,7 +9,7 @@
   z-index: 2;
 }
 
-.nav {
+.navItem {
   margin-left: 33px;
   float: left;
   display: block;
@@ -20,17 +20,17 @@
   font-family: sans-serif;
 }
 
-.nav:hover {
+.navItem:hover {
   background-color: rgba(214, 204, 61, 0.911);
   color: black;
   border-radius: 10px;
 }
 
-.nav a:link {
+.navItem a:link {
   color: white;
 }
 
-.nav a:visited {
+.navItem a:visited {
   color: white;
 }
 .navRight {

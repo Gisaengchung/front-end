@@ -17,7 +17,7 @@ export default function Navigation() {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => history.push('/Home'));
+      .then(() => history.push('/'));
   };
     
   // ---------------------------------------
@@ -31,19 +31,19 @@ export default function Navigation() {
           <>
             <section className={styles.navContainer}>
               <div className={styles.navLeft}>
-                <li className={styles.nav}>
-                  <NavLink className="link" to="/home">Home</NavLink>
+                <li className={styles.navItem}>
+                  <NavLink className="link" to="/">Home</NavLink>
                 </li>
-                <li className={styles.nav}>
+                <li className={styles.navItem}>
                   <NavLink className="link" to="/info">What Is FIIN?</NavLink>
                 </li>
-                <li className={styles.nav}>
+                <li className={styles.navItem}>
                   <NavLink className="link" to="/about-us">About the Developers</NavLink>
                 </li>
-                <li className={styles.nav}>
+                <li className={styles.navItem}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
                 </li>
-                <li className={styles.nav}>
+                <li className={styles.navItem}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
                 </li>
               </div>
@@ -64,7 +64,7 @@ export default function Navigation() {
             <div className={styles.navContainer}>
               <div className={styles.navLeft}>
                 <li className={styles.nav}>
-                  <NavLink className="link" to="/home">Home</NavLink>
+                  <NavLink className="link" to="/">Home</NavLink>
                 </li>
                 <li className={styles.nav}>
                   <NavLink className="link" to="/info">What is FIIN?</NavLink>
