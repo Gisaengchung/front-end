@@ -1,15 +1,14 @@
 .navContainer {
-  position: sticky;
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: rgb(250, 249, 247);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 70px;
   line-height: 2em;
-  z-index: 2;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
 }
 
 .navItem {
@@ -19,23 +18,18 @@
   text-align: center;
   padding: 15px;
   text-decoration: none;
-  font-family: sans-serif;
 }
 
 .navItem:hover {
-  background-color: rgba(214, 204, 61, 0.911);
-  color: black;
-  border-radius: 10px;
+  text-decoration: underline;
+  color: rgb(43, 44, 40);
 }
 
 .navItem a:link {
-  color: white;
+  color: rgb(43, 44, 40);
+  text-decoration: none;
 }
 
 .navItem a:visited {
-  color: white;
-}
-.navRight {
-  float: right;
-  margin-right: 50px;
+  color: rgb(43, 44, 40);
 }

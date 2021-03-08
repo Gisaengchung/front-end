@@ -23,12 +23,12 @@ export default function Navigation() {
   // ---------------------------------------
 
   return (
-    <div className={styles.site}>
+    <div>
       {
         authentication 
         // CONDITIONAL----------------------------------------------------------
           ?
-          <>
+          <div>
             <nav className={styles.navContainer}>
               <div className={styles.logo}>FIIN</div>
               <ul className={styles.navList}>
@@ -39,50 +39,53 @@ export default function Navigation() {
                   <NavLink className="link" to="/info">What Is FIIN?</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <NavLink className="link" to="/about-us">About the Developers</NavLink>
+                  <NavLink className="link" to="/about-us">About Us</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <NavLink className="link" to="/users-list">Find A Friend</NavLink>
+                  <NavLink className="link" to="/users-list">Find Creators</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <NavLink className="link" to="/project-list">Discover Projects</NavLink>
+                  <NavLink className="link" to="/project-list">Discover Films</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <NavLink className="link" to="/project-form">Create a Project</NavLink>
+                  <NavLink className="link" to="/project-form">Create a Film</NavLink>
                 </li>
                 <li className={styles.navItem}>
                   <span className="link" onClick={handleLogOut}>Log out</span>
                 </li>
               </ul>
             </nav>
-          </>
+          </div>
           // --------------------------------------------------------------------
           :
-          <>       
+          <div>       
             <nav className={styles.navContainer}>
-              <div className={styles.navLeft}>
-                <li className={styles.nav}>
+              <div className={styles.logo}>FIIN</div>
+              <ul className={styles.navList}>
+                <li className={styles.navItem}>
                   <NavLink className="link" to="/">Home</NavLink>
                 </li>
-                <li className={styles.nav}>
+                <li className={styles.navItem}>
                   <NavLink className="link" to="/info">What is FIIN?</NavLink>
                 </li>
-                <li className={styles.nav}>
-                  <NavLink className="link" to="/about-us">About the Developers</NavLink>
-                </li>
-                <li className={styles.nav}>
-                  <NavLink className="link" to="/users-list">Find A Friend</NavLink>
+                <li className={styles.navItem}>
+                  <NavLink className="link" to="/about-us">About Us</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <NavLink className="link" to="/project-list">Discover Projects</NavLink>
+                  <NavLink className="link" to="/users-list">Find Creators</NavLink>
                 </li>
-              </div>
-              <div className={styles.navRight}>
-                <li className={styles.nav}><NavLink className="link" to="/signup">Sign Up</NavLink></li>
-                <li className={styles.nav}><NavLink className="link" to="/login">Login</NavLink></li>
-              </div>
+                <li className={styles.navItem}>
+                  <NavLink className="link" to="/project-list">Discover Films</NavLink>
+                </li>
+                <li className={styles.navItem}>
+                  <NavLink className="link" to="/signup">Sign Up</NavLink>
+                </li>
+                <li className={styles.navItem}>
+                  <NavLink className="link" to="/login">Login</NavLink>
+                </li>
+              </ul>
             </nav>
-          </>
+          </div>
       }
     </div>
   );
