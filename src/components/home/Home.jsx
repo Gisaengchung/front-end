@@ -3,14 +3,17 @@ import React, { Component } from 'react';
 import styles from './Home.css';
 import para from './homeAssets/parasite.jpg';
 import hunt from './homeAssets/hunt.jpg';
+import BackgroundVideo from '../video/Backgroundvideo'
 
 const Home = () => {
   return (
     <>
       <section>    
+        
         <div className={styles.homeTitle}>
           <h1> WELCOME TO THE FILM INDEPENDENT </h1>
         </div>
+        <BackgroundVideo/>
         <p>skd djkushfslaj dbadjf hlkdash fkasdhjksa asjas;dkf ;adas dfs  sd h;asd lk jl;kf;SDHf;sd;idfn;oad; ;ofnf; dso fasd; fa;ousd  adhs;oudsgado</p>
       </section>
   
