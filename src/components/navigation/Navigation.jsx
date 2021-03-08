@@ -42,6 +42,8 @@ export default function Navigation() {
                 </li>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
+                <li className={styles.navItem}>
+                  <NavLink className="link" to="/project-list">Discover Projects</NavLink>
                 </li>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
@@ -74,8 +76,10 @@ export default function Navigation() {
                 </li>
                 <li className={styles.nav}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
+                <li className={styles.navItem}>
+                  <NavLink className="link" to="/project-list">Discover Projects</NavLink>
                 </li>
-                <li className={styles.nav}>
+                <li className={styles.navItem}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
                 </li>
               </div>
