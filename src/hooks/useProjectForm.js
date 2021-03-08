@@ -3,8 +3,9 @@ import { useDispatch } from '../state/ProjectProvider';
 import { createProject } from '../actions/projectActions';
 
 export default function useProjectForm() {
-  const dispatch = useDispatch();
 
+  const history = useHistory();
+  const dispatch = useDispatch();
   const [projectTitle, setProjectTitle] = useState('');
   const [projectSubtitle, setProjectSubtitle] = useState('');
   const [projectDescription, setProjectDescription] = useState('');  
@@ -16,9 +17,11 @@ export default function useProjectForm() {
   const [projectFundingExDate, setProjectFundingExDate] = useState('');
   const [projectRiskChallenge, setProjectRiskChallenge] = useState('');
   const [projectDiversity, setProjectDiversity] = useState('');
+ 
 
   const handleSubmitProject = event => {
     event.preventDefault();
+
     dispatch(createProject({ 
       projectTitle, 
       projectSubtitle, 
@@ -57,6 +60,8 @@ export default function useProjectForm() {
     setProjectFundingExDate,
     setProjectRiskChallenge,
     setProjectDiversity,
-    handleSubmitProject
+    handleSubmitProject,
   };
+
+
 }
