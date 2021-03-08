@@ -9,25 +9,25 @@ const Home = () => {
   return (
     <>
       <section>    
-        
-        <div className={styles.homeTitle}>
-          <h1> WELCOME TO THE FILM INDEPENDENT </h1>
-        </div>
+        <div>
+        <h1>
         <BackgroundVideo/>
-        <p>skd djkushfslaj dbadjf hlkdash fkasdhjksa asjas;dkf ;adas dfs  sd h;asd lk jl;kf;SDHf;sd;idfn;oad; ;ofnf; dso fasd; fa;ousd  adhs;oudsgado</p>
+        </h1>
+        </div>
       </section>
-  
+      
       <section className={styles.featureSection}>
+        <h1> FEATURED FILMS</h1>
         <div className={styles.featImageContainer}>
           <img className={styles.featImage} src={hunt}/>
         </div>
 
         <div className={styles.featureTextContainer}>
-          <h1>NAME OF FEAT FILM</h1>
-          <h2>SUBTITLE</h2>
+          <h1>HUNT FOR THE WILDERPEOPLE</h1>
+          <h2>Taika Waititi</h2>
           
           <p className={styles.descriptionParagraph}>
-            Description
+          A national manhunt is ordered for a rebellious kid and his foster uncle who go missing in the wild New Zealand bush.
           </p>
 
         </div>
@@ -36,9 +36,9 @@ const Home = () => {
       <section className={styles.subFeatArticles}>
         <article>
           <img className={styles.subFeatImage} src={para}/>
-          <h2>Title of first sub feat film</h2>
-          <h3>Subtitle</h3>
-          <p>description</p>
+          <h1>PARASITE</h1>
+          <h2>Bong Joon Ho</h2>
+          <p>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>
         </article>
       </section>
     </>

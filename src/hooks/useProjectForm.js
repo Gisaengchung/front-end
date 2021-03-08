@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useDispatch } from '../state/ProjectProvider';
 import { createProject } from '../actions/projectActions';
+import { useHistory } from 'react-router';
 
 export default function useProjectForm() {
 
   const history = useHistory();
   const dispatch = useDispatch();
+  const [session, setSession] = useState('');
   const [projectTitle, setProjectTitle] = useState('');
   const [projectSubtitle, setProjectSubtitle] = useState('');
   const [projectDescription, setProjectDescription] = useState('');  
@@ -22,6 +24,8 @@ export default function useProjectForm() {
   const handleSubmitProject = event => {
     event.preventDefault();
 
+    const userId = session.userId;
+
     dispatch(createProject({ 
       projectTitle, 
       projectSubtitle, 
@@ -33,16 +37,19 @@ export default function useProjectForm() {
       projectFundingGoal,
       projectFundingExDate,
       projectRiskChallenge,
-      projectDiversity, 
+      projectDiversity,
+      userId 
     })
 
-    .then((user) => { 
-      setSession(user);
-    history.push(`/project-detail/${project.id}`) 
-    }
+      .then((user) => { 
+        setSession(user);
+        history.push('/'); 
+        //history.push(`/project-detail/${project.id}`); 
+      }
 
-    )  
-  };
+      ));
+  };  
+  
 
   return {
     projectTitle, 

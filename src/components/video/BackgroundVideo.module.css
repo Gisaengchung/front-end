@@ -3,7 +3,8 @@
     min-height: 300px;
     max-height: 600px;
     overflow: hidden;
-    margin-bottom: 200px;
+    margin-bottom: 75px;
+    margin-top: 100px;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -14,41 +15,31 @@
   
   /* Add some content at the bottom of the video/page */
   .Content {
+    font-family: "Roboto Condensed", Sans-serif;
     position: absolute;
     top: 0;
-    color:#f1f1f1;
+    color:#ffffff;
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: left;
     align-items: left;
-    padding: 10px;
+    padding: 15px;
+
   }
   .SubContent {
       text-align: left;
-      padding: 0px;
+      padding: 0px; 
     }
 
     .SubContent h1 {
-        text-align: left;
-        padding: 0px;
+      font-family: "Roboto Condensed", Sans-serif;
+      text-align: left;
+      padding: 0px;
+      font-size: 2.5rem;
       }
-  .SubContent p {
-      color: #eeeeeead;
-      font-size: 1.3rem;
-  }
-  .SubContent button {
-      font-weight: bold;
-      margin-top: 30px;
-      color: #f1f1f1;
-      border: #f1f1f1 1px solid;
-      padding: 10px 5px;
-      background-color: hsla(0, 0%, 0%, 0);
-      font-size: 1.25rem;
-      border-radius: 5px;
-  }
-  .SubContent button:hover {
-      background-color: #f1f1f1;
-      color: #000000c0;
+  .SubContent h2 {
+      color: #ffffffd6;
+      font-size: 1rem;
   }
