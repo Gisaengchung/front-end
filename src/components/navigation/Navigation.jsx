@@ -31,28 +31,28 @@ export default function Navigation() {
           <>
             <section className={styles.navContainer}>
               <div className={styles.navLeft}>
-                <span className={styles.nav}>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/home">Home</NavLink>
-                </span>
-                <span className={styles.nav}>
-                  <NavLink className="link" to="/how-works">How It All Works</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className={styles.nav}>
+                  <NavLink className="link" to="/info">What Is FIIN?</NavLink>
+                </li>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/about-us">About the Developers</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
-                </span>
+                </li>
               </div>
             
               <div className={styles.navRight}>
                 {/* <NavLink className="link" to="/user-detail">User Profile</NavLink> */}
-                <span>
-                  <button onClick={handleLogOut}>Log out</button>
-                </span>
+                <li>
+                  <div onClick={handleLogOut}>Log out</div>
+                </li>
 
                
               </div>
@@ -63,25 +63,25 @@ export default function Navigation() {
           <>       
             <div className={styles.navContainer}>
               <div className={styles.navLeft}>
-                <span className={styles.nav}>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/home">Home</NavLink>
-                </span>
-                <span className={styles.nav}>
-                  <NavLink className="link" to="/how-works">How It All Works</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className={styles.nav}>
+                  <NavLink className="link" to="/info">What is FIIN?</NavLink>
+                </li>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/about-us">About the Developers</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/users-list">Find A Friend</NavLink>
-                </span>
-                <span className={styles.nav}>
+                </li>
+                <li className={styles.nav}>
                   <NavLink className="link" to="/project-form">Create a Project</NavLink>
-                </span>
+                </li>
               </div>
               <div className={styles.navRight}>
-                <span className={styles.nav}><NavLink className="link" to="/signup">Sign Up</NavLink></span>
-                <span className={styles.nav}><NavLink className="link" to="/login">Login</NavLink></span>
+                <li className={styles.nav}><NavLink className="link" to="/signup">Sign Up</NavLink></li>
+                <li className={styles.nav}><NavLink className="link" to="/login">Login</NavLink></li>
               </div>
             </div>
           </>
