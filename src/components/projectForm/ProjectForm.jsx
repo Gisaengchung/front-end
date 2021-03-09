@@ -43,8 +43,6 @@ const ProjectForm = () => {
         history.push('/');
       }); 
   };
-      
-
 
   return (
     <div className={styles.projectPage}>

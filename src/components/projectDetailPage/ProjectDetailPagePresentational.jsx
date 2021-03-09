@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProjectDetailPagePresentational = ({ project }) => {
-  console.log(project);
   return (
     <>
       <img src={ project.projectMainImage } />
@@ -25,4 +24,3 @@ ProjectDetailPagePresentational.propTypes = {
 };
 
 export default ProjectDetailPagePresentational;
-
