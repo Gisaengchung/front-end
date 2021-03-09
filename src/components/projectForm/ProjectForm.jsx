@@ -1,14 +1,15 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { postProjectData } from '../../services/fetches/fetches';
 import { useSession } from '../../state/AuthUserProvider';
-import UpLoader from '../cloudinary/UpLoader';
+import UpLoaderProject from '../cloudinary/UpLoaderProject';
 import styles from '../../styles/form.css';
 import FormInput from '../formInput/FormInput';
 
 const ProjectForm = () => { 
 
-  const defaultUrl='https://res.cloudinary.com/gisaengchung/image/upload/v1615316180/default/dwwpfykc2q73twhdfaho.png'
+  const defaultUrl = 'https://res.cloudinary.com/gisaengchung/image/upload/v1615316180/default/dwwpfykc2q73twhdfaho.png';
 
   const history = useHistory();
   const [projectTitle, setProjectTitle] = useState('');
@@ -98,7 +99,9 @@ const ProjectForm = () => {
           placeholder={'City'}
           onChangeFn={setProjectLocCity}
         />
-        <UpLoader setProfileImageUrl={setProjectMainImage} />
+        <div>
+          <UpLoaderProject setProjectMainImage={setProjectMainImage} projectMainImage={projectMainImage} />
+        </div>
         <FormInput 
           id={'projectFundingGoal'}
           type={'number'}
