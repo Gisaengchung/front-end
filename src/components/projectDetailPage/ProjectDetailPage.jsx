@@ -4,6 +4,7 @@ import LoadingSpinner from '../../loading/LoadingSpinner';
 import { useProjectHook } from '../../hooks/useProjectHook';
 import { useParams } from 'react-router';
 import { useSession } from '../../state/AuthUserProvider';
+import FundingForm from '../fundingForm/fundingForm';
 
 export default function ProjectDetail({ history }) {
   const { id } = useParams();
@@ -32,6 +33,7 @@ export default function ProjectDetail({ history }) {
     <>
       <ProjectDetailPagePresentational project={project} />
       <div>{projectButton}</div>
+      <FundingForm />
     </>
   
   );
