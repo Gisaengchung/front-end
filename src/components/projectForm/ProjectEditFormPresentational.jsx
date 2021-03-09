@@ -7,6 +7,7 @@ import { useSession } from '../../state/AuthUserProvider';
 import styles from '../../styles/form.css';
 import UpLoader from '../cloudinary/UpLoader';
 import UpLoaderProject from '../cloudinary/UpLoaderProject';
+import FormInput from '../formInput/FormInput';
 
 const ProjectEditFormPresentational = ({ project }) => { 
 
@@ -51,78 +52,88 @@ const ProjectEditFormPresentational = ({ project }) => {
   };
       
   return (
-    <div className={styles.projectPage}>
-      <form onSubmit={handleSubmitProject}>
-        <input
-          type="text"
-          placeholder="Title"
+    <div className={styles.displayPage}>
+      <form className={styles.formContainer} onSubmit={handleSubmitProject}>
+        <h2 className={styles.formHeader}>Edit Your Film</h2>
+        <FormInput 
+          id={'projectTitle'}
+          type={'text'}
+          maxLength={'50'}
           value={projectTitle}
-          onChange={({ target }) => setProjectTitle(target.value)}
-          required
+          placeholder={'Title'}
+          onChangeFn={setProjectTitle}
         />
-        <input
-          type="text"
-          placeholder="Subtitle"
+        <FormInput 
+          id={'subtitle'}
+          type={'text'}
+          maxLength={'150'}
           value={projectSubtitle}
-          onChange={({ target }) => setProjectSubtitle(target.value)}
+          placeholder={'Subtitle'}
+          onChangeFn={setProjectSubtitle}
         />
-        <input
-          type="text"
-          placeholder="Project Description"
+        <FormInput 
+          id={'projectDescription'}
+          type={'text'}
           value={projectDescription}
-          onChange={({ target }) => setProjectDescription(target.value)}
+          placeholder={'Description'}
+          onChangeFn={setProjectDescription}
         />
-        <input
-          type="text"
-          placeholder="Genre"
+        <FormInput 
+          id={'projectGenre'}
+          type={'text'}
+          maxLength={'40'}
           value={projectGenre}
-          onChange={({ target }) => setProjectGenre(target.value)}
-          required
-        />        
-        <input
-          type="text"
-          placeholder="State"
+          placeholder={'Genre'}
+          onChangeFn={setProjectGenre}
+        />
+        <FormInput 
+          id={'projectLocState'}
+          type={'text'}
+          maxLength={'40'}
           value={projectLocState}
-          onChange={({ target }) => setProjectLocState(target.value)}
-          required
+          placeholder={'State'}
+          onChangeFn={setProjectLocState}
         />
-        <input
-          type="text"
-          placeholder="City"
+        <FormInput 
+          id={'projectLocCity'}
+          type={'text'}
+          maxLength={'40'}
           value={projectLocCity}
-          onChange={({ target }) => setProjectLocCity(target.value)}
-          required
+          placeholder={'City'}
+          onChangeFn={setProjectLocCity}
         />
-
         <div>
           <UpLoaderProject setProjectMainImage={setProjectMainImage} projectMainImage={projectMainImage} />
         </div>
-        
-        <input
-          type="number"
-          placeholder="0"
+        <FormInput 
+          id={'projectFundingGoal'}
+          type={'number'}
           value={projectFundingGoal}
-          onChange={({ target }) => setProjectFundingGoal(target.value)}
-          required
+          placeholder={'Funding Goal'}
+          onChangeFn={setProjectFundingGoal}
         />
-        <input
-          type="date"
+        <FormInput 
+          id={'projectFundingExDate'}
+          type={'date'}
           value={projectFundingExDate}
-          onChange={({ target }) => setProjectFundingExDate(target.value)}
+          placeholder={'Funding Expiration Date'}
+          onChangeFn={setProjectFundingExDate}
         />
-        <input
-          type="text"
-          placeholder="Risks and Challenges"
+        <FormInput 
+          id={'projectRiskChallenge'}
+          type={'text'}
           value={projectRiskChallenge}
-          onChange={({ target }) => setProjectRiskChallenge(target.value)}
+          placeholder={'Risks and Challenges'}
+          onChangeFn={setProjectRiskChallenge}
         />
-        <input
-          type="text"
-          placeholder="Diversity"
+        <FormInput 
+          id={'projectDiversity'}
+          type={'text'}
           value={projectDiversity}
-          onChange={({ target }) => setProjectDiversity(target.value)}
-        /> 
-        <button>Update Project</button>
+          placeholder={'Diversity Commitments'}
+          onChangeFn={setProjectDiversity}
+        />
+        <button>Update Your Project</button>
       </form>
     </div>
   );
