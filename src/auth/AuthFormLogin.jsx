@@ -14,24 +14,40 @@ const AuthForm = ({ authFn }) => {
   };
 
   return (
-    <div className={styles.signUpPage}>
-      <h2>Login</h2>
+    <div className={styles.authPage}>
       {error && <p>{error.message}</p>}
       <form className={styles.formContainer} onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          placeholder="Email"
-          onChange={({ target }) => setEmail(target.value)} 
-          required />
-
-        <input
-          type="password"
-          value={password}
-          placeholder="Password"
-          onChange={({ target }) => setPassword(target.value)} 
-          required />
-          
+        <h2 className={styles.formHeader}>Login</h2>
+        <div className={styles.field}>
+          <input
+            id="email"
+            className={styles.floatingInput}
+            type="email"
+            value={email}
+            placeholder="Email"
+            onChange={({ target }) => setEmail(target.value)} 
+            required />
+          <label 
+            className={styles.floatingLabel} data-content="Email"
+            htmlFor="email">
+            <span className={styles.hiddenVisually}>Email</span>
+          </label>        
+        </div>
+        <div className={styles.field}>
+          <input
+            id="password"
+            className={styles.floatingInput}
+            type="password"
+            value={password}
+            placeholder="Password"
+            onChange={({ target }) => setPassword(target.value)} 
+            required />
+          <label
+            className={styles.floatingLabel} data-content="Password"
+            htmlFor="password">
+            <span className={styles.hiddenVisually}>Password</span>
+          </label>
+        </div>  
         <button>Login</button>
       </form>
     </div>
