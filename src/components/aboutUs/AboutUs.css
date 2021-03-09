@@ -1,11 +1,23 @@
 .aboutContainer {
   background-color: rgb(24, 24, 24);
-  margin-top: 70px;
-  padding-left: 10%;
+  padding-top: 12%;
+  padding-bottom: 12%;
+  padding-right: 4%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 200px auto 200px; 
+  column-gap: 55px;
+  row-gap: 0px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .personContainer {
-  margin: 20px;
+  color: rgb(255, 255, 255);
 }
 
 .picContainer {
@@ -13,22 +25,27 @@
   width: 20vw;
 }
 
-img {
-  height: 5%;
-  width: 50%;
-
-}
-
 .ktImage {
-  height: 200%;
+  height: 250%;
   width: 125%;
-}
-
-
-.textContainer {
-  color: white;
-  border: black solid 1px;
-  margin: 20px;
   border-radius: 10px;
-  padding: 30px;
 }
+
+.contactImage {
+  height: 50px;
+  width: 50px;
+  padding: 8px;
+  margin-left: 10%;
+}
+
+span {
+text-align: center;
+padding-left: 4%;
+padding-right: 4%;
+}
+
+.aboutNames {
+  text-align: center;
+  padding-left: 45px;
+}
+

@@ -1,27 +1,46 @@
 .listImage{
-  width: 50px;
-  height: 50px;
-}
-
-li{
-  list-style: none;
-}
-
-.row{
-  display: flex;
-  flex-direction: row;
-
-}
-
-.column{
-  display: flex;
-  flex-direction: column;
+  width: 245px;
+  height: 220px;
+  text-decoration: none;
 }
 
 .userListContainer{
-  background-color: seagreen;
-  width: 500px;
-  margin: 5px;
-  border: solid black;
+  background-color: rgb(59, 59, 59);
+  width: 245px;
+  height: 275px;;
   text-decoration: none;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  justify-content: center;
+
 }
+
+.userListContainer:hover > *,
+.userListContainer:focus-within > * {
+  opacity: 0.4;
+}
+
+.userListContainer:hover > :hover,
+.userListContainer:focus-within > :focus {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.userStuff {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 100px auto 100px; 
+  column-gap: 35px;
+  row-gap: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+

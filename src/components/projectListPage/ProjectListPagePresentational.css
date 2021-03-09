@@ -3,7 +3,6 @@
   height: 350px;
 }
 
-
 .userListContainer{
   background-color: rgb(147, 46, 26);
   width: 250px;
@@ -33,7 +32,7 @@
   grid-template-rows: 100px auto 100px; 
   column-gap: 25px;
   row-gap: 0px;
-
+  list-style: none;
 }
 
 .projectId {
