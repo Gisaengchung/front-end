@@ -1,7 +1,7 @@
 .aboutContainer {
   background-color: rgb(24, 24, 24);
   padding-top: 12%;
-  padding-bottom: 15%;
+  padding-bottom: 12%;
   padding-right: 4%;
   display: flex;
   flex-direction: row;
@@ -35,15 +35,17 @@
   height: 50px;
   width: 50px;
   padding: 8px;
+  margin-left: 15%;
 }
 
 span {
 text-align: center;
 padding-left: 4%;
-padding-right: 2%;
+padding-right: 4%;
 }
 
 .aboutNames {
   text-align: center;
   padding-left: 45px;
 }
+
