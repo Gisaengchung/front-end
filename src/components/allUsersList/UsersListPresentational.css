@@ -1,13 +1,13 @@
 .listImage{
-  width: 225px;
-  height: 200px;
+  width: 245px;
+  height: 220px;
   text-decoration: none;
 }
 
 .userListContainer{
   background-color: rgb(59, 59, 59);
-  width: 225px;
-  height: 250px;;
+  width: 245px;
+  height: 275px;;
   text-decoration: none;
   margin-top: 200px;
   display: flex;
@@ -39,6 +39,7 @@
   column-gap: 35px;
   row-gap: 0px;
   text-decoration: none;
+  list-style: none;
 }
 
 
