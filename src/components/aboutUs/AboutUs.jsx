@@ -5,6 +5,7 @@ import kt from './aboutAssets/kt.jpg'
 import kevin from './aboutAssets/kevin.png'
 import rird from './aboutAssets/rird.png'
 import sydney from './aboutAssets/sydney.png'
+import github from './aboutAssets/github.png'
 
 
 export default function AboutUs() {
