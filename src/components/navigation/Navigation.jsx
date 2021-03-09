@@ -51,7 +51,7 @@ export default function Navigation() {
                   <NavLink className="link" to="/project-form">Create a Film</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <span className="link" onClick={handleLogOut}>Log out</span>
+                  <div className="link" onClick={handleLogOut}>Log out</div>
                 </li>
               </ul>
             </nav>

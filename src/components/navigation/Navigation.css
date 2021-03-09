@@ -20,6 +20,10 @@
   font-family: 'Heebo', sans-serif;
 }
 
+.navList {
+  padding-inline-start: 0;
+}
+
 .navItem {
   margin-left: 33px;
   display: inline-block;
