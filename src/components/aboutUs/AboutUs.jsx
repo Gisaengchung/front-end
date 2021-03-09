@@ -14,16 +14,17 @@ export default function AboutUs() {
       {/* -------------------------------------------------------- */}
 
       <div className={styles.personContainer}>
-
+        
         <div className={styles.picContainer}>
-          <img className={styles.ktImage} src={kt} />
-         
-          <p className={styles.textContainer}>
-          <h2>Katie</h2>
-          Hi! I'm a Katie. I eat berries for breakfast.             
+        <img className={styles.ktImage} src={kt} />
+        </div>
+        
+        <div className={styles.textContainer}>
+          <h3>Kt</h3>
+          <p className="about-text">
+                Hi! My name is kt!
           </p>
         </div>
-
 
       </div>
 
