@@ -93,9 +93,11 @@ const ProjectEditFormPresentational = ({ project }) => {
           onChange={({ target }) => setProjectLocCity(target.value)}
           required
         />
+
         <div>
           <UpLoaderProject setProjectMainImage={setProjectMainImage} projectMainImage={projectMainImage} />
         </div>
+        
         <input
           type="number"
           placeholder="0"
