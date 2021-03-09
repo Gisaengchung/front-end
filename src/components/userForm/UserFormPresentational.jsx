@@ -7,7 +7,6 @@ import { useAuthError, useSession } from '../../state/AuthUserProvider';
 import { useHistory } from 'react-router-dom';
 import UpLoader from '../cloudinary/UpLoader';
 
-
 const UserFormPresentational = ({ user }) => {
   const history = useHistory();
 
@@ -23,10 +22,7 @@ const UserFormPresentational = ({ user }) => {
   const [profileImageUrl, setProfileImageUrl] = useState(user.profileImageUrl || '');
   const [paymentHandle, setPaymentHandle] = useState(user.paymentHandle);
 
-
-
   const handleSubmit = event => {
-    console.log(user, 'fucker');
     event.preventDefault();
     patchUserData({ 
       userId:session.userId, 
@@ -43,7 +39,6 @@ const UserFormPresentational = ({ user }) => {
       .then((user) => { 
         setSession(user);
         history.push(`/user-detail/${user.userId}`);}); 
-    console.log(user);
   };
   
   return (
