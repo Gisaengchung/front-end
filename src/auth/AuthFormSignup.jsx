@@ -62,6 +62,7 @@ const AuthForm = ({ authFn }) => {
           id={'cityInput'}
           type={'text'}
           value={userCity}
+          maxLength={'40'}
           placeholder={'City'}
           onChangeFn={setCity}
         />
@@ -69,6 +70,7 @@ const AuthForm = ({ authFn }) => {
           id={'stateInput'}
           type={'text'}
           value={userState}
+          maxLength={'40'}
           placeholder={'State'}
           onChangeFn={setUserState}
         />

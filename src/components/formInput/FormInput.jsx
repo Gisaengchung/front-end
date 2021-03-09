@@ -1,8 +1,9 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styles from '../../styles/form.css';
 
-function FormInput({ id, type, minLength, value, placeholder, onChangeFn }) {
+function FormInput({ id, type, minLength, maxLength, value, placeholder, onChangeFn }) {
   return (
     <div className={styles.field}>
       <input
@@ -10,7 +11,7 @@ function FormInput({ id, type, minLength, value, placeholder, onChangeFn }) {
         className={styles.floatingInput}
         type={type}
         minLength={minLength}
-        maxLength="50"
+        maxLength={maxLength}
         value={value}
         placeholder={placeholder}
         onChange={({ target }) => onChangeFn(target.value)}
