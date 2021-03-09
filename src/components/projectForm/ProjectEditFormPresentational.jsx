@@ -6,6 +6,7 @@ import { patchProjectData } from '../../services/fetches/fetches';
 import { useSession } from '../../state/AuthUserProvider';
 import styles from '../../styles/form.css';
 import UpLoader from '../cloudinary/UpLoader';
+import UpLoaderProject from '../cloudinary/UpLoaderProject';
 
 const ProjectEditFormPresentational = ({ project }) => { 
 
@@ -93,7 +94,7 @@ const ProjectEditFormPresentational = ({ project }) => {
           required
         />
         <div>
-          <UpLoader setProjectMainImage={setProjectMainImage} projectMainImage={projectMainImage} />
+          <UpLoaderProject setProjectMainImage={setProjectMainImage} projectMainImage={projectMainImage} />
         </div>
         <input
           type="number"
