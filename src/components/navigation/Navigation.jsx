@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useIsAuthenticated, useLogout } from '../../state/AuthUserProvider';
 import { useHistory } from 'react-router-dom';
 import styles from './Navigation.css';
+import fiin from '../home/homeAssets/fiin.png'
 
 // -----------------------------------------
 
@@ -29,8 +30,9 @@ export default function Navigation() {
         // CONDITIONAL----------------------------------------------------------
           ?
           <div>
+            
             <nav className={styles.navContainer}>
-              <div className={styles.logo}>FIIN</div>
+              <div className={styles.logo}></div>
               <ul className={styles.navList}>
                 <li className={styles.navItem}>
                   <NavLink className="link" to="/">Home</NavLink>
