@@ -11,8 +11,6 @@ const AuthForm = ({ history }) => {
   const id = session.userId;
   const { user, loading } = useUserDetail(id);
 
-  console.log(user);
-
   if(loading) return <LoadingSpinner />;
   return (
     <>
