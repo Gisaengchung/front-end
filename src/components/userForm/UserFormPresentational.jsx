@@ -71,7 +71,7 @@ const UserFormPresentational = ({ user }) => {
         <FormInput 
           id={'tagline'}
           type={'text'}
-          maxLength={'250'}
+          maxLength={'150'}
           value={tagline}
           placeholder={'Tagline'}
           onChangeFn={setTagline}
