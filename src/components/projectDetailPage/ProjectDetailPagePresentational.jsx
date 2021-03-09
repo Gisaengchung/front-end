@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Project.css';
+import styles from './Project.css';
 
 const ProjectDetailPagePresentational = ({ project }) => {
   console.log(project);
   return (
-    <>
-      <img src={ project.projectMainImage } />
+    <div className={styles.projectDetailMain}>
+      <img className={styles.projectDetailIMG} src={ project.projectMainImage } />
       <div>{ project.projectTitle }</div>
       <div>{ project.projectSubtitle }</div>
       <div>{ project.projectDescription }</div>
@@ -17,7 +17,7 @@ const ProjectDetailPagePresentational = ({ project }) => {
       <div>{ project.projectFundingExDate }</div>
       <div>{ project.projectRiskChallenge }</div>
       <div>{ project.projectDiversity }</div>
-    </>
+    </div>
   );
 };
 

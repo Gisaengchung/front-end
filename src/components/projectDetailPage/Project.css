@@ -1,0 +1,18 @@
+.projectDetailMain {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.projectDetailIMG {
+    height: 400px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
