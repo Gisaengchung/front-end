@@ -166,7 +166,7 @@ const UserFormPresentational = ({ user }) => {
           </label> 
         </div>          
         <div>
-          <UpLoader setProfileImageUrl={setProfileImageUrl} />
+          <UpLoader setProfileImageUrl={setProfileImageUrl} profileImageUrl={profileImageUrl} />
         </div>
         <button>Submit</button>
       </form>
