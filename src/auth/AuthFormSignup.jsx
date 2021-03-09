@@ -24,10 +24,10 @@ const AuthForm = ({ authFn }) => {
   };
 
   return (
-    <div className={styles.signUpPage}>
-      <h1 className={styles.formHeader}>Sign Up</h1>
+    <div className={styles.authPage}>
       {error && <p>{error.message}</p>}
       <form className={styles.formContainer} onSubmit={handleSubmit}>
+        <h2 className={styles.formHeader}>Sign Up</h2>
         <div className={styles.field}>
           <input
             id="email"

@@ -23,7 +23,7 @@ const Home = () => {
         </div>
 
         <div className={styles.featureTextContainer}>
-          <h2>PHOENIX, OREGON</h2>
+          <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
           <h3>Gary Lundgren</h3>
        
           <p className={styles.descriptionParagraph}>
@@ -39,7 +39,7 @@ const Home = () => {
         </div>
 
         <div className={styles.featureTextContainer}>
-          <h2>HUNT FOR THE WILDERPEOPLE</h2>
+          <h2 className={styles.movieTitle}>HUNT FOR THE WILDERPEOPLE</h2>
           <h3>Taika Waititi</h3>
        
           <p className={styles.descriptionParagraph}>
@@ -52,7 +52,7 @@ const Home = () => {
       <section className={styles.subFeatArticles}>
         <article>
           <img className={styles.subFeatImage3} src={para}/>
-          <h2>PARASITE</h2>
+          <h2 className={styles.movieTitle}>PARASITE</h2>
           <h3>Bong Joon Ho</h3>
           <p>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>
         </article>
