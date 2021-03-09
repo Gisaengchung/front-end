@@ -6,6 +6,7 @@ import kevin from './aboutAssets/kevin.png'
 import rird from './aboutAssets/rird.png'
 import sydney from './aboutAssets/sydney.png'
 import github from './aboutAssets/github.png'
+import linkedinlogo from './aboutAssets/linkedinlogo.png'
 
 
 export default function AboutUs() {
@@ -59,6 +60,10 @@ export default function AboutUs() {
         <p/>
         <a href="https://github.com/scjam">
         <img className={styles.contactImage} src={github} />
+        </a>
+  
+        <a href="https://www.linkedin.com/in/sydjames/">
+        < img className={styles.contactImage} src={linkedinlogo} />
         </a>
         </div>
       </div>
