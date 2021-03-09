@@ -9,6 +9,8 @@ export default function UserDetail({ history }) {
   const { id } = useParams();
   const { session } = useSession() || {};
   const { loading, user } = useUserDetail(id);
+ 
+  console.log(user);
 
   const handleClick = () => {
     history.push('/user-form');

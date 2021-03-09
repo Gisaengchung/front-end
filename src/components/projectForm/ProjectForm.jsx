@@ -8,6 +8,8 @@ import FormInput from '../formInput/FormInput';
 
 const ProjectForm = () => { 
 
+  const defaultUrl='https://res.cloudinary.com/gisaengchung/image/upload/v1615316180/default/dwwpfykc2q73twhdfaho.png'
+
   const history = useHistory();
   const [projectTitle, setProjectTitle] = useState('');
   const [projectSubtitle,  setProjectSubtitle] = useState('');
@@ -15,7 +17,7 @@ const ProjectForm = () => {
   const [projectGenre, setProjectGenre] = useState('');
   const [projectLocState, setProjectLocState] = useState('');
   const [projectLocCity, setProjectLocCity] = useState('');
-  const [projectMainImage, setProjectMainImage] = useState('');
+  const [projectMainImage, setProjectMainImage] = useState(defaultUrl);
   const [projectFundingGoal, setProjectFundingGoal] = useState('');
   const [projectFundingExDate, setProjectFundingExDate] = useState('');
   const [projectRiskChallenge, setProjectRiskChallenge] = useState('');
@@ -44,8 +46,6 @@ const ProjectForm = () => {
         history.push('/');
       }); 
   };
-      
-
 
   return (
     <div className={styles.displayPage}>
