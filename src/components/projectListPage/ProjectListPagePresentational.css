@@ -1,27 +1,40 @@
 .listImage{
-  width: 50px;
-  height: 50px;
-}
-
-li{
-  list-style: none;
-}
-
-.row{
-  display: flex;
-  flex-direction: row;
-
-}
-
-.column{
-  display: flex;
-  flex-direction: column;
+  width: 250px;
+  height: 350px;
 }
 
 .userListContainer{
-  background-color: seagreen;
-  width: 500px;
-  margin: 5px;
-  border: solid black;
+  background-color: rgb(147, 46, 26);
+  width: 250px;
   text-decoration: none;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.userListContainer:hover > *,
+.userListContainer:focus-within > * {
+  opacity: 0.4;
+}
+
+.userListContainer:hover > :hover,
+.userListContainer:focus-within > :focus {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.ulList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 100px auto 100px; 
+  column-gap: 25px;
+  row-gap: 0px;
+
+}
+
+.projectId {
+  margin-top: 10%;
 }

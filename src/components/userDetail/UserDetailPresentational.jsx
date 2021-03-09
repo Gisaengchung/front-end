@@ -1,21 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './UserDetail.css'
 
 const UserListPresentation = ({ user }) => {
   
   return (
-    <>
-      <img src={user.profileImageUrl} />
-      <div>{ user.email }</div>
-      <div>{ user.firstName }</div>
-      <div>{ user.lastName }</div>
-      <div>{ user.paymentHandle }</div>
-      <div>{ user.userRole }</div>
-      <div>{ user.userCity }</div>
-      <div>{ user.userState }</div>
+    <div className={styles.userDetailPresentational}>
+      <img className={styles.userImageDetail} src={user.profileImageUrl} />
+      <h2 className={styles.h2User}>{ user.firstName } { user.lastName }</h2>
+      <h3>{ user.userCity }, { user.userState }</h3>
       <div>{ user.tagline }</div>
-
-    </>
+      <div>{ user.userRole }</div>
+      <div>{ user.email }</div>
+      <div>{ user.paymentHandle }</div>
+    </div>
   );
 };
 

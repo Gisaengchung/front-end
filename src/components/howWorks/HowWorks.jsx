@@ -1,20 +1,21 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
+import styles from './HowWorks.css'
 
 class AboutUs extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.howItWorks}>
         <h1> How it all works!</h1>
         <section>
           <p>
-            Film Indepedent is a place for film industry professionals to network as well as find and support projects they may wish to be a part of. Additionally we want to bring about a platform that keeps a film crews vision and control in their own hands. We want to do this by providing a place for Independent film groups to crowd fund, market, sell and stream their movies. This gives film makers the opportunity to present and interact with their audience in a whole new format. Film makers can share director led discussions, share their scripts, actively recruit actors and cinematographers. This is a place to allow for more accessibility and opportunity for independent film makers to succeed.      
+            Film Indepedent is a place for film industry professionals to network as well as find and support projects they may wish to be a part of. Additionally we want to bring about a platform that keeps a film crews vision and control in their own hands. We want to do this by providing a place for Independent film groups to crowd fund, market, sell and stream their movies. This gives film makers the opportunity to present and interact with their audience in a whole new format. Film makers can share director lead discussions, share their scripts, actively recruit actors and cinematographers. This is a place to allow for more accessibility and opportunity for independent film makers to succeed.      
           </p>
         </section>
 
         <section>
           <p> 
-            <h2>Step 1:</h2> Go ahead and click sign up in the top right corner of the site and fill out your profile information. If you are a director or just a simple movie goer add your role to our community. Follow the prompts for each section. 
+            <h2>Step 1:</h2> Go ahead and click sign up in the top right corner of the site to fill out your profile information. If you are a director or just a simple movie goer be sure to add your role to our community then follow the prompts for each section. 
           </p>
         </section>
         

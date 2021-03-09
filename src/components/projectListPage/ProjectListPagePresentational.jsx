@@ -6,9 +6,9 @@ import styles from './ProjectListPagePresentational.css';
 
 const ProjectListPagePresentational = ({ projects }) => {
   const projectElements = projects.map(project => (
-    <li key={project.projectId}>
+    <li className={styles.listStyle} key={project.projectId}>
       <Link to={`/project-detail/${project.projectId}`}>
-        <div className={`${styles.row} ${styles.userListContainer}`} >
+        <div className={`${styles.userListContainer}`} >
           <img className = {styles.listImage} src = {project.projectMainImage} />
           <div className={styles.column}>
             <div>{project.projectTitle}</div> 
@@ -25,7 +25,7 @@ const ProjectListPagePresentational = ({ projects }) => {
   ));
 
   return (
-    <ul>
+    <ul className={styles.ulList} >
       {projectElements}
     </ul>
   );

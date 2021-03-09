@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { patchUserData } from '../../services/fetches/fetches';
-import styles from './UserForm.css';
+import styles from '../../styles/form.css';
 import { useAuthError, useSession } from '../../state/AuthUserProvider';
 import { useHistory } from 'react-router-dom';
 import UpLoader from '../cloudinary/UpLoader';
@@ -42,77 +42,135 @@ const UserFormPresentational = ({ user }) => {
   };
   
   return (
-    <>
-      <h2>Edit Your Profile</h2>
+    <div className={styles.displayPage}>
       {error && <p>{error.message}</p>}
-      <form onSubmit={handleSubmit}>   
-        <div className = {styles.formContainer}>         
+      <form className={styles.formContainer} onSubmit={handleSubmit}>   
+        <h2 className={styles.formHeader}>Edit Your Profile</h2>
+        <div className={styles.field}>         
           <input
+            id="email"
+            className={styles.floatingInput}
             type="email"
             value={email}
             placeholder="Email"
-            onChange={({ target }) => setEmail(target.value)} 
-            required/>
-
+            onChange={({ target }) => setEmail(target.value)}
+            required />
+          <label 
+            className={styles.floatingLabel} data-content="Email"
+            htmlFor="email">
+            <span className={styles.hiddenVisually}>Email</span>
+          </label>
+        </div>         
+        <div className={styles.field}>
           <input
-            type="text"
+            id="firstName"
+            className={styles.floatingInput}
+            type="firstName"
             value={firstName}
             placeholder="First Name"
             onChange={({ target }) => setFName(target.value)} 
-            required/>
-
+            required />
+          <label
+            className={styles.floatingLabel} data-content="First Name"
+            htmlFor="firstName">
+            <span className={styles.hiddenVisually}>First Name</span>
+          </label>        
+        </div>
+        <div className={styles.field}>
           <input
-            type="text"
+            id="lastName"
+            className={styles.floatingInput}
+            type="lastName"
             value={lastName}
             placeholder="Last Name"
             onChange={({ target }) => setLName(target.value)} 
-            required/>
-
+            required />
+          <label
+            className={styles.floatingLabel} data-content="Last Name"
+            htmlFor="lastName">
+            <span className={styles.hiddenVisually}>Last Name</span>
+          </label>        
+        </div>
+        <div className={styles.field}>
           <input
+            id="tagline"
+            className={styles.floatingInput}
             type="text"
             value={tagline}
             placeholder="Tagline"
             onChange={({ target }) => setTagline(target.value)} />
-
+          <label
+            className={styles.floatingLabel} data-content="Tagline"
+            htmlFor="tagline">
+            <span className={styles.hiddenVisually}>Tagline</span>
+          </label>
+        </div>
+        <div className={styles.field}>
           <input
+            id="userRole"
+            className={styles.floatingInput}
             type="text"
             value={userRole}
             placeholder="Role"
             onChange={({ target }) => setUserRole(target.value)} />
-
+          <label
+            className={styles.floatingLabel} data-content="Role"
+            htmlFor="userRole">
+            <span className={styles.hiddenVisually}>Role</span>
+          </label>
+        </div>
+        <div className={styles.field}>
           <input
+            id="paymentHandle"
+            className={styles.floatingInput}
             type="text"
             value={paymentHandle}
             placeholder="Venmo Handle"
             onChange={({ target }) => setPaymentHandle(target.value)} />
-
+          <label
+            className={styles.floatingLabel} data-content="Venmo Handle"
+            htmlFor="paymentHandle">
+            <span className={styles.hiddenVisually}>Venmo Handle</span>
+          </label>
+        </div>
+        <div className={styles.field}>
           <input
+            id="cityInput"
             type="text"
-            className="cityInput"
+            className={styles.floatingInput}
             maxLength="50"
             placeholder="City"
             onChange={({ target }) => setCity(target.value)}
             value={userCity} 
             required/>
-
+          <label
+            className={styles.floatingLabel} data-content="City"
+            htmlFor="cityInput">
+            <span className={styles.hiddenVisually}>City</span>
+          </label>  
+        </div>      
+        <div className={styles.field}>
           <input
-            type="text"
-            className="userState"
+            id="stateInput"
+            className={styles.floatingInput}
+            state="userState"
             placeholder="State"
             maxLength="30"
             onChange={({ target }) => setUserState(target.value)}
             value={userState} 
-            required/>
-
-          <div>
-            <UpLoader setProfileImageUrl={setProfileImageUrl} />
-          </div>
-
-          <button>Submit</button>
-        </div> 
+            required/>     
+          <label
+            className={styles.floatingLabel} data-content="State"
+            htmlFor="stateInput">
+            <span className={styles.hiddenVisually}>State</span>
+          </label> 
+        </div>          
+        <div>
+          <UpLoader setProfileImageUrl={setProfileImageUrl} />
+        </div>
+        <button>Submit</button>
       </form>
-
-    </>
+    </div>
   );
 };
 

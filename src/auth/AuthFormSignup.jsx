@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useAuthError } from '../state/AuthUserProvider';
 import { useHistory } from 'react-router-dom';
-import styles from './AuthForm.css';
+import styles from '../styles/form.css';
 
 const AuthForm = ({ authFn }) => {
   const history = useHistory();
@@ -24,7 +24,7 @@ const AuthForm = ({ authFn }) => {
   };
 
   return (
-    <div className={styles.authPage}>
+    <div className={styles.displayPage}>
       {error && <p>{error.message}</p>}
       <form className={styles.formContainer} onSubmit={handleSubmit}>
         <h2 className={styles.formHeader}>Sign Up</h2>
@@ -63,7 +63,7 @@ const AuthForm = ({ authFn }) => {
           <input
             id="firstName"
             className={styles.floatingInput}
-            type="firstName"
+            type="text"
             value={firstName}
             placeholder="First Name"
             onChange={({ target }) => setFName(target.value)} 
@@ -78,7 +78,7 @@ const AuthForm = ({ authFn }) => {
           <input
             id="lastName"
             className={styles.floatingInput}
-            type="lastName"
+            type="text"
             value={lastName}
             placeholder="Last Name"
             onChange={({ target }) => setLName(target.value)} 
@@ -93,7 +93,7 @@ const AuthForm = ({ authFn }) => {
           <input
             id="cityInput"
             className={styles.floatingInput}
-            city="userCity"
+            type="text"
             maxLength="30"
             placeholder="City"
             onChange={({ target }) => setCity(target.value)}
