@@ -16,7 +16,8 @@ const Home = () => {
       </section>
     
       <section className={styles.featureSection}>
-        <h1> FEATURED FILMS</h1>
+        <h1> FEATURED FILMS<hr/></h1>
+
         <div className={styles.featImageContainer}>
           <img className={styles.featImage} src={pog}/>
         </div>
@@ -31,9 +32,10 @@ const Home = () => {
 
         </div>
       </section>
+      <hr/>
       <section>
         <div className={styles.featImageContainer}>
-          <img className={styles.featImage} src={hunt}/>
+          <img className={styles.featImage2} src={hunt}/>
         </div>
 
         <div className={styles.featureTextContainer}>
@@ -46,10 +48,10 @@ const Home = () => {
  
         </div>
       </section>
-
+    <hr/>
       <section className={styles.subFeatArticles}>
         <article>
-          <img className={styles.subFeatImage} src={para}/>
+          <img className={styles.subFeatImage3} src={para}/>
           <h2>PARASITE</h2>
           <h3>Bong Joon Ho</h3>
           <p>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>

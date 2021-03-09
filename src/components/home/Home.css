@@ -6,6 +6,14 @@
 .homeTitle {
     margin: 100px;
  }
+
+ .featImage2 {
+    margin-top: 30px;
+ }
+
+ .subFeatImage3 {
+   margin-top: 30px;
+}
   
  h1  {
     text-align: center;
@@ -14,7 +22,7 @@
  }
   
  h2  {
-    font-size: large;
+    font-size: larger;
     font-family: Lemon Milk;
  }
   
@@ -22,12 +30,14 @@
     font-size: medium;
     font-family: Lemon Milk;
  }
-
+ hr {
+   width: 350px;
+ }
   
  p {
     margin-left: 20%;
     margin-right: 20%;
-    font-weight: 2;
+    margin-bottom: 2%;
  }
   
   
@@ -37,7 +47,5 @@
     text-align: center;
  }
  
- .subFeatArticles {
-   font-family: Lemon Milk;
-   
- }
+
+
