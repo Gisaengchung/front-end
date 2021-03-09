@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useAuthError } from '../state/AuthUserProvider';
-import styles from './AuthForm.css';
+import styles from '../styles/form.css';
 
 const AuthForm = ({ authFn }) => {
   const error = useAuthError();
@@ -14,7 +14,7 @@ const AuthForm = ({ authFn }) => {
   };
 
   return (
-    <div className={styles.authPage}>
+    <div className={styles.displayPage}>
       {error && <p>{error.message}</p>}
       <form className={styles.formContainer} onSubmit={handleSubmit}>
         <h2 className={styles.formHeader}>Login</h2>

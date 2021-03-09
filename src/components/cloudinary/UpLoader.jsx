@@ -35,8 +35,8 @@ export default function UpLoader({ setProfileImageUrl }) {
   };
 
   return (
-    <div className="App">
-      <h1>Upload An Image</h1>
+    <div className="uploadImage">
+      <h3>Upload Your Picture</h3>
       <input 
         type="file" 
         placeholder="Upload An Image Here" 
