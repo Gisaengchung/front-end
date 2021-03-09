@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useHistory, useParams } from 'react-router';
 import { patchProjectData } from '../../services/fetches/fetches';
 import { useSession } from '../../state/AuthUserProvider';
-import styles from './ProjectForm.css';
+import styles from '../../styles/form.css';
 import UpLoader from '../cloudinary/UpLoader';
 
 const ProjectEditFormPresentational = ({ project }) => { 
