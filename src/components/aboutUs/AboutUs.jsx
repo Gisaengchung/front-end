@@ -22,6 +22,9 @@ export default function AboutUs() {
         <a href="https://github.com/Richard-Hillman">
         <img className={styles.contactImage} src={github} />
         </a>
+        <a href="https://www.linkedin.com/in/richard-hillman/">
+        <img className={styles.contactImage} src={linkedinlogo} />
+        </a>
         </div>
       </div>
 
@@ -36,7 +39,9 @@ export default function AboutUs() {
         <a href="https://github.com/katiejonesyo">
         <img className={styles.contactImage} src={github} />
         </a>
-        
+        <a href="https://www.linkedin.com/in/katiejonesyo/">
+        <img className={styles.contactImage} src={linkedinlogo} />
+        </a>
         </div>
       </div>
       <div className={styles.personContainer}>
@@ -48,6 +53,9 @@ export default function AboutUs() {
         <p/>
         <a href="https://github.com/kevinfiero">
         <img className={styles.contactImage} src={github} />
+        </a>
+        <a href="https://www.linkedin.com/in/kevinfiero/">
+        <img className={styles.contactImage} src={linkedinlogo} />
         </a>
         </div>
       </div>
@@ -63,7 +71,7 @@ export default function AboutUs() {
         </a>
   
         <a href="https://www.linkedin.com/in/sydjames/">
-        < img className={styles.contactImage} src={linkedinlogo} />
+        <img className={styles.contactImage} src={linkedinlogo} />
         </a>
         </div>
       </div>
