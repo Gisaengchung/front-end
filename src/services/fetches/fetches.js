@@ -7,6 +7,16 @@ export const getUserById = (id) => {
 export const getProjectById = (id) => {
   return get(`project/${id}`);
 };
+
+export const getDonationsById = (id) => {
+  return get(`project/donate/${id}`);
+};
+
+export const patchDonationData = (donationInfo) => {
+  console.log(donationInfo);
+  console.log(`project/donate`)
+  return put(`project/donate`, donationInfo);
+};
   
 export const getAllUsers = () => {
   return fetch('https://fiin-dev.herokuapp.com/api/v1/user')
@@ -25,7 +35,6 @@ export const postProjectData = (projectInfo) => {
 };
 
 export const patchProjectData = (projectInfo) => {
-  console.log(projectInfo);
   return put('project', projectInfo);
 };
 
