@@ -1,9 +1,11 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { patchUserData } from '../../services/fetches/fetches';
 import styles from './UserForm.css';
 import { useAuthError, useSession } from '../../state/AuthUserProvider';
 import { useHistory } from 'react-router-dom';
+import UpLoader from '../cloudinary/UpLoader';
 
 
 const UserFormPresentational = ({ user }) => {
@@ -18,12 +20,13 @@ const UserFormPresentational = ({ user }) => {
   const [userState, setUserState] = useState(user.userState);
   const [tagline, setTagline] = useState(user.tagline);
   const [userRole, setUserRole] = useState(user.userRole);
-  const [profileImageUrl, setProfileImageUrl] = useState(user.profileImageUrl);
+  const [profileImageUrl, setProfileImageUrl] = useState(user.profileImageUrl || '');
   const [paymentHandle, setPaymentHandle] = useState(user.paymentHandle);
 
 
 
   const handleSubmit = event => {
+    console.log(user, 'fucker');
     event.preventDefault();
     patchUserData({ 
       userId:session.userId, 
@@ -35,11 +38,12 @@ const UserFormPresentational = ({ user }) => {
       lastName, 
       userState, 
       userCity, 
-      profileImageUrl 
+      profileImageUrl
     })
       .then((user) => { 
         setSession(user);
         history.push(`/user-detail/${user.userId}`);}); 
+    console.log(user);
   };
   
   return (
@@ -105,13 +109,9 @@ const UserFormPresentational = ({ user }) => {
             value={userState} 
             required/>
 
-          <input
-            type="text"
-            className="profileImage"
-            placeholder="Profile Image URL"
-            onChange={({ target }) => setProfileImageUrl(target.value)}
-            value={profileImageUrl} 
-            required/>      
+          <div>
+            <UpLoader setProfileImageUrl={setProfileImageUrl} />
+          </div>
 
           <button>Submit</button>
         </div> 
