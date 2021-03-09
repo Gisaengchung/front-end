@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './Project.css';
 
 const ProjectDetailPagePresentational = ({ project }) => {
-  console.log(project);
   return (
     <div className={styles.projectDetailMain}>
       <img className={styles.projectDetailIMG} src={ project.projectMainImage } />
@@ -26,4 +25,3 @@ ProjectDetailPagePresentational.propTypes = {
 };
 
 export default ProjectDetailPagePresentational;
-
