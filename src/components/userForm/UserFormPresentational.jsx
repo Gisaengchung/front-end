@@ -116,7 +116,7 @@ const UserFormPresentational = ({ user }) => {
           placeholder={'State'}
           onChangeFn={setUserState}
         />      
-        <UpLoader setProfileImageUrl={setProfileImageUrl} />
+        <UpLoader setProfileImageUrl={setProfileImageUrl} profileImageUrl={profileImageUrl} />
         <button>Submit</button>
       </form>
     </div>

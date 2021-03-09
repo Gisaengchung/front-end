@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './UserDetail.css'
 
 const UserListPresentation = ({ user }) => {
-  
+  console.log(user);
   return (
     <div className={styles.userDetailPresentational}>
       <img className={styles.userImageDetail} src={user.profileImageUrl} />
