@@ -24,6 +24,11 @@ export const postProjectData = (projectInfo) => {
   return post('project', projectInfo);
 };
 
+export const patchProjectData = (projectInfo) => {
+  console.log(projectInfo);
+  return put('project', projectInfo);
+};
+
 export const patchUserData = (userInfo) => {
   return put('user', userInfo);
 };

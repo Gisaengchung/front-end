@@ -1,5 +1,9 @@
 body {
-  background-color: rgb(250, 249, 247);
+  background-color: rgb(232, 232, 232);
   margin: 0;
   font-family: 'Roboto', sans-serif;
+}
+
+.page {
+  margin-top: 70px;
 }

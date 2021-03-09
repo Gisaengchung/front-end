@@ -27,7 +27,7 @@ const AuthForm = ({ authFn }) => {
   };
 
   return (
-    <>
+    <div className={styles.signUpPage}>
       <h2>Sign Up</h2>
       {error && <p>{error.message}</p>}
       <form onSubmit={handleSubmit}>
@@ -76,7 +76,7 @@ const AuthForm = ({ authFn }) => {
           <button>Sign Up</button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

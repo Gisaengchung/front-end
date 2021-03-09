@@ -21,6 +21,7 @@ import { AuthUserProvider } from '../state/AuthUserProvider';
 import { ProjectProvider } from '../state/ProjectProvider';
 import PrivateRoute from '../auth/PrivateRoute';
 import UsersList from '../components/allUsersList/UsersList';
+import ProjectEditForm from '../components/projectForm/ProjectEditForm';
 // -----------------------------------------------------------------------------------
 
 export default class App extends Component {
@@ -90,6 +91,11 @@ export default class App extends Component {
                 <PrivateRoute
                   exact path="/project-form"
                   component = { ProjectForm } 
+                />
+
+                <PrivateRoute
+                  exact path="/project-edit/:id"
+                  component = { ProjectEditForm } 
                 />
 
               </Switch>
