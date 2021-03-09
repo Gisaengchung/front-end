@@ -16,10 +16,7 @@ const AuthForm = ({ authFn }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-
-    // dispatching to backend
     authFn({ email, password, firstName, lastName, userState, userCity })
-      // returns user
       .then(() => {
         history.push('/');
       });
@@ -28,50 +25,102 @@ const AuthForm = ({ authFn }) => {
 
   return (
     <div className={styles.signUpPage}>
-      <h2>Sign Up</h2>
+      <h1 className={styles.formHeader}>Sign Up</h1>
       {error && <p>{error.message}</p>}
       <form className={styles.formContainer} onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          placeholder="Email"
-          onChange={({ target }) => setEmail(target.value)}
-          required />
-        <input
-          type="password"
-          value={password}
-          minLength="8"
-          placeholder="Password"
-          onChange={({ target }) => setPassword(target.value)} 
-          required />
-        <input
-          type="firstName"
-          value={firstName}
-          placeholder="First Name"
-          onChange={({ target }) => setFName(target.value)} 
-          required />
-        <input
-          type="lastName"
-          value={lastName}
-          placeholder="Last Name"
-          onChange={({ target }) => setLName(target.value)} 
-          required />
-        <input
-          className="cityInput"
-          city="userCity"
-          maxLength="30"
-          placeholder="City"
-          onChange={({ target }) => setCity(target.value)}
-          value={userCity} 
-          required />
-        <input
-          className="userState"
-          city="userState"
-          placeholder="State"
-          maxLength="30"
-          onChange={({ target }) => setUserState(target.value)}
-          value={userState} 
-          required/>     
+        <div className={styles.field}>
+          <input
+            id="email"
+            className={styles.floatingInput}
+            type="email"
+            value={email}
+            placeholder="Email"
+            onChange={({ target }) => setEmail(target.value)}
+            required />
+          <label 
+            className={styles.floatingLabel} data-content="Email"
+            htmlFor="email">
+            <span className={styles.hiddenVisually}>Email</span>
+          </label>
+        </div>
+        <div className={styles.field}>
+          <input
+            id="password"
+            className={styles.floatingInput}
+            type="password"
+            value={password}
+            minLength="8"
+            placeholder="Password"
+            onChange={({ target }) => setPassword(target.value)} 
+            required />
+          <label
+            className={styles.floatingLabel} data-content="Password"
+            htmlFor="password">
+            <span className={styles.hiddenVisually}>Password</span>
+          </label>
+        </div>
+        <div className={styles.field}>
+          <input
+            id="firstName"
+            className={styles.floatingInput}
+            type="firstName"
+            value={firstName}
+            placeholder="First Name"
+            onChange={({ target }) => setFName(target.value)} 
+            required />
+          <label
+            className={styles.floatingLabel} data-content="First Name"
+            htmlFor="firstName">
+            <span className={styles.hiddenVisually}>First Name</span>
+          </label>        
+        </div>
+        <div className={styles.field}>
+          <input
+            id="lastName"
+            className={styles.floatingInput}
+            type="lastName"
+            value={lastName}
+            placeholder="Last Name"
+            onChange={({ target }) => setLName(target.value)} 
+            required />
+          <label
+            className={styles.floatingLabel} data-content="Last Name"
+            htmlFor="lastName">
+            <span className={styles.hiddenVisually}>Last Name</span>
+          </label>        
+        </div>
+        <div className={styles.field}>
+          <input
+            id="cityInput"
+            className={styles.floatingInput}
+            city="userCity"
+            maxLength="30"
+            placeholder="City"
+            onChange={({ target }) => setCity(target.value)}
+            value={userCity} 
+            required />
+          <label
+            className={styles.floatingLabel} data-content="City"
+            htmlFor="cityInput">
+            <span className={styles.hiddenVisually}>City</span>
+          </label>        
+        </div>
+        <div className={styles.field}>
+          <input
+            id="stateInput"
+            className={styles.floatingInput}
+            state="userState"
+            placeholder="State"
+            maxLength="30"
+            onChange={({ target }) => setUserState(target.value)}
+            value={userState} 
+            required/>     
+          <label
+            className={styles.floatingLabel} data-content="State"
+            htmlFor="stateInput">
+            <span className={styles.hiddenVisually}>State</span>
+          </label> 
+        </div>
         <button>Sign Up</button>
       </form>
     </div>
