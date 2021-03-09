@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styles from './AboutUs.css';
+import kt from './aboutAssets/kt.jpg'
+import kevin from './aboutAssets/kevin.png'
+import rird from './aboutAssets/rird.png'
+import sydney from './aboutAssets/sydney.png'
 
-// import Kevin from '';
-// import Katie from './images/';
-// import Sydney from './images/';
-// import Richard from './images/';
 
 export default function AboutUs() {
   return (
@@ -16,15 +16,14 @@ export default function AboutUs() {
       <div className={styles.personContainer}>
 
         <div className={styles.picContainer}>
-          <img src="https://bit.ly/3kN09pq" type="image" alt="Katie" />
-        </div>
-
-        <div className={styles.textContainer}>
+          <img className={styles.ktImage} src={kt} />
+         
+          <p className={styles.textContainer}>
           <h2>Katie</h2>
-          <p className="about-text">
-                  Hi! I'm a Katie. I eat berries for breakfast.             
+          Hi! I'm a Katie. I eat berries for breakfast.             
           </p>
         </div>
+
 
       </div>
 
@@ -33,7 +32,7 @@ export default function AboutUs() {
       <div className={styles.personContainer}>
         
         <div className={styles.picContainer}>
-          <img src="https://bit.ly/3kN09pq" type="image" alt="Kevin" />
+        <img className={styles.ktImage} src={kevin} />
         </div>
         
         <div className={styles.textContainer}>
@@ -50,7 +49,7 @@ export default function AboutUs() {
       <div className={styles.personContainer}>
 
         <div className={styles.picContainer}>
-          <img src="https://bit.ly/3kN09pq" type="image" alt="Sydney" />
+        <img className={styles.ktImage} src={sydney} />
         </div>
         
         <div className={styles.textContainer}>
@@ -67,7 +66,7 @@ export default function AboutUs() {
       <div className={styles.personContainer}>
         
         <div className={styles.picContainer}>
-          <img src="https://bit.ly/3kN09pq" type="image" alt="Richard and his cat" />
+        <img className={styles.ktImage} src={rird} />
         </div>
 
         <div className={styles.textContainer}>
