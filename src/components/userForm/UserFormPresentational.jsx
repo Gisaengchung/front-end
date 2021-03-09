@@ -85,14 +85,6 @@ const UserFormPresentational = ({ user }) => {
           onChangeFn={setUserRole}
         />
         <FormInput 
-          id={'userRole'}
-          type={'text'}
-          maxLength={'50'}
-          value={userRole}
-          placeholder={'Role'}
-          onChangeFn={setUserRole}
-        />
-        <FormInput 
           id={'paymentHandle'}
           type={'text'}
           maxLength={'30'}
