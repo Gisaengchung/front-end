@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import { postProjectData } from '../../services/fetches/fetches';
 import { useSession } from '../../state/AuthUserProvider';
 import UpLoader from '../cloudinary/UpLoader';
-import styles from './ProjectForm.css';
+import styles from '../../styles/form.css';
 
 const ProjectForm = () => { 
 
