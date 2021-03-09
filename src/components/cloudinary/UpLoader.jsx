@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // import { patchUserData } from '../../services/fetches/fetches';
 // import { useSession } from '../../state/AuthUserProvider';
 
-export default function UpLoader({ setProfileImageUrl, profileImageUrl }) {
+export default function UpLoader({ setProfileImageUrl, profileImageUrl, setProjectMainImage, projectMainImage }) {
 
   const [loading, setLoading] = useState(false);
   // const { session, setSession }  = useSession() || {}; 
@@ -26,6 +26,8 @@ export default function UpLoader({ setProfileImageUrl, profileImageUrl }) {
     const file = await res.json();
 
     setProfileImageUrl(file.secure_url);
+    setProjectMainImage(file.secure_url);
+
     setLoading(false);
   };
 
@@ -41,7 +43,7 @@ export default function UpLoader({ setProfileImageUrl, profileImageUrl }) {
         loading ? 
           (<h3>Loading...</h3>) :
           (<img src={profileImageUrl} style={{ width:'300px' }}/>)
-        
+          (<img src={projectMainImage} style={{ width:'300px' }}/>)
       }
     </div>
   );

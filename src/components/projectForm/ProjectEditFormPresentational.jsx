@@ -93,7 +93,7 @@ const ProjectEditFormPresentational = ({ project }) => {
           required
         />
         <div>
-          <UpLoader setProfileImageUrl={setProjectMainImage} />
+          <UpLoader setProjectMainImage={setProjectMainImage} projectMainImage={projectMainImage} />
         </div>
         <input
           type="number"
