@@ -36,3 +36,14 @@
   width: 50px;
   padding: 8px;
 }
+
+span {
+text-align: center;
+padding-left: 4%;
+padding-right: 2%;
+}
+
+.aboutNames {
+  text-align: center;
+  padding-left: 45px;
+}
