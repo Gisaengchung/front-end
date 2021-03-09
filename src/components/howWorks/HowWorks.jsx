@@ -1,10 +1,11 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
+import styles from './HowWorks.css'
 
 class AboutUs extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.howItWorks}>
         <h1> How it all works!</h1>
         <section>
           <p>
