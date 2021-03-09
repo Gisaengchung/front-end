@@ -1,23 +1,43 @@
+@font-face {
+   font-family: Lemon Milk;
+   src: 'src/components/home/homeAssets/font/LEMONMILK-Regular.otf';
+ }
+
 .homeTitle {
     margin: 100px;
  }
+
+ .featImage2 {
+    margin-top: 30px;
+ }
+
+ .subFeatImage3 {
+   margin-top: 30px;
+}
   
  h1  {
     text-align: center;
     font-size: 35px;
+    font-family: Lemon Milk;
  }
   
  h2  {
-    font-size: large;
+    font-size: larger;
+    font-family: Lemon Milk;
  }
   
  h3  {
     font-size: medium;
+    font-family: Lemon Milk;
+ }
+ hr {
+   width: 350px;
  }
   
  p {
     margin-left: 20%;
     margin-right: 20%;
+    margin-bottom: 2%;
  }
   
   
@@ -25,6 +45,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 7%;
  }
  
+
+
