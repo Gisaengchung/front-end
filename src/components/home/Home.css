@@ -1,28 +1,8 @@
-@font-face {
-  font-family: 'Heebo';
-  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
-}
 
-.homeTitle {
-  margin: 100px;
-}
-
-.featImage2 {
-  margin-top: 30px;
-}
-
-.subFeatImage3 {
-  margin-top: 30px;
-}
 
 h1 {
   text-align: center;
   font-size: 35px;
-  font-family: 'Heebo', sans-serif;
-}
-
-.movieTitle {
-  font-size: larger;
   font-family: 'Heebo', sans-serif;
 }
 
@@ -50,5 +30,59 @@ section {
 img {
   height: 10%;
   width: 50%;
+}
 
+@font-face {
+  font-family: 'Heebo';
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+}
+
+.homeTitle {
+  margin: 100px;
+}
+
+.featImageContainer { 
+  margin: 30px;
+}
+
+.featImage {
+  box-shadow: black 0 0 20px;
+}
+
+.Begin {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.movieTitle {
+  font-size: larger;
+  font-family: 'Heebo', sans-serif;
+}
+
+.articleFilm {
+  background-color: rgba(0, 0, 0, 0.253);
+  width: 80vw;
+  justify-content: center;
+}
+
+.allSections {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ padding: 20px;
+}
+
+.Begin { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.inBegin {
+  border: black solid 1px;
+  box-shadow: black 0 0 50px;
+  background-color: rgba(0, 0, 0, 0.253);
+  width: 90vw; 
+  border-radius: 5px;
 }
