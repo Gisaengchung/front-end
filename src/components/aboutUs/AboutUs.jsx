@@ -2,6 +2,9 @@
 import React from 'react';
 import styles from './AboutUs.css';
 import kt from './aboutAssets/kt.jpg'
+import kevin from './aboutAssets/kevin.png'
+import rird from './aboutAssets/rird.png'
+import sydney from './aboutAssets/sydney.png'
 
 
 export default function AboutUs() {
@@ -29,7 +32,7 @@ export default function AboutUs() {
       <div className={styles.personContainer}>
         
         <div className={styles.picContainer}>
-          <img src="https://bit.ly/3kN09pq" type="image" alt="Kevin" />
+        <img className={styles.ktImage} src={kevin} />
         </div>
         
         <div className={styles.textContainer}>
@@ -46,7 +49,7 @@ export default function AboutUs() {
       <div className={styles.personContainer}>
 
         <div className={styles.picContainer}>
-          <img src="https://bit.ly/3kN09pq" type="image" alt="Sydney" />
+        <img className={styles.ktImage} src={sydney} />
         </div>
         
         <div className={styles.textContainer}>
@@ -63,7 +66,7 @@ export default function AboutUs() {
       <div className={styles.personContainer}>
         
         <div className={styles.picContainer}>
-          <img src="https://bit.ly/3kN09pq" type="image" alt="Richard and his cat" />
+        <img className={styles.ktImage} src={rird} />
         </div>
 
         <div className={styles.textContainer}>
