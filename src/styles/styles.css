@@ -2,6 +2,7 @@ body {
   background-color: rgb(232, 232, 232);
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 .page {

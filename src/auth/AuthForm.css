@@ -1,0 +1,29 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  margin-top: 6em;
+}
+
+input,
+button {
+  margin: 30px 0px 0px 10px;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 0 0 15px 4px rgba(43, 44, 40, 0.1);
+  border: 0;
+}
+
+button {
+  background-color: rgba(43, 44, 40, 0.3);
+}
+
+.signUpPage {
+  margin-top: 70px;
+  text-align: center;
+}
