@@ -1,7 +1,6 @@
-
 @font-face {
-  font-family: Lemon Milk;
-  src: '../home/homeAssets/font/LEMONMILK-Regular.otf';
+  font-family: 'Heebo';
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
 }
 
 .Container {
@@ -19,7 +18,7 @@
 }
  /* Add some content at the bottom of the video/page */
 .Content {
-  font-family: "Roboto Condensed", Sans-serif;
+  font-family: 'Heebo', sans-serif;
   position: absolute;
   top: 0;
   color:#ffffff;
@@ -38,16 +37,15 @@
   }
 
   .SubContent h1 {
-    font-family: "Roboto Condensed", Sans-serif;
+    font-family: 'Heebo', sans-serif;
     text-align: left;
-    font-size: 2.5rem;
-    font-family: Lemon Milk;
+    font-size: 2.75rem;
     padding: 0px;
     }
-.SubContent h2 {
+.SubContent h3 {
+    font-family: 'Heebo', sans-serif;
     color: #ffffffd6;
-    font-size: 1rem;
-    font-family: Lemon Milk;
+    font-size: 1.5rem;
     padding: 0px;
   }
  

@@ -16,7 +16,7 @@ const Home = () => {
       </section>
     
       <section className={styles.featureSection}>
-        <h1> FEATURED FILMS<hr/></h1>
+        <h1> <hr/>FEATURED FILMS<hr/></h1>
 
         <div className={styles.featImageContainer}>
           <img className={styles.featImage} src={pog}/>

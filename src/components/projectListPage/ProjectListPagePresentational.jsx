@@ -6,7 +6,7 @@ import styles from './ProjectListPagePresentational.css';
 
 const ProjectListPagePresentational = ({ projects }) => {
   const projectElements = projects.map(project => (
-    <li key={project.projectId}>
+    <li className={styles.listStyle} key={project.projectId}>
       <Link to={`/project-detail/${project.projectId}`}>
         <div className={`${styles.userListContainer}`} >
           <img className = {styles.listImage} src = {project.projectMainImage} />

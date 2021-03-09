@@ -29,7 +29,6 @@ export default function Navigation() {
         // CONDITIONAL----------------------------------------------------------
           ?
           <div>
-            
             <nav className={styles.navContainer}>
               <div className={styles.logo}>FIIN</div>
               <ul className={styles.navList}>

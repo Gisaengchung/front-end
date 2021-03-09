@@ -1,34 +1,51 @@
 .aboutContainer {
   background-color: rgb(24, 24, 24);
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 75px;
+  padding-top: 12%;
+  padding-bottom: 12%;
+  padding-right: 4%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 200px auto 200px; 
+  column-gap: 55px;
+  row-gap: 0px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .personContainer {
-  margin: 20px;
+  color: rgb(255, 255, 255);
 }
 
 .picContainer {
   padding: 30px;
   width: 20vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: double black 2px;
 }
 
-img {
-  height: 5%;
-  width: 50%;
-
-}
-
-
-.textContainer {
-  color: white;
-  border: black solid 1px;
-  margin: 40px;
+.ktImage {
+  height: 250%;
+  width: 125%;
   border-radius: 10px;
-  padding: 30px;
 }
+
+.contactImage {
+  height: 50px;
+  width: 50px;
+  padding: 8px;
+  margin-left: 10%;
+}
+
+span {
+text-align: center;
+padding-left: 4%;
+padding-right: 4%;
+}
+
+.aboutNames {
+  text-align: center;
+  padding-left: 45px;
+}
+
