@@ -5,13 +5,13 @@ const ProjectDetailPagePresentational = ({ project }) => {
   console.log(project);
   return (
     <>
-      <div>{project.projectTitle }</div>
+      <img src={ project.projectMainImage } />
+      <div>{ project.projectTitle }</div>
       <div>{ project.projectSubtitle }</div>
       <div>{ project.projectDescription }</div>
       <div>{ project.projectGenre }</div>
       <div>{ project.projectLocState }</div>
       <div>{ project.projectLocCity }</div>
-      <div>{ project.projectMainImage }</div>
       <div>{ project.projectFundingGoal }</div>
       <div>{ project.projectFundingExDate }</div>
       <div>{ project.projectRiskChallenge }</div>
