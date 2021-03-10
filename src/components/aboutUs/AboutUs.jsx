@@ -34,7 +34,7 @@ export default function AboutUs() {
        
           <img className={styles.ktImage} src={kt} />
           <h2 className={styles.aboutNames}>Kt</h2>
-          <span>Hi! My name is kt!I am tall!!!!!!WOOOOO!!!</span>
+          <span>Hi! My name is kt!I am tall!!!!!! WOOOOO!!!</span>
           <p/>
           <a href="https://github.com/katiejonesyo">
             <img className={styles.contactImage} src={github} />
@@ -49,7 +49,7 @@ export default function AboutUs() {
         <div className={styles.picContainer}>
           <img className={styles.ktImage} src={kevin} />
           <h2 className={styles.aboutNames}>Kevin</h2>
-          <span>Hi! My name is Ferrari!I am Ferrari!</span>
+          <span>Hi! My name is Ferrari!I am Ferrari! Vroom vroom cars go fast yea yea yea</span>
           <p/>
           <a href="https://github.com/kevinfiero">
             <img className={styles.contactImage} src={github} />
@@ -64,7 +64,7 @@ export default function AboutUs() {
         <div className={styles.picContainer}>
           <img className={styles.ktImage} src={sydney} />
           <h2 className={styles.aboutNames}>Sydney</h2>
-          <span>Hi! My name is Sydney! I am not tall!</span> 
+          <span>Hi! My name is Sydney! I am not tall!  I DO NOT DRINK COFFEEEEEEEEEE</span> 
           <p/>
           <a href="https://github.com/scjam">
             <img className={styles.contactImage} src={github} />
