@@ -85,3 +85,7 @@ img {
   background-color: rgba(0, 0, 0, 0.253);
   width: 90vw; 
 }
+
+.bottomMargin {
+  margin-bottom: 100px;
+}
