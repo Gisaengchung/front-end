@@ -148,3 +148,17 @@ form {
   padding: 2rem 3rem 4rem;
   box-shadow: 2px 2px 16px 3px rgba(0, 0, 0, 0.4);
 }
+
+.fundDetails {
+  line-height: 2em;
+}
+
+.fundingForm {
+  width: 22vw;
+  height: auto;
+}
+
+.fundNum {
+  font-weight: bold;
+  font-size: medium;
+}

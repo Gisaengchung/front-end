@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router';
 import { patchDonationData } from '../../services/fetches/fetches';
 import styles from '../../styles/form.css';
-import style from './FundingForm.css';
 import FormInput from '../formInput/FormInput';
+import NumberFormat from 'react-number-format';
 
 const FundingFormPresentational = ({ donation }) => { 
 
@@ -33,11 +33,33 @@ const FundingFormPresentational = ({ donation }) => {
       
   return (
     <div className={styles.displayPage}>
-      <form className={`${styles.formContainer} ${style.width}`} onSubmit={handleSubmitDonation}>
+      <form 
+        className={`${styles.formContainer} ${styles.fundingForm}`} 
+        onSubmit={handleSubmitDonation}>
         <h2 className={styles.formHeader}>Donate</h2>
-        <div>Funding Goal: ${projectFundingGoal}</div> 
-        <div>Total Donations: ${projectDonations}</div>
-        <div>Funding Expiration Date: {projectFundingExDate}</div>
+        <div className={styles.fundDetails}>Funding Goal:
+          <br></br>
+          <NumberFormat
+            className={styles.fundNum}
+            value={projectFundingGoal}
+            displayType={'text'}
+            thousandSeparator={true}
+            prefix={'$'} 
+          />
+        </div> 
+        <div className={styles.fundDetails}>Total Donations:
+          <br></br>
+          <NumberFormat
+            className={styles.fundNum}
+            value={projectDonations}
+            displayType={'text'}
+            thousandSeparator={true}
+            prefix={'$'}
+          />
+        </div>
+        <div className={styles.fundDetails}>Funding Expiration Date:
+          <br></br> {projectFundingExDate}</div>
+        <br></br>
         <FormInput 
           id={'increment'}
           type={'number'}
