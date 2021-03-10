@@ -14,18 +14,18 @@ export const getDonationsById = (id) => {
 
 export const patchDonationData = (donationInfo) => {
   console.log(donationInfo);
-  console.log(`project/donate`)
-  return put(`project/donate`, donationInfo);
+  console.log('project/donate')
+  return put('project/donate', donationInfo);
 };
   
 export const getAllUsers = () => {
-  return fetch('https://fiin-dev.herokuapp.com/api/v1/user')
+  return fetch(`${process.env.API_URL}user`)
     .then(res => res.json())
   ;
 };
 
 export const getAllProjects = () => {
-  return fetch('https://fiin-dev.herokuapp.com/api/v1/project')
+  return fetch(`${process.env.API_URL}project`)
     .then(res => res.json())
   ;
 };
