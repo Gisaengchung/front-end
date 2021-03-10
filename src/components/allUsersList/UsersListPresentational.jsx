@@ -5,7 +5,7 @@ import styles from './UsersListPresentational.css';
 const UsersListPresentational = ({ users }) => {
   const userElements = users.map(user => (
     <li key={user.userId}>
-      <Link to={`/user-detail/${user.userId}`}>
+      <Link to={`/user-detail/${user.userId}`} className={styles.userNameStuff}>
         <div className={`${styles.userListContainer}`} >
           <img className = {styles.listImage} src={user.profileImageUrl} />
           <div className = {styles.column}>
