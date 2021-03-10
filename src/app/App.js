@@ -22,6 +22,7 @@ import { ProjectProvider } from '../state/ProjectProvider';
 import PrivateRoute from '../auth/PrivateRoute';
 import UsersList from '../components/allUsersList/UsersList';
 import ProjectEditForm from '../components/projectForm/ProjectEditForm';
+import Footer from '../components/footer/Footer';
 // -----------------------------------------------------------------------------------
 
 export default class App extends Component {
@@ -99,6 +100,7 @@ export default class App extends Component {
                 />
 
               </Switch>
+              <Footer />
             </ProjectProvider>
           </AuthUserProvider>
         </Router>
