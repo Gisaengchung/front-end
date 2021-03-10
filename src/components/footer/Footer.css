@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     margin-top: 200px;
-    height: 5vh;
+    height: 70px;
     background-color: black;
-
     font-size: 15px;
     width: 100%;
     position: fixed;
