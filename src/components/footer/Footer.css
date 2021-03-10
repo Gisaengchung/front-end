@@ -1,0 +1,30 @@
+.navFooter {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 16vh;
+    background-color: black;
+    padding: 30px;
+    font-size: 15px;
+}
+
+.snake { 
+    margin-bottom: 10px;
+}
+
+.snake a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.snake a:visited {
+    color: rgb(255, 255, 255);
+}
+
+.snake a:link {
+    color: rgb(255, 255, 255);
+}
+
+.separate {
+    float: left;
+    margin-left: 50px;
+}
