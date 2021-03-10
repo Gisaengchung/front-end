@@ -12,7 +12,6 @@ import AboutUs from '../components/aboutUs/AboutUs';
 import Home from '../components/home/Home';
 import Navigation from '../components/navigation/Navigation';
 import HowWorks from '../components/howWorks/HowWorks';
-import ProjectDetail from '../components/ProjectDetailPage/ProjectDetailPage';
 import ProjectList from '../components/projectListPage/ProjectListPage';
 import ProjectForm from '../components/projectForm/ProjectForm';
 import UserDetail from '../components/userDetail/UserDetail';
@@ -23,6 +22,7 @@ import PrivateRoute from '../auth/PrivateRoute';
 import UsersList from '../components/allUsersList/UsersList';
 import ProjectEditForm from '../components/projectForm/ProjectEditForm';
 import Footer from '../components/footer/Footer';
+import ProjectDetail from '../components/projectDetail/ProjectDetail';
 // -----------------------------------------------------------------------------------
 
 export default class App extends Component {
