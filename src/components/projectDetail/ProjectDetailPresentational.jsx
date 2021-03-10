@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Project.css';
-import FundingForm from '../fundingForm/fundingForm';
+import FundingForm from '../fundingForm/FundingForm';
 import UserListPresentation from '../userDetail/UserDetailPresentational';
 
 const ProjectDetailPresentational = ({ project, projectButton, user }) => {
