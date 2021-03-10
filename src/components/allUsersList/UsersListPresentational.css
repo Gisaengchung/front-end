@@ -14,7 +14,7 @@
 .userListContainer{
   background-color: rgb(244, 244, 244);
   width: 260px;
-  height: 325px;;
+  height: 325px;
   text-decoration: none;
   margin-top: 150px;
   display: flex;
@@ -27,7 +27,6 @@
   border-radius: 10px;
   margin-left: 43px;
   font-family: 'Heebo', sans-serif;
-
 }
 
 .userListContainer:hover > *,
@@ -51,7 +50,7 @@
   row-gap: 0px;
   text-decoration: none;
   list-style: none;
-  background-color: rgba(24, 24, 24, 0.963);
+  /* background-color: rgba(24, 24, 24, 0.963); */
   padding-bottom: 10%;
   font-family: 'Heebo', sans-serif;
 }
@@ -59,4 +58,5 @@
 
 .userNameStuff {
   font-family: 'Heebo', sans-serif;
+  text-decoration: none;
 }

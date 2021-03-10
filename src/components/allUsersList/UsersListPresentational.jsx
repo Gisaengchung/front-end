@@ -10,7 +10,7 @@ const UsersListPresentational = ({ users }) => {
           <img className = {styles.listImage} src={user.profileImageUrl} />
           <div className = {styles.column}>
             <div>{`${user.firstName} ${user.lastName}`}</div> 
-            <div>{`${user.userCity} ${user.userState}`}</div> 
+            <div>{`${user.userCity}, ${user.userState}`}</div> 
           </div>
         </div>
       </Link>
