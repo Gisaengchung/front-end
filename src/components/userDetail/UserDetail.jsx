@@ -4,6 +4,7 @@ import LoadingSpinner from '../../loading/LoadingSpinner';
 import { useUserDetail } from '../../hooks/userHook';
 import { useParams } from 'react-router';
 import { useSession } from '../../state/AuthUserProvider';
+import styles from './UserDetail.css';
 
 export default function UserDetail({ history }) {
   const { id } = useParams();
@@ -22,7 +23,12 @@ export default function UserDetail({ history }) {
   try {
     profileButton = 
     (id === session.userId) ? 
-      <button onClick={handleClick}>Edit Profile</button> : <div></div>;
+      <button 
+        className={styles.editUserButton} 
+        onClick={handleClick}>Edit Profile
+      </button> 
+      : 
+      <div></div>;
   }
   catch{
     profileButton = '';

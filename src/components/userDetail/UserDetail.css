@@ -1,24 +1,28 @@
 .userDetailPresentational {
-    margin-top: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .userImageDetail {
-    height: 400px;
-    width: 450px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    
+  height: 400px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 .h2User {
-    padding: 0px;
+  padding: 0px;
+}
+
+.editUserButton {
+  width: 32%;
+  margin-left: auto;
+  margin-right: auto;
 }
