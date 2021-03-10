@@ -36,9 +36,6 @@ export default function Navigation() {
                   <NavLink className="link" to="/info">What Is FIIN?</NavLink>
                 </li>
                 <li className={styles.navItem}>
-                  <NavLink className="link" to="/about-us">About Us</NavLink>
-                </li>
-                <li className={styles.navItem}>
                   <NavLink className="link" to="/users-list">Find Creators</NavLink>
                 </li>
                 <li className={styles.navItem}>
