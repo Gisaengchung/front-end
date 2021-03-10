@@ -58,7 +58,7 @@ exports[`AboutUs component renders AboutUs 1`] = `
           Kt
         </h2>
         <span>
-          Hi! My name is kt!I am tall!!!!!!WOOOOO!!!
+          Hi! My name is kt!I am tall!!!!!! WOOOOO!!!
         </span>
         <p />
         <a
@@ -95,7 +95,7 @@ exports[`AboutUs component renders AboutUs 1`] = `
           Kevin
         </h2>
         <span>
-          Hi! My name is Ferrari!I am Ferrari!
+          Hi! My name is Ferrari!I am Ferrari! Vroom vroom cars go fast yea yea yea
         </span>
         <p />
         <a
@@ -132,7 +132,7 @@ exports[`AboutUs component renders AboutUs 1`] = `
           Sydney
         </h2>
         <span>
-          Hi! My name is Sydney! I am not tall!
+          Hi! My name is Sydney! I am not tall!  I DO NOT DRINK COFFEEEEEEEEEE
         </span>
         <p />
         <a
