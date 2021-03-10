@@ -25,9 +25,6 @@ export default function Footer() {
                 <li className={styles.snake}>
                   <NavLink className="link" to="/">Home</NavLink>
                 </li>
-                <li className={styles.snake}>
-                  <NavLink className="link" to="/info">What Is FIIN?</NavLink>
-                </li>
               </span>
             </div>
 
@@ -38,9 +35,7 @@ export default function Footer() {
                 <li className={styles.snake}>
                   <NavLink className="link" to="/about-us">About Us</NavLink>
                 </li>
-                <li className={styles.snake}>
-                  <NavLink className="link" to="/users-list">Find Creators</NavLink>
-                </li>
+
               </span>
             </div>
 
@@ -49,10 +44,7 @@ export default function Footer() {
             <div  className={styles.separate}>
               <span>
                 <li className={styles.snake}>
-                  <NavLink className="link" to="/project-list">Discover Films</NavLink>
-                </li>
-                <li className={styles.snake}>
-                  <NavLink className="link" to="/project-form">Create a Film</NavLink>
+                  <NavLink className="link" to="/info">What Is FIIN?</NavLink>
                 </li>
               </span>
             </div>
