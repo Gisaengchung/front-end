@@ -14,7 +14,6 @@ const ProjectListPagePresentational = ({ projects }) => {
             <div>{project.projectTitle}</div> 
             <div>{project.subtitle}</div> 
             <div>{project.projectGenre}</div> 
-            <div>{project.projectFundingGoal}</div>
           </div>
         </div>
       </Link>
