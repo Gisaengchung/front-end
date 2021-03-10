@@ -5,13 +5,14 @@ import { useProjectHook } from '../../hooks/useProjectHook';
 import { useParams } from 'react-router';
 import { useSession } from '../../state/AuthUserProvider';
 import styles from './Project.css';
-import FundingForm from '../fundingForm/fundingForm';
+import { useUserDetail } from '../../hooks/userHook';
 
 
 export default function ProjectDetail({ history }) {
   const { id } = useParams();
   const { session } = useSession() || {};
   const { loading, project } = useProjectHook(id);
+  const { user } = useUserDetail(project.userId);
   const projUserId = project.userId;
 
   const handleClick = () => {
@@ -24,7 +25,7 @@ export default function ProjectDetail({ history }) {
     projectButton = 
     (session.userId === projUserId) ? 
       <button 
-        className={styles.editProjectButton} 
+        className={`${styles.editProjectButton} ${styles.width}`} 
         onClick={handleClick}>Edit Project
       </button> 
       : 
@@ -36,9 +37,12 @@ export default function ProjectDetail({ history }) {
   if(loading) return <LoadingSpinner />;
   return (
     <>
-      <ProjectDetailPagePresentational project={project} />
-      <div>{projectButton}</div>
-      <FundingForm />
+      <ProjectDetailPagePresentational 
+        project={project} 
+        projectButton = {projectButton} 
+        user = {user}  
+      />
+      
     </>
   
   );

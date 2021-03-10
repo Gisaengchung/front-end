@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router';
 import { patchDonationData } from '../../services/fetches/fetches';
 import styles from '../../styles/form.css';
+import style from './FundingForm.css';
 import FormInput from '../formInput/FormInput';
 
 const FundingFormPresentational = ({ donation }) => { 
@@ -25,12 +26,13 @@ const FundingFormPresentational = ({ donation }) => {
       increment
     })
       .then(() => { 
-        window.location.reload(false);      }); 
+        window.location.reload(false);
+      }); 
   };
       
   return (
     <div className={styles.displayPage}>
-      <form className={styles.formContainer} onSubmit={handleSubmitDonation}>
+      <form className={`${styles.formContainer} ${style.width}`} onSubmit={handleSubmitDonation}>
         <h2 className={styles.formHeader}>Donate</h2>
         <div>Funding Goal: ${projectFundingGoal}</div> 
         <div>Total Donations: ${projectDonations}</div>
