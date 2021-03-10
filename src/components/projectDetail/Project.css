@@ -24,7 +24,7 @@
   margin-right: auto;
 }
 
-.leftColumn{
+.leftColumn {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -32,32 +32,32 @@
   padding: 0 0 5em 10em;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
 }
 
-.userContainer{
-  zoom: 0.60;
-  -moz-transform: scale(0.50);
+.userContainer {
+  zoom: 0.6;
+  -moz-transform: scale(0.5);
   margin: 5em 0 5em 0;
   padding: 2em 0 2em 0;
   background-color: rgb(255, 255, 255);
 }
 
-.column{
+.column {
   display: flex;
   flex-direction: row;
 }
 
-.rightColumn{
+.rightColumn {
   padding: 6em 0em 0em 10em;
 }
 
-.leftAlign{
+.leftAlign {
   text-align: left;
 }
 
-body{
+body {
   margin-bottom: 100px;
 }

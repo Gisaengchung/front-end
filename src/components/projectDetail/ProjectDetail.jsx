@@ -1,12 +1,12 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import ProjectDetailPagePresentational from './ProjectDetailPagePresentational';
+import ProjectDetailPresentational from './ProjectDetailPresentational';
 import LoadingSpinner from '../../loading/LoadingSpinner';
 import { useProjectHook } from '../../hooks/useProjectHook';
 import { useParams } from 'react-router';
 import { useSession } from '../../state/AuthUserProvider';
 import styles from './Project.css';
 import { useUserDetail } from '../../hooks/userHook';
-
 
 export default function ProjectDetail({ history }) {
   const { id } = useParams();
@@ -37,13 +37,11 @@ export default function ProjectDetail({ history }) {
   if(loading) return <LoadingSpinner />;
   return (
     <>
-      <ProjectDetailPagePresentational 
+      <ProjectDetailPresentational 
         project={project} 
         projectButton = {projectButton} 
         user = {user}  
       />
-      
     </>
-  
   );
 }
