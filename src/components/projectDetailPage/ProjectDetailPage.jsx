@@ -4,18 +4,18 @@ import LoadingSpinner from '../../loading/LoadingSpinner';
 import { useProjectHook } from '../../hooks/useProjectHook';
 import { useParams } from 'react-router';
 import { useSession } from '../../state/AuthUserProvider';
+import styles from './Project.css';
 import FundingForm from '../fundingForm/fundingForm';
+
 
 export default function ProjectDetail({ history }) {
   const { id } = useParams();
   const { session } = useSession() || {};
   const { loading, project } = useProjectHook(id);
-
   const projUserId = project.userId;
 
   const handleClick = () => {
     history.push(`/project-edit/${project.projectId}`);
-
   };
 
   let projectButton = '';
@@ -23,7 +23,12 @@ export default function ProjectDetail({ history }) {
   try {
     projectButton = 
     (session.userId === projUserId) ? 
-      <button onClick={handleClick}>Edit Project</button> : <div></div>;
+      <button 
+        className={styles.editProjectButton} 
+        onClick={handleClick}>Edit Project
+      </button> 
+      : 
+      <div></div>;
   }
   catch{
     projectButton = '';
