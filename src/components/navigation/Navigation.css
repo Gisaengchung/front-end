@@ -29,7 +29,7 @@
   display: inline-block;
   color: rgb(43, 44, 40);
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   text-decoration: none;
 }
 
@@ -38,6 +38,7 @@
   height: auto;
   margin-left: -1em;
   margin-right: -1em;
+  margin-bottom: -0.4em;
 }
 
 .navItem:hover {

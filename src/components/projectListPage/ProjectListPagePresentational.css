@@ -4,13 +4,20 @@
 }
 
 .userListContainer{
-  background-color: rgb(147, 46, 26);
+  background-color: rgb(244, 244, 244);
   width: 250px;
   text-decoration: none;
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 37px;
+  font-family: 'Heebo', sans-serif;
+  box-shadow: 0px 0px 10px 10px rgba(0.1, 0.1, 0.1, 0.1);
 }
 
 .userListContainer:hover > *,
@@ -29,12 +36,20 @@
   flex-direction: row;
   flex-wrap: wrap;
   grid-template-columns: 100px 50px 100px;
-  grid-template-rows: 100px auto 100px; 
-  column-gap: 25px;
-  row-gap: 0px;
+  column-gap: 4%;
   list-style: none;
 }
 
 .projectId {
   margin-top: 10%;
+}
+
+.infoStuff {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  list-style: none;
+  padding-top: 5%;
+  padding-bottom: 8%;
 }

@@ -10,14 +10,10 @@ const ProjectListPagePresentational = ({ projects }) => {
       <Link to={`/project-detail/${project.projectId}`}>
         <div className={`${styles.userListContainer}`} >
           <img className = {styles.listImage} src = {project.projectMainImage} />
-          <div className={styles.column}>
+          <div className={styles.infoStuff}>
             <div>{project.projectTitle}</div> 
             <div>{project.subtitle}</div> 
             <div>{project.projectGenre}</div> 
-          </div>
-          <div>
-            <div>{project.projectFundingExDate}</div>
-            <div>{project.projectFundingGoal}</div>
           </div>
         </div>
       </Link>
