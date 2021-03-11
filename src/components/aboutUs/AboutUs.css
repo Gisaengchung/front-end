@@ -30,6 +30,7 @@
 .ktImage {
   height: 250%;
   width: 125%;
+  border-radius: 10px;
 
 }
 
