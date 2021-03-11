@@ -3,17 +3,34 @@ import React from 'react';
 import styles from './Home.css';
 import para from './homeAssets/parasite.jpg';
 import hunt from './homeAssets/hunt.jpg';
-import BackgroundVideo from '../video/Backgroundvideo';
 import pog from './homeAssets/pog.png';
 import gisaengchung from './homeAssets/Gisaengchung.jpg';
 import topBanner from './homeAssets/topBanner.jpg';
+import meetPic from './homeAssets/meetPic.jpg';
+import discoverPic from './homeAssets/discoverPic.jpg';
+import createPic from './homeAssets/createPic.jpg';
+import topFilm from './homeAssets/topFilm.mp4';
+import help from './homeAssets/helpUs.mp4';
 
 const Home = () => {
   return (
     <>
-      <section>   
+      <section className={styles.VideoContainer}>   
         <div>
-          <BackgroundVideo/>
+          <video autoPlay="autoplay" loop="loop" muted className={styles.Video}>
+            <source src={topFilm} type="video/mp4" />
+               Your browser does not support the video tag.
+          </video>
+
+          <div className={styles.VideoText} >
+            <div className={styles.Content}>
+              <div className={styles.SubContent} >
+                <h1 className={styles.Mainer}>FILM INDIE</h1>
+                <h3 className={styles.Subber}>THE Independent Film Platform</h3>
+                <div className={styles.Descriptor}>FUND, FILM, MARKET, and SHOWCASE your film all in one place.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     
@@ -25,12 +42,29 @@ const Home = () => {
           <img className={styles.topBanner} src={topBanner}/>
         </section>
 
+        {/* --------------------------------------------------- */}
+
         <div className={styles.inBegin}> 
-          <h2>Explore, Create, Enjoy</h2>
-          <p>
-            Welcome to the premier platform for independent creation. Here you will discover both independent films and creators alike. Here at FIIN we want to provide a platform for film industry professionals to both have a clear and dedicated way of introducing an idea and maintaining full control of their vision through and through. For more information about how we operate check out <a href="/info">What is FIIN?</a></p>
-          <p>
-            We also are encouraging users to sign-up and share what projects they are working on or have worked on. This will provide a social platform for directors, producers, and actors alike to find new talent hidden in the rough.  </p>
+
+          <section className={styles.ThreeThings}>
+      
+            <a href="/users-list"><div className={styles.smallerBox}><h2>Meet</h2>
+              <p>Meet new people in the industry to work with.</p>
+              <img className={styles.meetdiscovercreate} src={meetPic}/>
+            </div></a>
+
+            <a href="/project-form"><div className={styles.smallerBox}><h2>Create</h2>
+              <p>Are you a director or producer? Want to create a film? Click here.</p>
+              <img className={styles.meetdiscovercreate} src={createPic}/>
+            </div></a>
+
+            <a href="/project-list"><div className={styles.smallerBox}><h2>Discover</h2>
+              <p>Find films underway and support their project!</p> 
+              <img className={styles.meetdiscovercreate} src={discoverPic}/>
+            </div></a>
+
+          </section>
+          
         </div>
 
       </section>
@@ -49,7 +83,7 @@ const Home = () => {
             <div className={styles.featImageContainer}>
               <img className={styles.featImage} src={pog}/>
             </div>
-            
+
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
               <h3>Director: Gary Lundgren</h3>
@@ -108,6 +142,15 @@ const Home = () => {
           </article>
 
         </section>
+
+
+        <section className={styles.bottomBannerOne}>
+          <video autoPlay="autoplay" loop="loop" muted >
+            <source src={help} type="video/mp4" />
+               Your browser does not support the video tag.
+          </video> 
+        </section>
+
 
         {/* --------------------------------------------------- */}
         {/* --------------------------------------------------- */}
