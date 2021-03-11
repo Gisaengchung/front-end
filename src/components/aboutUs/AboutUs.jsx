@@ -34,7 +34,7 @@ export default function AboutUs() {
        
           <img className={styles.ktImage} src={kt} />
           <h2 className={styles.aboutNames}>Kt</h2>
-          <span>Hi! My name is kt!I am tall!!!!!! WOOOOO!!!</span>
+          <span>Hi! My name is Katie and in my free time I create and produce small films!</span>
           <br/>
           <a href="https://github.com/katiejonesyo">
             <img className={styles.contactImage} src={github} />
