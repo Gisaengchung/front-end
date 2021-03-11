@@ -3,17 +3,36 @@ import React from 'react';
 import styles from './Home.css';
 import para from './homeAssets/parasite.jpg';
 import hunt from './homeAssets/hunt.jpg';
-import BackgroundVideo from '../video/Backgroundvideo';
 import pog from './homeAssets/pog.png';
 import gisaengchung from './homeAssets/Gisaengchung.jpg';
 import topBanner from './homeAssets/topBanner.jpg';
+import meetPic from './homeAssets/meetPic.jpg';
+import discoverPic from './homeAssets/discoverPic.jpg';
+import createPic from './homeAssets/createPic.jpg';
+import topFilm from './homeAssets/topFilm.mp4';
+
 
 const Home = () => {
   return (
-    <>
-      <section>   
+    <div className={styles.displayPage}>
+      <section className={styles.VideoContainer}>   
         <div>
-          <BackgroundVideo/>
+          <video autoPlay="autoplay" loop="loop" muted className={styles.Video}>
+            <source src={topFilm} type="video/mp4" />
+               Your browser does not support the video tag.
+          </video>
+
+          <hr/>
+
+          <div className={styles.VideoText} >
+            <div className={styles.Content}>
+              <div className={styles.SubContent} >
+                <h1 className={styles.Mainer}>FILM INDIE</h1>
+                <h3 className={styles.Subber}>THE Independent Film Platform</h3>
+                <div className={styles.Descriptor}>FUND, FILM, MARKET, and SHOWCASE your film all in one place.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     
@@ -25,12 +44,32 @@ const Home = () => {
           <img className={styles.topBanner} src={topBanner}/>
         </section>
 
+        {/* --------------------------------------------------- */}
+
         <div className={styles.inBegin}> 
-          <h2>Explore, Create, Enjoy</h2>
-          <p>
-            Welcome to the premier platform for independent creation. Here you will discover both independent films and creators alike. Here at FIIN we want to provide a platform for film industry professionals to both have a clear and dedicated way of introducing an idea and maintaining full control of their vision through and through. For more information about how we operate check out <a href="/info">What is FIIN?</a></p>
-          <p>
-            We also are encouraging users to sign-up and share what projects they are working on or have worked on. This will provide a social platform for directors, producers, and actors alike to find new talent hidden in the rough.  </p>
+          <div className={styles.ThreeThings}>
+            <a href="/users-list">
+              <div className={styles.smallerBox}>
+                <h2>MEET</h2>
+                <p>Meet new people in the industry to work with.</p>
+                <img className={styles.meetdiscovercreate} src={meetPic}/>
+              </div>
+            </a>
+            <a href="/project-form">
+              <div className={styles.smallerBox}>
+                <h2>CREATE</h2>
+                <p>Click here to create a film!</p>
+                <img className={styles.meetdiscovercreate} src={createPic}/>
+              </div>
+            </a>
+            <a href="/project-list">
+              <div className={styles.smallerBox}>
+                <h2>DISCOVER</h2>
+                <p>Find films underway and support their project!</p> 
+                <img className={styles.meetdiscovercreate} src={discoverPic}/>
+              </div>
+            </a>
+          </div>
         </div>
 
       </section>
@@ -49,13 +88,13 @@ const Home = () => {
             <div className={styles.featImageContainer}>
               <img className={styles.featImage} src={pog}/>
             </div>
-            
+
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
               <h3>Director: Gary Lundgren</h3>
               <p className={styles.descriptionParagraph}>108 min, R</p>
-              <p>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the "world's greatest pizza."</p> 
-              <p>Stars James Le Gros (Drugstore Cowboy, Living in Oblivion), Lisa Edelstein (Girlfriends' Guide to Divorce, House), Jesse Borrego (Fame, Blood In Blood Out), Reynaldo Gallegos (Triple Frontier, American Sniper), Diedrich Bader (Napoleon Dynamite, Office Space, Veep), and Kevin Corrigan (The Departed, Pineapple Express, True Romance).</p>
+              <p>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the &#34;world&#39;s greatest pizza.&#34;</p> 
+              <p>Stars James Le Gros (Drugstore Cowboy, Living in Oblivion), Lisa Edelstein (Girlfriends&#39; Guide to Divorce, House), Jesse Borrego (Fame, Blood In Blood Out), Reynaldo Gallegos (Triple Frontier, American Sniper), Diedrich Bader (Napoleon Dynamite, Office Space, Veep), and Kevin Corrigan (The Departed, Pineapple Express, True Romance).</p>
               <p>Produced by Joma Films with Pied Piper Productions, Lui-G Films and Sunset Dynamics. </p>
             </div>
           </article>
@@ -115,7 +154,7 @@ const Home = () => {
       {/* --------------------------------------------------- */}
       {/* --------------------------------------------------- */}
 
-    </>
+    </div>
   );
 };
 export default Home;

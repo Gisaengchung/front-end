@@ -1,32 +1,41 @@
-.navFooter {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    height: 70px;
-    background-color: black;
-    font-size: 15px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+.footerContainer {
+  background-color: rgb(43, 44, 40);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  line-height: 2em;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
 
-.snake { 
-    margin-bottom: 10px;
+.footerList {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.snake a:hover {
-    color: rgb(255, 255, 255);
+.footerItem {
+  margin-left: 33px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
 }
 
-.snake a:visited {
-    color: rgb(255, 255, 255);
+.footerItem:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
 }
 
-.snake a:link {
-    color: rgb(255, 255, 255);
+.footerItem a:visited {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
-.separate {
-    float: left;
-    margin-left: 50px;
+.footerItem a:link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }

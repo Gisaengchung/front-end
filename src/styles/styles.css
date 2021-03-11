@@ -8,3 +8,8 @@ body {
 .page {
   margin-top: 70px;
 }
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+}

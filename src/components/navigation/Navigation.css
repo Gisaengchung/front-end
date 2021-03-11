@@ -53,6 +53,7 @@
 }
 
 .navItem a:visited {
+  text-decoration: none;
   color: rgb(43, 44, 40);
 }
 
@@ -77,4 +78,3 @@
 .logo a:visited {
   color: rgb(43, 44, 40);
 }
-

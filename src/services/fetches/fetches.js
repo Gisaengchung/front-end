@@ -13,8 +13,6 @@ export const getDonationsById = (id) => {
 };
 
 export const patchDonationData = (donationInfo) => {
-  console.log(donationInfo);
-  console.log('project/donate')
   return put('project/donate', donationInfo);
 };
   
