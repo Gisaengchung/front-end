@@ -52,6 +52,9 @@
   list-style: none;
   padding-top: 5%;
   padding-bottom: 8%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 a:hover {
@@ -67,4 +70,11 @@ a:link {
 a:visited {
   text-decoration: none;
   color: rgb(43, 44, 40);
+}
+
+.title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0px 10px 0px 10px;
 }
