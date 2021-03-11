@@ -14,7 +14,7 @@ import topFilm from './homeAssets/topFilm.mp4';
 
 const Home = () => {
   return (
-    <>
+    <div className={styles.displayPage}>
       <section className={styles.VideoContainer}>   
         <div>
           <video autoPlay="autoplay" loop="loop" muted className={styles.Video}>
@@ -151,7 +151,7 @@ const Home = () => {
       {/* --------------------------------------------------- */}
       {/* --------------------------------------------------- */}
 
-    </>
+    </div>
   );
 };
 export default Home;
