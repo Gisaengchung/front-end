@@ -84,3 +84,57 @@ h5 {
 body {
   margin-bottom: 100px;
 }
+
+.projectDetailPresentational {
+  margin-top: 7%;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Heebo', sans-serif;
+  color: black;
+}
+
+.userTitle {
+  color: rgb(43, 44, 40);
+}
+
+.userLocation {
+  color: rgb(43, 44, 40);
+}
+
+.projectUserImage {
+  width: 18vw;
+  height: auto;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  box-shadow: 0px 0px 2px 2px rgba(43, 44, 40, 0.387);
+}
+
+.editUserButton {
+  width: 32%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userProDetail {
+  line-height: 2em;
+  color: rgb(43, 44, 40);
+}
+
+.userVenmo {
+  width: 20px;
+  height: 19px;
+  margin-right: 3px;
+  margin-bottom: -0.3em;
+}

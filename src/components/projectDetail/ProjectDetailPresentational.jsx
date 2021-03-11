@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Project.css';
 import FundingForm from '../fundingForm/FundingForm';
-import UserListPresentation from '../userDetail/UserDetailPresentational';
 import { Link } from 'react-router-dom';
+import ProjectDetailUser from './ProjectDetailUser';
 
 const ProjectDetailPresentational = (
   { project, projectButton, user }
@@ -35,7 +35,7 @@ const ProjectDetailPresentational = (
             <Link 
               to={`/user-detail/${user.userId}`}  
               className={styles.userDetailPresentational}>
-              <UserListPresentation user={user} />
+              <ProjectDetailUser user={user} />
             </Link>
           </div>
           <div>{projectButton}</div>
