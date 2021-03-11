@@ -21,9 +21,7 @@ const Home = () => {
             <source src={topFilm} type="video/mp4" />
                Your browser does not support the video tag.
           </video>
-
           <hr/>
-
           <div className={styles.VideoText} >
             <div className={styles.Content}>
               <div className={styles.SubContent} >
@@ -36,16 +34,10 @@ const Home = () => {
         </div>
       </section>
     
-      {/* --------------------------------------------------- */}
-
       <section className={styles.Begin}>
-
         <section>
           <img className={styles.topBanner} src={topBanner}/>
         </section>
-
-        {/* --------------------------------------------------- */}
-
         <div className={styles.inBegin}> 
           <div className={styles.ThreeThings}>
             <a href="/users-list">
@@ -71,24 +63,15 @@ const Home = () => {
             </a>
           </div>
         </div>
-
       </section>
 
-      {/* --------------------------------------------------- */}
-      {/* --------------------------------------------------- */}
       <section className={styles.bottomMargin}>
-        {/* --------------------------------------------------- */}
-        {/* --------------------------------------------------- */}
- 
         <h1><hr/>FEATURED FILM<hr/></h1>
-
         <section className={styles.allSections}>
-
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
               <img className={styles.featImage} src={pog}/>
             </div>
-
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
               <h3>Director: Gary Lundgren</h3>
@@ -98,21 +81,15 @@ const Home = () => {
               <p>Produced by Joma Films with Pied Piper Productions, Lui-G Films and Sunset Dynamics. </p>
             </div>
           </article>
-
           <section className={styles.advImageOver}>
             <div className={styles.advImageMid}>
               <img className={styles.advImageUnder} src={gisaengchung}/>
             </div>
           </section>
-
         </section>
 
-        {/* --------------------------------------------------- */}
         <h1><hr/>NEW ARRIVALS<hr/></h1>
-        {/* --------------------------------------------------- */}
-
         <section className={styles.allSections}>
-
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
               <img className={styles.featImage} src={hunt}/>
@@ -126,15 +103,11 @@ const Home = () => {
               <p>Sam Neill, Julian Dennison, Rima Te Wiata . </p>
             </div>
           </article>
-
         </section>
 
-        {/* --------------------------------------------------- */}
         <hr/>
-        {/* --------------------------------------------------- */}
 
         <section className={styles.allSections}>
-
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
               <img className={styles.featImage} src={para}/>
@@ -145,14 +118,8 @@ const Home = () => {
               <p>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>
             </div>
           </article>
-
         </section>
-
-        {/* --------------------------------------------------- */}
-        {/* --------------------------------------------------- */}
       </section>
-      {/* --------------------------------------------------- */}
-      {/* --------------------------------------------------- */}
 
     </div>
   );
