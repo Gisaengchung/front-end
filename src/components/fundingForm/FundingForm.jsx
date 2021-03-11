@@ -2,6 +2,7 @@
 import React from 'react';
 import LoadingSpinner from '../../loading/LoadingSpinner';
 import FundingFormPresentational from './FundingFormPresentational';
+import PropTypes from 'prop-types';
 import { useFundingHook } from '../../hooks/useFundingHook';
 import { useParams } from 'react-router';
 
@@ -16,12 +17,10 @@ const FundingForm = ({ history }) => {
     return `${month}/${day}/${year}`;
   };
   
-
   if(loading) return <LoadingSpinner />;
   if(!loading){
     donation.projectFundingExDate = formatDate(donation.projectFundingExDate);
   }
-  console.log(donation);
 
   return (
     <div>
@@ -31,6 +30,7 @@ const FundingForm = ({ history }) => {
 };
 
 FundingForm.propTypes = {
+  history: PropTypes.object
 };
 
 export default FundingForm;
