@@ -42,7 +42,7 @@ class AboutUs extends Component {
           {/* ---------------------------------------------- */}
           <span className={styles.smallContainers} >
             <p className={styles.pgraph}>
-              <h2>Step 3:</h2> After you have created your campaign, it's time to get to work. Continue to build your campaign by keeping your media up to date, search other users who might be able to help you carry out your film, or plan and host live or recorded meetings to promote your film and your idea. Use your custom project URL as an active virtual business card to pass out to anyone you see fit. The possibilities are endless and we here at FiIn want to make sure you get the most out of your project and our platform.  
+              <h2>Step 3:</h2> After you have created your campaign, it&#39;s time to get to work. Continue to build your campaign by keeping your media up to date, search other users who might be able to help you carry out your film, or plan and host live or recorded meetings to promote your film and your idea. Use your custom project URL as an active virtual business card to pass out to anyone you see fit. The possibilities are endless and we here at FiIn want to make sure you get the most out of your project and our platform.  
             </p>
           </span>
 

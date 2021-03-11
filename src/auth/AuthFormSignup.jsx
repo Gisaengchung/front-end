@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useAuthError } from '../state/AuthUserProvider';
 import { useHistory } from 'react-router-dom';
 import styles from '../styles/form.css';
 import FormInput from '../components/formInput/FormInput';
 
 const AuthForm = ({ authFn }) => {
   const history = useHistory();
-  const error = useAuthError();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFName] = useState('');
