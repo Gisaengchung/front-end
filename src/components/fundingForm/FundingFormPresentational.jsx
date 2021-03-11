@@ -60,7 +60,7 @@ const FundingFormPresentational = ({ donation }) => {
         <div className={styles.fundDetails}>Funding Expiration Date:
           <br></br> {projectFundingExDate}</div>
         <br></br>
-        <FormInput 
+        <FormInput
           id={'increment'}
           type={'number'}
           value={increment}
