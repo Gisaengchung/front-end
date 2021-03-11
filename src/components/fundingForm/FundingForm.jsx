@@ -9,7 +9,20 @@ const FundingForm = ({ history }) => {
   const { id } = useParams();
   const { donation, loading } = useFundingHook(id);
 
+  const formatDate = (date) => {
+    const day = donation.projectFundingExDate.substring(8, 10);
+    const month = donation.projectFundingExDate.substring(5, 7);
+    const year = donation.projectFundingExDate.substring(0, 4);
+    return `${month}/${day}/${year}`;
+  };
+  
+
   if(loading) return <LoadingSpinner />;
+  if(!loading){
+    donation.projectFundingExDate = formatDate(donation.projectFundingExDate);
+  }
+  console.log(donation);
+
   return (
     <div>
       <FundingFormPresentational donation = { donation } />
