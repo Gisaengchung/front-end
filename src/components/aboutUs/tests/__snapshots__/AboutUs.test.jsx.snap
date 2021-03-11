@@ -8,150 +8,142 @@ exports[`AboutUs component renders AboutUs 1`] = `
     <div
       class="personContainer"
     >
-      <div
-        class="picContainer"
+      <img
+        class="ktImage"
+        src="/path/image"
+      />
+      <h2
+        class="aboutNames"
+      >
+        Richard
+      </h2>
+      <span>
+        Hi! I am a software engineer born in South Korea and raised in Vermont. I used to live in a tiny house school bus and would watch loads of movies with my wife who built the bus. I also served in the military and on deployment watched hundreds of movies. Right now my favorite movie is ‘The King’.
+      </span>
+      <br />
+      <a
+        href="https://github.com/Richard-Hillman"
       >
         <img
-          class="ktImage"
+          class="contactImage"
           src="/path/image"
         />
-        <h2
-          class="aboutNames"
-        >
-          Richard
-        </h2>
-        <span>
-          Hi! My Name is Richard. In the future time is backwards!
-        </span>
-        <br />
-        <a
-          href="https://github.com/Richard-Hillman"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/richard-hillman/"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-      </div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/richard-hillman/"
+      >
+        <img
+          class="contactImage"
+          src="/path/image"
+        />
+      </a>
     </div>
     <div
       class="personContainer"
     >
-      <div
-        class="picContainer"
+      <img
+        class="ktImage"
+        src="/path/image"
+      />
+      <h2
+        class="aboutNames"
+      >
+        Kt
+      </h2>
+      <span>
+        Hi! My name is Katie and I'm a Fullstack Software Engineer. In my free time I create and produce small films!
+      </span>
+      <br />
+      <a
+        href="https://github.com/katiejonesyo"
       >
         <img
-          class="ktImage"
+          class="contactImage"
           src="/path/image"
         />
-        <h2
-          class="aboutNames"
-        >
-          Kt
-        </h2>
-        <span>
-          Hi! My name is Katie and in my free time I create and produce small films!
-        </span>
-        <br />
-        <a
-          href="https://github.com/katiejonesyo"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/katiejonesyo/"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-      </div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/katiejonesyo/"
+      >
+        <img
+          class="contactImage"
+          src="/path/image"
+        />
+      </a>
     </div>
     <div
       class="personContainer"
     >
-      <div
-        class="picContainer"
+      <img
+        class="ktImage"
+        src="/path/image"
+      />
+      <h2
+        class="aboutNames"
+      >
+        Kevin
+      </h2>
+      <span>
+        My name is Kevin and I am a full stack software engineer. I recently moved to Portland and have previously lived in New York, Texas, and Michigan. My hobbies include rock climbing, 3D printing, and board games.
+      </span>
+      <br />
+      <a
+        href="https://github.com/kevinfiero"
       >
         <img
-          class="ktImage"
+          class="contactImage"
           src="/path/image"
         />
-        <h2
-          class="aboutNames"
-        >
-          Kevin
-        </h2>
-        <span>
-          Hi! My name is Ferrari!I am Ferrari! Vroom vroom cars go fast yea yea yea
-        </span>
-        <br />
-        <a
-          href="https://github.com/kevinfiero"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kevinfiero/"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-      </div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/kevinfiero/"
+      >
+        <img
+          class="contactImage"
+          src="/path/image"
+        />
+      </a>
     </div>
     <div
       class="personContainer"
     >
-      <div
-        class="picContainer"
+      <img
+        class="ktImage"
+        src="/path/image"
+      />
+      <h2
+        class="aboutNames"
+      >
+        Sydney
+      </h2>
+      <span
+        class="sydneySpan"
+      >
+        My name is Sydney and I'm a HUGE film nerd. I love watching films and award shows. I regularly get lost in Wikipedia rabbit holes about directors and actors. My favorite nonprofit is the 
+        <a
+          href="https://hollywoodtheatre.org/"
+        >
+          Hollywood Theatre
+        </a>
+        , which also happens to be one of the best independent theatres in the world! I'm also a fullstack software engineer with a passion for clean code and design-driven development.
+      </span>
+      <br />
+      <a
+        href="https://github.com/scjam"
       >
         <img
-          class="ktImage"
+          class="contactImage"
           src="/path/image"
         />
-        <h2
-          class="aboutNames"
-        >
-          Sydney
-        </h2>
-        <span>
-          Hi! My name is Sydney! I am not tall!  I DO NOT DRINK COFFEEEEEEEEEE
-        </span>
-        <br />
-        <a
-          href="https://github.com/scjam"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/sydjames/"
-        >
-          <img
-            class="contactImage"
-            src="/path/image"
-          />
-        </a>
-      </div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/sydjames/"
+      >
+        <img
+          class="contactImage"
+          src="/path/image"
+        />
+      </a>
     </div>
   </div>
 </DocumentFragment>
