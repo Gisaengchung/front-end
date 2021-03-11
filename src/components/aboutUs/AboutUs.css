@@ -1,50 +1,56 @@
 .aboutContainer {
-  background-color: rgb(232, 232, 232);
-  padding-top: 12%;
-  padding-bottom: 12%;
-  padding-right: 4%;
+  background-color: rgb(43, 44, 40);
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.305);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   grid-template-columns: 200px auto 200px;
-  grid-template-rows: 200px auto 200px; 
+  grid-template-rows: 200px auto 200px;
   column-gap: 55px;
-  row-gap: 0px;
   text-align: center;
-  align-items: center;
+  align-items: flex-start;
   align-content: center;
   justify-content: center;
+  margin-top: 10%;
+  margin-left: 4%;
+  height: auto;
+  width: 92vw;
+  padding: 2em;
 }
 
 .personContainer {
-  color: rgb(43, 44, 40);
-}
-
-.picContainer {
-  padding: 30px;
-  width: 20vw;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 17vw;
+  align-items: center;
+  margin: 1em;
 }
 
 .ktImage {
-  height: 250%;
-  width: 125%;
+  height: 24vh;
+  width: auto;
   border-radius: 10px;
 }
 
 .contactImage {
   height: 50px;
   width: 50px;
-  padding: 8px;
-  margin-left: 6%;
+  padding: 7px;
 }
 
 span {
-text-align: center;
-padding-left: 4%;
-padding-right: 4%;
+  text-align: center;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .aboutNames {
   text-align: center;
-  padding-left: 45px;
+}
+
+.sydneySpan {
+  a {
+    color: rgb(255, 255, 255) !important;
+    text-decoration: underline !important;
+  }
 }
