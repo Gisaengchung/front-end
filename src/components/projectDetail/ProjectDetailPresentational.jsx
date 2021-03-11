@@ -43,7 +43,8 @@ const ProjectDetailPresentational = (
 
 ProjectDetailPresentational.propTypes = {
   project: PropTypes.object.isRequired,
-  projectButton: PropTypes.object.isRequired
+  projectButton: PropTypes.string.isRequired,
+  user: PropTypes.object.isRequired
 };
 
 export default ProjectDetailPresentational;
