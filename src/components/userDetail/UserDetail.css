@@ -18,17 +18,14 @@
 
 }
 
-.userImageDetails {
-  height: 425px;
-  width: 400px;
+.userImageDetail {
+  width: 18vw;
+  height: auto;
+  object-fit: contain;
   display: flex;
   justify-content: center;
   align-content: center;
   text-align: center;
-}
-
-.h2User {
-  padding: 0px;
 }
 
 .editUserButton {
@@ -36,4 +33,8 @@
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.userDetail {
+  line-height: 2em;
 }
