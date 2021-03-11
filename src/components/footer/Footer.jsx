@@ -11,42 +11,34 @@ export default function Footer() {
 
   return (
     <div>
+      <nav className={styles.navFooter}>
 
-      <div>
-        <nav className={styles.navFooter}>
+        <ul className={styles.navList}>
 
-          <div className={styles.logo}>FIIN</div>
-
-          <ul className={styles.navList}>
-
-            {/* -------------------------------------------- */}
+          {/* -------------------------------------------- */}
       
-            <span>
-              <li className={styles.snake}>
-                <NavLink className="link" to="/">Home</NavLink>
-              </li>
-            </span>
+          <li className={styles.snake}>
+            <NavLink className="link" to="/">Home</NavLink>
+          </li>
+
     
-            {/* -------------------------------------------- */}
+          {/* -------------------------------------------- */}
 
-            <span>
-              <li className={styles.snake}>
-                <NavLink className="link" to="/about-us">About Us</NavLink>
-              </li>
-            </span>
+          <li className={styles.snake}>
+            <NavLink className="link" to="/about-us">About Us</NavLink>
+          </li>
 
-            {/* -------------------------------------------- */}
 
-            <span>
-              <li className={styles.snake}>
-                <NavLink className="link" to="/info">What Is FIIN?</NavLink>
-              </li>
-            </span>
+          {/* -------------------------------------------- */}
 
-          </ul>
+          <li className={styles.snake}>
+            <NavLink className="link" to="/info">What Is FIIN?</NavLink>
+          </li>
 
-        </nav>
-      </div>
+        </ul>
+
+      </nav>
+
 
     </div>
   );
