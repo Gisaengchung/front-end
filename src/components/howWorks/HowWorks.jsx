@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import styles from './HowWorks.css';
 import filmPerfect from './howWorksAssets/filmPerfect.jpg';
-import help from './howWorksAssets/helpUs.mp4';
+
 
 class AboutUs extends Component {
   render() {
@@ -48,11 +48,13 @@ class AboutUs extends Component {
 
         </div>
       
-        <section className={styles.bottomBannerOne}>
-          <video autoPlay="autoplay" loop="loop" muted >
-            <source src={help} type="video/mp4" />
-               Your browser does not support the video tag.
-          </video> 
+        <section>
+          <span className={styles.helpUs} >
+            <p className={styles.helpMid}>
+              <h2>Open Source Help </h2>
+              DO you want to help us.................................................................................................................................................................................................................................................................................................................................................................................
+            </p>
+          </span>
         </section>
 
         
