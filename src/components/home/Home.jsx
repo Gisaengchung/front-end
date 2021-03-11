@@ -10,6 +10,7 @@ import meetPic from './homeAssets/meetPic.jpg';
 import discoverPic from './homeAssets/discoverPic.jpg';
 import createPic from './homeAssets/createPic.jpg';
 import topFilm from './homeAssets/topFilm.mp4';
+import help from './homeAssets/helpUs.mp4';
 
 const Home = () => {
   return (
@@ -141,6 +142,15 @@ const Home = () => {
           </article>
 
         </section>
+
+
+        <section className={styles.bottomBannerOne}>
+          <video autoPlay="autoplay" loop="loop" muted >
+            <source src={help} type="video/mp4" />
+               Your browser does not support the video tag.
+          </video> 
+        </section>
+
 
         {/* --------------------------------------------------- */}
         {/* --------------------------------------------------- */}
