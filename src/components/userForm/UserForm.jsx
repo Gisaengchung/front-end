@@ -1,4 +1,5 @@
-/* eslint-disable max-len */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useSession } from '../../state/AuthUserProvider';
 import { useUserDetail } from '../../hooks/userHook';

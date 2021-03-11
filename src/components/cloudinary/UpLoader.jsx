@@ -1,20 +1,17 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
-// import { patchUserData } from '../../services/fetches/fetches';
-// import { useSession } from '../../state/AuthUserProvider';
 
 export default function UpLoader({ setProfileImageUrl, profileImageUrl }) {
-
   const [loading, setLoading] = useState(false);
-  // const { session, setSession }  = useSession() || {}; 
-
+  
   const uploadImage = async e => {
     const files = e.target.files;
     const data = new FormData();
+    
     data.append('file', files[0]);
     data.append('upload_preset', 'upload');
     setLoading(true);
-
 
     const res = 
       await fetch('	https://api.cloudinary.com/v1_1/gisaengchung/image/upload', 
@@ -26,7 +23,6 @@ export default function UpLoader({ setProfileImageUrl, profileImageUrl }) {
     const file = await res.json();
 
     setProfileImageUrl(file.secure_url);
-
     setLoading(false);
   };
 
@@ -37,7 +33,6 @@ export default function UpLoader({ setProfileImageUrl, profileImageUrl }) {
         type="file" 
         placeholder="Upload An Image Here" 
         onChange={uploadImage}/>
-
       {
         loading ? 
           (<h3>Loading...</h3>) :

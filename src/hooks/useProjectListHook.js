@@ -13,7 +13,6 @@ export const useProjectListHook = () => {
       });
   }, []);
   
-  
   return {
     projects, 
     loading

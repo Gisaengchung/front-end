@@ -10,7 +10,7 @@ import meetPic from './homeAssets/meetPic.jpg';
 import discoverPic from './homeAssets/discoverPic.jpg';
 import createPic from './homeAssets/createPic.jpg';
 import topFilm from './homeAssets/topFilm.mp4';
-
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -70,13 +70,14 @@ const Home = () => {
         <section className={styles.allSections}>
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
-              <img className={styles.featImage} src={pog}/>
+              <Link to={'/project-detail/23'}>
+                <img className={styles.featImage} src={pog}/>
+              </Link>
             </div>
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
               <h3>Director: Gary Lundgren</h3>
-              <p className={styles.descriptionParagraph}>108 min, R</p>
-              <p>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the &#34;world&#39;s greatest pizza.&#34;</p> 
+              <p className={styles.descriptionParagraph}>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the &#34;world&#39;s greatest pizza.&#34;</p> 
               <p>Stars James Le Gros (Drugstore Cowboy, Living in Oblivion), Lisa Edelstein (Girlfriends&#39; Guide to Divorce, House), Jesse Borrego (Fame, Blood In Blood Out), Reynaldo Gallegos (Triple Frontier, American Sniper), Diedrich Bader (Napoleon Dynamite, Office Space, Veep), and Kevin Corrigan (The Departed, Pineapple Express, True Romance).</p>
               <p>Produced by Joma Films with Pied Piper Productions, Lui-G Films and Sunset Dynamics. </p>
             </div>
@@ -92,15 +93,16 @@ const Home = () => {
         <section className={styles.allSections}>
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
-              <img className={styles.featImage} src={hunt}/>
+              <Link to={'/project-detail/22'}>
+                <img className={styles.featImage} src={hunt}/>
+              </Link>
             </div>
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>HUNT FOR THE WILDERPEOPLE</h2>
               <h3>Director: Taika Waititi</h3>
-              <p className={styles.descriptionParagraph}>101 min, R</p>
-              <p>Raised on hip-hop and foster care, defiant city kid Ricky gets a fresh start in the New Zealand countryside. He quickly finds himself at home with his new foster family: the loving Aunt Bella, the cantankerous Uncle Hec, and dog Tupac. When a tragedy strikes that threatens to ship Ricky to another home, both he and Hec go on the run in the bush. As a national manhunt ensues, the newly branded outlaws must face their options: go out in a blaze of glory or overcome their differences and survive as a family.</p> 
+              <p className={styles.descriptionParagraph}>Raised on hip-hop and foster care, defiant city kid Ricky gets a fresh start in the New Zealand countryside. He quickly finds himself at home with his new foster family: the loving Aunt Bella, the cantankerous Uncle Hec, and dog Tupac. When a tragedy strikes that threatens to ship Ricky to another home, both he and Hec go on the run in the bush. As a national manhunt ensues, the newly branded outlaws must face their options: go out in a blaze of glory or overcome their differences and survive as a family.</p> 
               <p>Equal parts road comedy and coming-of-age drama, director Taika Waititi masterfully weaves lively humor with emotionally honest performances by Sam Neill and Julian Dennison. Never short on laughs, this touching story reminds us about the journey that growing up is (at any age) and those who help us along the way.</p>
-              <p>Sam Neill, Julian Dennison, Rima Te Wiata . </p>
+              <p>Sam Neill, Julian Dennison, Rima Te Wiata</p>
             </div>
           </article>
         </section>
@@ -110,12 +112,14 @@ const Home = () => {
         <section className={styles.allSections}>
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
-              <img className={styles.featImage} src={para}/>
+              <Link to={'/project-detail/5'}>
+                <img className={styles.featImage} src={para}/>
+              </Link>
             </div>
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PARASITE</h2>
               <h3>Director: Bong Joon Ho</h3>
-              <p>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>
+              <p>Jobless, penniless, and, above all, hopeless, the unmotivated patriarch, Ki-taek, and his equally unambitious family--his supportive wife, Chung-sook; his cynical twentysomething daughter, Ki-jung, and his college-age son, Ki-woo--occupy themselves by working for peanuts in their squalid basement-level apartment. Then, by sheer luck, a lucrative business proposition will pave the way for an ingeniously insidious scheme, as Ki-woo summons up the courage to pose as an English tutor for the teenage daughter of the affluent Park family. Now, the stage seems set for an unceasing winner-take-all class war. How does one get rid of a parasite?</p>
             </div>
           </article>
         </section>

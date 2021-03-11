@@ -1,6 +1,7 @@
 .listImage {
   width: 250px;
   height: 350px;
+  object-fit: contain;
 }
 
 .userListContainer {
@@ -72,7 +73,7 @@ a:visited {
   color: rgb(43, 44, 40);
 }
 
-.title{
+.title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

@@ -34,7 +34,9 @@ export default function ProjectDetail({ history }) {
   catch{
     projectButton = '';
   }
+
   if(loading) return <LoadingSpinner />;
+  
   return (
     <>
       <ProjectDetailPresentational 

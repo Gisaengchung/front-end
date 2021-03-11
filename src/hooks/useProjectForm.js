@@ -19,11 +19,9 @@ export default function useProjectForm() {
   const [projectFundingExDate, setProjectFundingExDate] = useState('');
   const [projectRiskChallenge, setProjectRiskChallenge] = useState('');
   const [projectDiversity, setProjectDiversity] = useState('');
- 
 
   const handleSubmitProject = event => {
     event.preventDefault();
-
     const userId = session.userId;
 
     dispatch(createProject({ 
@@ -44,12 +42,9 @@ export default function useProjectForm() {
       .then((user) => { 
         setSession(user);
         history.push('/'); 
-        //history.push(`/project-detail/${project.id}`); 
       }
-
       ));
   };  
-  
 
   return {
     projectTitle, 
@@ -76,6 +71,4 @@ export default function useProjectForm() {
     setProjectDiversity,
     handleSubmitProject,
   };
-
-
 }

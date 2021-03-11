@@ -12,14 +12,12 @@ const AuthForm = ({ authFn }) => {
   const [lastName, setLName] = useState('');
   const [userCity, setCity] = useState('');
   const [userState, setUserState] = useState('');
-
   const handleSubmit = event => {
     event.preventDefault();
     authFn({ email, password, firstName, lastName, userState, userCity })
       .then(() => {
         history.push('/');
       });
-      
   };
 
   return (
