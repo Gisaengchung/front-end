@@ -11,7 +11,7 @@ const ProjectListPagePresentational = ({ projects }) => {
         <div className={`${styles.userListContainer}`} >
           <img className = {styles.listImage} src = {project.projectMainImage} />
           <div className={styles.infoStuff}>
-            <div>{project.projectTitle}</div> 
+            <div className={styles.title}>{project.projectTitle}</div> 
             <div>{project.subtitle}</div> 
             <div>{project.projectGenre}</div> 
           </div>
