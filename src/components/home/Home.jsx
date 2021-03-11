@@ -75,8 +75,7 @@ const Home = () => {
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
               <h3>Director: Gary Lundgren</h3>
-              <p className={styles.descriptionParagraph}>108 min, R</p>
-              <p>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the &#34;world&#39;s greatest pizza.&#34;</p> 
+              <p className={styles.descriptionParagraph}>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the &#34;world&#39;s greatest pizza.&#34;</p> 
               <p>Stars James Le Gros (Drugstore Cowboy, Living in Oblivion), Lisa Edelstein (Girlfriends&#39; Guide to Divorce, House), Jesse Borrego (Fame, Blood In Blood Out), Reynaldo Gallegos (Triple Frontier, American Sniper), Diedrich Bader (Napoleon Dynamite, Office Space, Veep), and Kevin Corrigan (The Departed, Pineapple Express, True Romance).</p>
               <p>Produced by Joma Films with Pied Piper Productions, Lui-G Films and Sunset Dynamics. </p>
             </div>
@@ -97,10 +96,9 @@ const Home = () => {
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>HUNT FOR THE WILDERPEOPLE</h2>
               <h3>Director: Taika Waititi</h3>
-              <p className={styles.descriptionParagraph}>101 min, R</p>
-              <p>Raised on hip-hop and foster care, defiant city kid Ricky gets a fresh start in the New Zealand countryside. He quickly finds himself at home with his new foster family: the loving Aunt Bella, the cantankerous Uncle Hec, and dog Tupac. When a tragedy strikes that threatens to ship Ricky to another home, both he and Hec go on the run in the bush. As a national manhunt ensues, the newly branded outlaws must face their options: go out in a blaze of glory or overcome their differences and survive as a family.</p> 
+              <p className={styles.descriptionParagraph}>Raised on hip-hop and foster care, defiant city kid Ricky gets a fresh start in the New Zealand countryside. He quickly finds himself at home with his new foster family: the loving Aunt Bella, the cantankerous Uncle Hec, and dog Tupac. When a tragedy strikes that threatens to ship Ricky to another home, both he and Hec go on the run in the bush. As a national manhunt ensues, the newly branded outlaws must face their options: go out in a blaze of glory or overcome their differences and survive as a family.</p> 
               <p>Equal parts road comedy and coming-of-age drama, director Taika Waititi masterfully weaves lively humor with emotionally honest performances by Sam Neill and Julian Dennison. Never short on laughs, this touching story reminds us about the journey that growing up is (at any age) and those who help us along the way.</p>
-              <p>Sam Neill, Julian Dennison, Rima Te Wiata . </p>
+              <p>Sam Neill, Julian Dennison, Rima Te Wiata</p>
             </div>
           </article>
         </section>
