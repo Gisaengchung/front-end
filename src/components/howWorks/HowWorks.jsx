@@ -48,6 +48,16 @@ class AboutUs extends Component {
 
         </div>
       
+        <section>
+          <span className={styles.helpUs} >
+            <p className={styles.helpMid}>
+              <h2>Open Source Help </h2>
+              DO you want to help us.................................................................................................................................................................................................................................................................................................................................................................................
+            </p>
+          </span>
+        </section>
+
+
         <section className={styles.bottomBannerOne}>
           <video autoPlay="autoplay" loop="loop" muted >
             <source src={help} type="video/mp4" />
