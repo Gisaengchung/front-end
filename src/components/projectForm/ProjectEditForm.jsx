@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 import React from 'react';
 import { useSession } from '../../state/AuthUserProvider';
@@ -5,7 +7,6 @@ import LoadingSpinner from '../../loading/LoadingSpinner';
 import ProjectEditFormPresentational from './ProjectEditFormPresentational';
 import { useProjectHook } from '../../hooks/useProjectHook';
 import { useParams } from 'react-router';
-
 
 const ProjectEditForm = ({ history }) => {
   const { id } = useParams();

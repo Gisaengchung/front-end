@@ -23,12 +23,9 @@ import UsersList from '../components/allUsersList/UsersList';
 import ProjectEditForm from '../components/projectForm/ProjectEditForm';
 import Footer from '../components/footer/Footer';
 import ProjectDetail from '../components/projectDetail/ProjectDetail';
-// -----------------------------------------------------------------------------------
 
 export default class App extends Component {
 
-
-  // -----------------------------------------------------------------------------------
   render() {
     return (
       <div>
@@ -36,69 +33,19 @@ export default class App extends Component {
           <AuthUserProvider>
             <ProjectProvider>
               <Navigation /> 
-
               <Switch>
-            
-                <Route exact path="/login"
-                  component={ Login } 
-                />
-            
-                <Route exact path="/signup"
-                  component={ SignUp } 
-                />
-
-                <Route
-                  exact path="/about-us"
-                  render={ AboutUs }
-                />
-
-                <Route
-                  exact path="/"
-                  component = { Home } 
-                />
-
-                <Route
-                  exact path="/info"
-                  component = { HowWorks } 
-                />
-
-                <Route
-                  exact path="/users-list"
-                  component = { UsersList } 
-                />
-
-                <Route
-                  exact path="/user-detail/:id"
-                  component={ UserDetail }
-                />
-
-                <Route
-                  exact path="/project-list"
-                  component = { ProjectList } 
-                />
-
-                <Route
-                  exact path="/project-detail/:id"
-                  component = { ProjectDetail } 
-                />
-
-                {/* PRIVATE---------------------------------------------- */}
-  
-                <PrivateRoute
-                  exact path="/user-form"
-                  component={ UserForm }
-                />
-
-                <PrivateRoute
-                  exact path="/project-form"
-                  component = { ProjectForm } 
-                />
-
-                <PrivateRoute
-                  exact path="/project-edit/:id"
-                  component = { ProjectEditForm } 
-                />
-
+                <Route exact path="/login" component={ Login } />
+                <Route exact path="/signup" component={ SignUp } />
+                <Route exact path="/about-us" render={ AboutUs } />
+                <Route exact path="/" component = { Home } />
+                <Route exact path="/info" component = { HowWorks } />
+                <Route exact path="/users-list" component = { UsersList } />
+                <Route exact path="/user-detail/:id" component={ UserDetail } />
+                <Route exact path="/project-list" component = { ProjectList } />
+                <Route exact path="/project-detail/:id" component = { ProjectDetail } />
+                <PrivateRoute exact path="/user-form" component={ UserForm } />
+                <PrivateRoute exact path="/project-form" component = { ProjectForm } />
+                <PrivateRoute exact path="/project-edit/:id" component = { ProjectEditForm } />
               </Switch>
               <Footer />
             </ProjectProvider>

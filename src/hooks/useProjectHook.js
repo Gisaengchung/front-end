@@ -11,7 +11,6 @@ export const useProjectHook = id => {
         setProject(project);
         setLoading(false);
       });
-
   }, [id]);
   
   return {

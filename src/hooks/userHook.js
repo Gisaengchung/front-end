@@ -11,7 +11,6 @@ export const useUserDetail = id => {
         setUser(user);
         setLoading(false);
       });
-
   }, [id]);
   
   return {

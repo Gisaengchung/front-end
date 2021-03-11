@@ -10,7 +10,7 @@ import meetPic from './homeAssets/meetPic.jpg';
 import discoverPic from './homeAssets/discoverPic.jpg';
 import createPic from './homeAssets/createPic.jpg';
 import topFilm from './homeAssets/topFilm.mp4';
-
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -70,7 +70,9 @@ const Home = () => {
         <section className={styles.allSections}>
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
-              <img className={styles.featImage} src={pog}/>
+              <Link to={'/project-detail/23'}>
+                <img className={styles.featImage} src={pog}/>
+              </Link>
             </div>
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
@@ -91,7 +93,9 @@ const Home = () => {
         <section className={styles.allSections}>
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
-              <img className={styles.featImage} src={hunt}/>
+              <Link to={'/project-detail/22'}>
+                <img className={styles.featImage} src={hunt}/>
+              </Link>
             </div>
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>HUNT FOR THE WILDERPEOPLE</h2>
@@ -108,12 +112,14 @@ const Home = () => {
         <section className={styles.allSections}>
           <article className={styles.articleFilm}>
             <div className={styles.featImageContainer}>
-              <img className={styles.featImage} src={para}/>
+              <Link to={'/project-detail/5'}>
+                <img className={styles.featImage} src={para}/>
+              </Link>
             </div>
             <div className={styles.featureTextContainer}>
               <h2 className={styles.movieTitle}>PARASITE</h2>
               <h3>Director: Bong Joon Ho</h3>
-              <p>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</p>
+              <p>Jobless, penniless, and, above all, hopeless, the unmotivated patriarch, Ki-taek, and his equally unambitious family--his supportive wife, Chung-sook; his cynical twentysomething daughter, Ki-jung, and his college-age son, Ki-woo--occupy themselves by working for peanuts in their squalid basement-level apartment. Then, by sheer luck, a lucrative business proposition will pave the way for an ingeniously insidious scheme, as Ki-woo summons up the courage to pose as an English tutor for the teenage daughter of the affluent Park family. Now, the stage seems set for an unceasing winner-take-all class war. How does one get rid of a parasite?</p>
             </div>
           </article>
         </section>

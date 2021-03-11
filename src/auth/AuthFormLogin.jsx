@@ -6,7 +6,6 @@ import FormInput from '../components/formInput/FormInput';
 const AuthForm = ({ authFn }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
   const handleSubmit = event => {
     event.preventDefault();
     authFn(email, password);

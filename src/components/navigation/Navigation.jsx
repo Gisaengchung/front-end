@@ -55,7 +55,6 @@ export default function Navigation() {
               </ul>
             </nav>
           </div>
-          // --------------------------------------------------------------------
           :
           <div>       
             <nav className={styles.navContainer}>

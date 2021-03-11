@@ -19,7 +19,6 @@ const FundingFormPresentational = ({ donation }) => {
 
   const handleSubmitDonation = event => {
     event.preventDefault();
-
     patchDonationData({       
       projectId,
       projectFundingGoal,
@@ -77,4 +76,5 @@ const FundingFormPresentational = ({ donation }) => {
 FundingFormPresentational.propTypes = {
   donation: PropTypes.object.isRequired
 };
+
 export default FundingFormPresentational;
