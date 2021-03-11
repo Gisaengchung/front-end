@@ -20,34 +20,28 @@ export default function Footer() {
           <ul className={styles.navList}>
 
             {/* -------------------------------------------- */}
-            <div className={styles.separate}>
-              <span>
-                <li className={styles.snake}>
-                  <NavLink className="link" to="/">Home</NavLink>
-                </li>
-              </span>
-            </div>
+      
+            <span>
+              <li className={styles.snake}>
+                <NavLink className="link" to="/">Home</NavLink>
+              </li>
+            </span>
+    
+            {/* -------------------------------------------- */}
+
+            <span>
+              <li className={styles.snake}>
+                <NavLink className="link" to="/about-us">About Us</NavLink>
+              </li>
+            </span>
 
             {/* -------------------------------------------- */}
 
-            <div className={styles.separate}>
-              <span>
-                <li className={styles.snake}>
-                  <NavLink className="link" to="/about-us">About Us</NavLink>
-                </li>
-
-              </span>
-            </div>
-
-            {/* -------------------------------------------- */}
-
-            <div  className={styles.separate}>
-              <span>
-                <li className={styles.snake}>
-                  <NavLink className="link" to="/info">What Is FIIN?</NavLink>
-                </li>
-              </span>
-            </div>
+            <span>
+              <li className={styles.snake}>
+                <NavLink className="link" to="/info">What Is FIIN?</NavLink>
+              </li>
+            </span>
 
           </ul>
 

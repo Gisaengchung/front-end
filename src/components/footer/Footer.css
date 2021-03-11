@@ -1,6 +1,4 @@
 .navFooter {
-    display: flex;
-    justify-content: center;
     margin-top: 200px;
     height: 70px;
     background-color: black;
@@ -10,8 +8,14 @@
     bottom: 0;
 }
 
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .snake { 
-    margin-bottom: 10px;
+    width: 40px;
 }
 
 .snake a:hover {
@@ -26,7 +30,3 @@
     color: rgb(255, 255, 255);
 }
 
-.separate {
-    float: left;
-    margin-left: 50px;
-}
