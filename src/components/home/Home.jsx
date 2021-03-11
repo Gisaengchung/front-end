@@ -47,26 +47,29 @@ const Home = () => {
         {/* --------------------------------------------------- */}
 
         <div className={styles.inBegin}> 
-
-          <section className={styles.ThreeThings}>
-      
-            <a href="/users-list"><div className={styles.smallerBox}><h2>MEET</h2>
-              <p>Meet new people in the industry to work with.</p>
-              <img className={styles.meetdiscovercreate} src={meetPic}/>
-            </div></a>
-
-            <a href="/project-form"><div className={styles.smallerBox}><h2>CREATE</h2>
-              <p>Click here to create a film!</p>
-              <img className={styles.meetdiscovercreate} src={createPic}/>
-            </div></a>
-
-            <a href="/project-list"><div className={styles.smallerBox}><h2>DISCOVER</h2>
-              <p>Find films underway and support their project!</p> 
-              <img className={styles.meetdiscovercreate} src={discoverPic}/>
-            </div></a>
-
-          </section>
-          
+          <div className={styles.ThreeThings}>
+            <a href="/users-list">
+              <div className={styles.smallerBox}>
+                <h2>MEET</h2>
+                <p>Meet new people in the industry to work with.</p>
+                <img className={styles.meetdiscovercreate} src={meetPic}/>
+              </div>
+            </a>
+            <a href="/project-form">
+              <div className={styles.smallerBox}>
+                <h2>CREATE</h2>
+                <p>Click here to create a film!</p>
+                <img className={styles.meetdiscovercreate} src={createPic}/>
+              </div>
+            </a>
+            <a href="/project-list">
+              <div className={styles.smallerBox}>
+                <h2>DISCOVER</h2>
+                <p>Find films underway and support their project!</p> 
+                <img className={styles.meetdiscovercreate} src={discoverPic}/>
+              </div>
+            </a>
+          </div>
         </div>
 
       </section>
@@ -90,8 +93,8 @@ const Home = () => {
               <h2 className={styles.movieTitle}>PHOENIX, OREGON</h2>
               <h3>Director: Gary Lundgren</h3>
               <p className={styles.descriptionParagraph}>108 min, R</p>
-              <p>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the "world's greatest pizza."</p> 
-              <p>Stars James Le Gros (Drugstore Cowboy, Living in Oblivion), Lisa Edelstein (Girlfriends' Guide to Divorce, House), Jesse Borrego (Fame, Blood In Blood Out), Reynaldo Gallegos (Triple Frontier, American Sniper), Diedrich Bader (Napoleon Dynamite, Office Space, Veep), and Kevin Corrigan (The Departed, Pineapple Express, True Romance).</p>
+              <p>A funny and bittersweet story about two friends, a graphic novelist and a chef, who seize an unlikely opportunity to reinvest their lives, quitting their service industry jobs to restore an old bowling center and serve the &#34;world&#39;s greatest pizza.&#34;</p> 
+              <p>Stars James Le Gros (Drugstore Cowboy, Living in Oblivion), Lisa Edelstein (Girlfriends&#39; Guide to Divorce, House), Jesse Borrego (Fame, Blood In Blood Out), Reynaldo Gallegos (Triple Frontier, American Sniper), Diedrich Bader (Napoleon Dynamite, Office Space, Veep), and Kevin Corrigan (The Departed, Pineapple Express, True Romance).</p>
               <p>Produced by Joma Films with Pied Piper Productions, Lui-G Films and Sunset Dynamics. </p>
             </div>
           </article>

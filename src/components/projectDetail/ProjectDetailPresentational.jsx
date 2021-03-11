@@ -20,10 +20,9 @@ const ProjectDetailPresentational = (
           />
           <h5>{`${project.projectLocCity}, ${project.projectLocState}`}</h5>
           <div className={styles.leftAlign}>
-            <div>Genre: {project.projectGenre}</div>
             <h4>Description</h4>
             <div>{project.projectDescription}</div>
-            <h4>Risk & Challenges</h4>
+            <h4>Risks & Challenges</h4>
             <div>{project.projectRiskChallenge}</div>
             <h4>Diversity Commitments</h4>
             <div>{project.projectDiversity}</div>
@@ -43,7 +42,8 @@ const ProjectDetailPresentational = (
 
 ProjectDetailPresentational.propTypes = {
   project: PropTypes.object.isRequired,
-  projectButton: PropTypes.object.isRequired
+  projectButton: PropTypes.string.isRequired,
+  user: PropTypes.object.isRequired
 };
 
 export default ProjectDetailPresentational;

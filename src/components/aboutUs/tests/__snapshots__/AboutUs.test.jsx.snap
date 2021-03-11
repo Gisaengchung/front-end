@@ -23,7 +23,7 @@ exports[`AboutUs component renders AboutUs 1`] = `
         <span>
           Hi! My Name is Richard. In the future time is backwards!
         </span>
-        <p />
+        <br />
         <a
           href="https://github.com/Richard-Hillman"
         >
@@ -58,9 +58,9 @@ exports[`AboutUs component renders AboutUs 1`] = `
           Kt
         </h2>
         <span>
-          Hi! My name is Katie! In my free time I create, direct, and edit fun films! 
+          Hi! My name is kt!I am tall!!!!!! WOOOOO!!!
         </span>
-        <p />
+        <br />
         <a
           href="https://github.com/katiejonesyo"
         >
@@ -97,7 +97,7 @@ exports[`AboutUs component renders AboutUs 1`] = `
         <span>
           Hi! My name is Ferrari!I am Ferrari! Vroom vroom cars go fast yea yea yea
         </span>
-        <p />
+        <br />
         <a
           href="https://github.com/kevinfiero"
         >
@@ -134,7 +134,7 @@ exports[`AboutUs component renders AboutUs 1`] = `
         <span>
           Hi! My name is Sydney! I am not tall!  I DO NOT DRINK COFFEEEEEEEEEE
         </span>
-        <p />
+        <br />
         <a
           href="https://github.com/scjam"
         >
