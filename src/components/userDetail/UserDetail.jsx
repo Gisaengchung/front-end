@@ -11,11 +11,8 @@ export default function UserDetail({ history }) {
   const { session } = useSession() || {};
   const { loading, user } = useUserDetail(id);
  
-  console.log(user);
-
   const handleClick = () => {
     history.push('/user-form');
-
   };
 
   let profileButton = '';
