@@ -50,17 +50,17 @@ const Home = () => {
 
           <section className={styles.ThreeThings}>
       
-            <a href="/users-list"><div className={styles.smallerBox}><h2>Meet</h2>
+            <a href="/users-list"><div className={styles.smallerBox}><h2>MEET</h2>
               <p>Meet new people in the industry to work with.</p>
               <img className={styles.meetdiscovercreate} src={meetPic}/>
             </div></a>
 
-            <a href="/project-form"><div className={styles.smallerBox}><h2>Create</h2>
-              <p>Are you a director or producer? Want to create a film? Click here.</p>
+            <a href="/project-form"><div className={styles.smallerBox}><h2>CREATE</h2>
+              <p>Click here to create a film!</p>
               <img className={styles.meetdiscovercreate} src={createPic}/>
             </div></a>
 
-            <a href="/project-list"><div className={styles.smallerBox}><h2>Discover</h2>
+            <a href="/project-list"><div className={styles.smallerBox}><h2>DISCOVER</h2>
               <p>Find films underway and support their project!</p> 
               <img className={styles.meetdiscovercreate} src={discoverPic}/>
             </div></a>
