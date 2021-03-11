@@ -8,7 +8,6 @@ import sydney from './aboutAssets/sydney.png';
 import github from './aboutAssets/github.png';
 import linkedinlogo from './aboutAssets/linkedinlogo.png';
 
-
 export default function AboutUs() {
   return (
     <div className={styles.aboutContainer}>

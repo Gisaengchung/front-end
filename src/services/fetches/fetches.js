@@ -39,5 +39,3 @@ export const patchProjectData = (projectInfo) => {
 export const patchUserData = (userInfo) => {
   return put('user', userInfo);
 };
-
-

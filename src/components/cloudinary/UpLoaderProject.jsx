@@ -1,10 +1,9 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 
 export default function UpLoaderProject({ setProjectMainImage, projectMainImage }) {
-
   const [loading, setLoading] = useState(false);
-
 
   const uploadImage = async e => {
     const files = e.target.files;
@@ -12,7 +11,6 @@ export default function UpLoaderProject({ setProjectMainImage, projectMainImage 
     data.append('file', files[0]);
     data.append('upload_preset', 'upload');
     setLoading(true);
-
 
     const res = 
       await fetch('	https://api.cloudinary.com/v1_1/gisaengchung/image/upload', 
@@ -24,7 +22,6 @@ export default function UpLoaderProject({ setProjectMainImage, projectMainImage 
     const file = await res.json();
 
     setProjectMainImage(file.secure_url);
-
     setLoading(false);
   };
 
@@ -35,7 +32,6 @@ export default function UpLoaderProject({ setProjectMainImage, projectMainImage 
         type="file" 
         placeholder="Upload An Image Here" 
         onChange={uploadImage}/>
-
       {
         loading ? 
           (<h3>Loading...</h3>) :

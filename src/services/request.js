@@ -1,5 +1,4 @@
 const API_URL = process.env.API_URL;
-
 const WITHOUT_BODY_METHODS = ['GET', 'DELETE'];
 
 const request = (path, method, body) => {

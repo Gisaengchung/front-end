@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable react/prop-types */
 /* eslint-disable max-len */
 import React, { createContext, useContext, useEffect, useReducer, useState } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -15,18 +17,12 @@ export const AuthUserProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const isAuthenticated = !!session;
 
-  // CHECKING AND STORING CRED FOR USER-----------------------------------
   useEffect(() => {
-    // check if the user is logged in
     getVerify()
       .then(user => setSession(user))
       .catch(() => console.log('user not logged in'))
       .finally(() => setLoading(false));
-    // if they are store the in session
   }, []);
-
-  // GetUsers------------------------------------------------------------
-
 
   const useUserList = () => {
     const [users, setUsers]  = useState([]);
@@ -38,42 +34,31 @@ export const AuthUserProvider = ({ children }) => {
           setLoading(false);
         });
     }, []);
+
     return {
       users, 
       loading
     };
   };
 
-  // SIGNUP------------------------------------------------------------
-
   const signup = (email, password) => {
-    // make a fetch request to signup a user
     return postSignup(email, password)
-    // store the signed up user in session
       .then(user => setSession(user))
       .then(() => history.push('/'))
       .catch(err => setError(err));
   };
     
-  //LOGIN ------------------------------------------------------------
-
   const login = (email, password) => {
-    // make a fetch request to login a user
     return postLogin(email, password)
-      // store the logged in user in session
       .then(user => setSession(user))
       .then(() => history.push('/'))
       .catch(err => setError(err));
   };
 
-  //LOGOUT ------------------------------------------------------------
-
   const logout = () => {
     return getLogout()
       .then(() => setSession(null));
   };
-
-  // PROVIDER-------------------------------------------------------------
 
   return (
     <AuthContext.Provider value={{
@@ -95,65 +80,45 @@ export const AuthUserProvider = ({ children }) => {
   );
 };
 
-// HOOKS ------------------------------------------------------------
-
 export const useSession = () => {
   const { session, setSession } = useContext(AuthContext);
   return { session, setSession };
 };
-
-// ------------------------------------------------------------
 
 export const useAuthLoading = () => {
   const { loading } = useContext(AuthContext);
   return loading;
 };
 
-// ------------------------------------------------------------
-
 export const useAuthError = () => {
   const { error } = useContext(AuthContext);
   return error;
 };
-
-// ------------------------------------------------------------
 
 export const useIsAuthenticated = () => {
   const { isAuthenticated } = useContext(AuthContext);
   return isAuthenticated;
 };
 
-// ------------------------------------------------------------
-
 export const useSignUp = () => {
   const { signup } = useContext(AuthContext);
   return signup;
 };
-
-// ------------------------------------------------------------
 
 export const useLogin = () => {
   const { login } = useContext(AuthContext);
   return login;
 };
 
-// ------------------------------------------------------------
-
 export const useLogout = () => {
   const { logout } = useContext(AuthContext);
   return logout;
 };
 
-// ------------------------------------------------------------
-
 export const useSelector = selectorFn => {
   const { state } = useContext(AuthContext);
-
   return selectorFn(state);
 };
-
-// ------------------------------------------------------------
-
 
 export const users = () => {
   const { users } = useContext(AuthContext);

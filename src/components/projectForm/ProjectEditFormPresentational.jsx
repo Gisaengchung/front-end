@@ -5,7 +5,6 @@ import { useHistory, useParams } from 'react-router';
 import { patchProjectData } from '../../services/fetches/fetches';
 import { useSession } from '../../state/AuthUserProvider';
 import styles from '../../styles/form.css';
-import UpLoader from '../cloudinary/UpLoader';
 import UpLoaderProject from '../cloudinary/UpLoaderProject';
 import FormInput from '../formInput/FormInput';
 
