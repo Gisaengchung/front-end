@@ -22,7 +22,7 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
-    port: 7891,
+    port: 7891,                                     
     historyApiFallback: true,
   },
   plugins: [
@@ -83,6 +83,10 @@ module.exports = {
           loader: 'url-loader',
           options: { limit: 1000 },
         },
+      },
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
       },
     ],
   },

@@ -46,7 +46,7 @@ img {
 }
 
 .featImage {
-  box-shadow: black 0 0 20px;
+  box-shadow: black 0 0 7px;
 }
 
 .Begin {
@@ -61,7 +61,7 @@ img {
 
 .articleFilm {
   background-color: rgba(0, 0, 0, 0.253);
-  width: 80vw;
+  width: 60vw;
   justify-content: center;
 }
 
@@ -80,12 +80,21 @@ img {
 }
 
 .inBegin {
-  border: black solid 1px;
-  box-shadow: black 0 0 20px;
+  box-shadow: black 0 0 3px;
   background-color: rgba(0, 0, 0, 0.253);
   width: 90vw; 
 }
 
 .bottomMargin {
   margin-bottom: 100px;
+}
+
+.advImageOver {
+  height: 30%;
+  width: 30%;
+}
+
+.topBanner {
+  margin: 40px;
+  width: 80vw;
 }

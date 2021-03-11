@@ -84,20 +84,20 @@ const ProjectForm = () => {
           onChangeFn={setProjectGenre}
         />
         <FormInput 
-          id={'projectLocState'}
-          type={'text'}
-          maxLength={'40'}
-          value={projectLocState}
-          placeholder={'State'}
-          onChangeFn={setProjectLocState}
-        />
-        <FormInput 
           id={'projectLocCity'}
           type={'text'}
           maxLength={'40'}
           value={projectLocCity}
           placeholder={'City'}
           onChangeFn={setProjectLocCity}
+        />
+        <FormInput 
+          id={'projectLocState'}
+          type={'text'}
+          maxLength={'40'}
+          value={projectLocState}
+          placeholder={'State'}
+          onChangeFn={setProjectLocState}
         />
         <div>
           <UpLoaderProject setProjectMainImage={setProjectMainImage} projectMainImage={projectMainImage} />
