@@ -166,7 +166,7 @@ img {
 /* Three Routes Boxes -----------------------------------*/
 
 .ThreeThings {
-  --gutter: 2.5rem;
+  --gutter: 3rem;
 
   background: rgb(43, 44, 40);
   text-align: center;
