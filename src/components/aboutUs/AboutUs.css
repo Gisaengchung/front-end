@@ -12,7 +12,7 @@
   align-content: center;
   justify-content: center;
   margin-top: 10%;
-  margin-left: 4.8%;
+  margin-left: 4%;
   height: 70vh;
   width: 92vw;
   padding-right: 3%;
@@ -36,7 +36,7 @@
 .contactImage {
   height: 50px;
   width: 50px;
-  padding: 8px;
+  padding: 7px;
 }
 
 span {
