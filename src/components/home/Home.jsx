@@ -47,26 +47,29 @@ const Home = () => {
         {/* --------------------------------------------------- */}
 
         <div className={styles.inBegin}> 
-
-          <section className={styles.ThreeThings}>
-      
-            <a href="/users-list"><div className={styles.smallerBox}><h2>MEET</h2>
-              <p>Meet new people in the industry to work with.</p>
-              <img className={styles.meetdiscovercreate} src={meetPic}/>
-            </div></a>
-
-            <a href="/project-form"><div className={styles.smallerBox}><h2>CREATE</h2>
-              <p>Click here to create a film!</p>
-              <img className={styles.meetdiscovercreate} src={createPic}/>
-            </div></a>
-
-            <a href="/project-list"><div className={styles.smallerBox}><h2>DISCOVER</h2>
-              <p>Find films underway and support their project!</p> 
-              <img className={styles.meetdiscovercreate} src={discoverPic}/>
-            </div></a>
-
-          </section>
-          
+          <div className={styles.ThreeThings}>
+            <a href="/users-list">
+              <div className={styles.smallerBox}>
+                <h2>MEET</h2>
+                <p>Meet new people in the industry to work with.</p>
+                <img className={styles.meetdiscovercreate} src={meetPic}/>
+              </div>
+            </a>
+            <a href="/project-form">
+              <div className={styles.smallerBox}>
+                <h2>CREATE</h2>
+                <p>Click here to create a film!</p>
+                <img className={styles.meetdiscovercreate} src={createPic}/>
+              </div>
+            </a>
+            <a href="/project-list">
+              <div className={styles.smallerBox}>
+                <h2>DISCOVER</h2>
+                <p>Find films underway and support their project!</p> 
+                <img className={styles.meetdiscovercreate} src={discoverPic}/>
+              </div>
+            </a>
+          </div>
         </div>
 
       </section>
