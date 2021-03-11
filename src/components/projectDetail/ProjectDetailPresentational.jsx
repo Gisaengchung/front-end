@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Project.css';
 import FundingForm from '../fundingForm/FundingForm';
 import UserListPresentation from '../userDetail/UserDetailPresentational';
+import { Link } from 'react-router-dom';
 
 const ProjectDetailPresentational = (
   { project, projectButton, user }
@@ -11,7 +12,7 @@ const ProjectDetailPresentational = (
     <div className={styles.displayPage}>
       <div className={styles.projectDetailContainer} >
         <div className={styles.projectColumn}>
-          <h2>{project.projectTitle}</h2>
+          <h2 className={styles.projectTitle}>{project.projectTitle}</h2>
           <h3>{project.projectSubtitle}</h3>
           <img 
             className={styles.projectDetailIMG}
@@ -31,7 +32,11 @@ const ProjectDetailPresentational = (
         <div className={styles.fundingColumn}>
           <FundingForm />
           <div className={styles.userContainer}>
-            <UserListPresentation user={user} />
+            <Link 
+              to={`/user-detail/${user.userId}`}  
+              className={styles.userDetailPresentational}>
+              <UserListPresentation user={user} />
+            </Link>
           </div>
           <div>{projectButton}</div>
         </div>
