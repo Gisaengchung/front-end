@@ -6,9 +6,9 @@
 
 ## What is FIIN?
 
-FIIN stands for Film Indie. A site dedicated to empowering independent filmmakers and film industry professionals. In this application directors can submit a proposal to crowdfund a movie and then market and sell directly from our site. This empowers indie filmmakers by giving them complete control of their cinematic experience and rights. This site will also be a portal meet and discover others in the industry.
+FIIN stands for Film Indie. A site dedicated to empowering independent filmmakers and film industry professionals. In this application directors can submit a proposal to crowdfund a movie and then market and sell directly from our site. This empowers indie filmmakers by giving them complete control of their cinematic experience and rights. This site will also be a portal for industry film crews to connect and meet new actresses, cinemtographers or just regular movie goers. 
 
-The first phase of this app will be to build the infrastructure for the crowd-sourcing and movie pitch UI.
+![](readMeAssets/Finn.jpg)
 
 ## Technologies Used
 
