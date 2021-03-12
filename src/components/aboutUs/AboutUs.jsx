@@ -25,7 +25,7 @@ export default function AboutUs() {
       </div>
       <div className={styles.personContainer}>
         <img className={styles.ktImage} src={kt} />
-        <h2 className={styles.aboutNames}>Kt</h2>
+        <h2 className={styles.aboutNames}>Katie</h2>
         <span>Hi! My name is Katie and I&apos;m a Fullstack Software Engineer. In my free time I create and produce small films!</span>
         <br/>
         <a href="https://github.com/katiejonesyo">

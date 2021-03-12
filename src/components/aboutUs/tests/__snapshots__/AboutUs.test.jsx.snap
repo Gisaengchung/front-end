@@ -48,7 +48,7 @@ exports[`AboutUs component renders AboutUs 1`] = `
       <h2
         class="aboutNames"
       >
-        Kt
+        Katie
       </h2>
       <span>
         Hi! My name is Katie and I'm a Fullstack Software Engineer. In my free time I create and produce small films!
